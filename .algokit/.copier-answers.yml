@@ -1,0 +1,10 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 2.1.6
+_src_path: gh:algorandfoundation/algokit-fullstack-template
+author_email: 110350867+gurubazawada@users.noreply.github.com
+author_name: gurubazawada
+contract_name: insurance
+deployment_language: python
+preset_name: starter
+project_name: App
+
