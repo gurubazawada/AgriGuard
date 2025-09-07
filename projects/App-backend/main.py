@@ -140,6 +140,15 @@ class OracleSettlementResponse(BaseModel):
     transaction_success: bool  # Whether the smart contract call succeeded
     transaction_id: Optional[str] = None
 
+class SetOracleRequest(BaseModel):
+    oracle_address: str
+
+class SetOracleResponse(BaseModel):
+    success: bool
+    transaction_id: Optional[str] = None
+    oracle_address: str
+    error: Optional[str] = None
+
 @app.get("/")
 async def root():
     return {"message": "AgriGuard Insurance API", "status": "running"}
@@ -271,60 +280,69 @@ async def analyze_risk_with_gemini(request: RiskAnalysisRequest):
 async def analyze_oracle_settlement_with_gemini(request: OracleSettlementRequest):
     """Use Gemini to analyze policy settlement decision"""
     try:
+        # Convert coverage amount to microALGOs for calculation
+        coverage_micro_algos = convert_algo_to_micro_algo(request.coverage_amount)
+
         # Create a detailed prompt for settlement analysis
         prompt = f"""
-You are an agricultural insurance oracle analyzing a policy settlement claim.
+You are an agricultural insurance oracle analyzing a policy settlement claim on the Algorand blockchain.
 
 POLICY DETAILS:
 - Policy ID: {request.policy_id}
-- Location: {request.zip_code}
+- Location: ZIP Code {request.zip_code}
 - Coverage Period: {request.start_date} to {request.end_date}
-- Coverage Amount: {request.coverage_amount} ALGO
-- Risk Direction: {request.direction} (0=above threshold, 1=below threshold)
+- Coverage Amount: {request.coverage_amount} ALGO ({coverage_micro_algos:,} microALGOs)
+- Risk Direction: {request.direction} (0=above threshold triggers payout, 1=below threshold triggers payout)
 - Threshold: {request.threshold}
 - Slope: {request.slope}
-- Fee Paid: {request.fee_paid} microALGOs
-- Owner: {request.owner}
+- Fee Paid: {request.fee_paid:,} microALGOs
+- Policy Owner: {request.owner}
 
 SETTLEMENT ANALYSIS REQUIRED:
 Analyze whether this policy should be settled (approved for payout) or rejected.
 
 Consider:
-1. Weather data for the location and time period
+1. Weather data for the location and time period - check if threshold was breached
 2. Agricultural conditions during the coverage period
-3. Whether the risk threshold was actually breached
-4. Market conditions and crop prices
-5. Historical data for similar claims
+3. Whether the risk conditions were actually met based on direction and threshold
+4. Market conditions and crop prices during the period
+5. Historical data for similar claims in the area
 
 RESPONSE FORMAT (JSON):
 {{
     "decision": 0 or 1,
     "reasoning": "Detailed explanation of decision",
     "reasoning_steps": [
-        "Step 1: Checked weather data for location",
-        "Step 2: Analyzed agricultural conditions",
-        "Step 3: Verified threshold breach",
-        "Step 4: Considered market factors",
-        "Step 5: Made final decision"
+        "Step 1: Analyzed weather data for ZIP {request.zip_code} during coverage period",
+        "Step 2: Verified threshold breach conditions (direction={request.direction}, threshold={request.threshold})",
+        "Step 3: Evaluated agricultural impact and market conditions",
+        "Step 4: Considered historical precedents and risk factors",
+        "Step 5: Made final settlement decision"
     ],
-    "web_sources": ["source1", "source2"],
+    "web_sources": ["weather.gov", "usda.gov", "noaa.gov"],
     "confidence": 0.85,
-    "settlement_amount": 0 or coverage_amount_in_microALGOs
+    "settlement_amount": {coverage_micro_algos if 'decision' in locals() and 'decision' == 1 else 0}
 }}
 
-IMPORTANT:
-- Use web search to get current weather and agricultural data
-- Be conservative - only approve if clear evidence of claim validity
-- Settlement amount should be 0 if rejected, full coverage if approved
-- Limit reasoning to 5 steps maximum
+IMPORTANT GUIDELINES:
+- Use web search to get current and historical weather/agricultural data for ZIP {request.zip_code}
+- Be conservative - only approve if clear evidence shows threshold was breached
+- Decision = 1 (approve) only if weather conditions clearly met the policy trigger
+- Decision = 0 (reject) if conditions were not met or evidence is insufficient
+- Settlement amount = {coverage_micro_algos:,} microALGOs if approved, 0 if rejected
+- Provide specific weather data sources and measurements in reasoning
 """
 
         model = genai.GenerativeModel('gemini-1.5-flash')
 
-        # Enable web search grounding
+        # Enable web search grounding for real data
         response = model.generate_content(
             prompt,
-            tools=[{"google_search_retrieval": {}}]
+            tools=[{"google_search_retrieval": {}}],
+            generation_config=genai.types.GenerationConfig(
+                temperature=0.2,  # Lower temperature for more consistent analysis
+                max_output_tokens=2048,
+            )
         )
 
         # Parse the response
@@ -336,13 +354,20 @@ IMPORTANT:
             raise ValueError("No JSON found in Gemini response")
 
         analysis_data = json.loads(json_match.group())
+
+        # Validate and fix settlement_amount
+        if analysis_data["decision"] == 1:
+            analysis_data["settlement_amount"] = coverage_micro_algos
+        else:
+            analysis_data["settlement_amount"] = 0
+
         return analysis_data
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Oracle analysis failed: {str(e)}")
 
-async def call_smart_contract_settlement(policy_id: int, decision: int) -> dict:
-    """Call the smart contract's oracle_settle method"""
+async def call_smart_contract_settlement(policy_id: int, decision: int, expected_payout: int) -> dict:
+    """Call the smart contract's oracle_settle method and ensure payout execution"""
     try:
         # Set up Algorand client
         from algosdk.v2client import algod
@@ -351,6 +376,9 @@ async def call_smart_contract_settlement(policy_id: int, decision: int) -> dict:
         # Get oracle account from mnemonic
         oracle_private_key = mnemonic.to_private_key(ORACLE_MNEMONIC)
         oracle_address = account.address_from_private_key(oracle_private_key)
+
+        print(f"🔑 Oracle Address: {oracle_address}")
+        print(f"📋 Policy ID: {policy_id}, Decision: {decision}, Expected Payout: {expected_payout}")
 
         # Create AlgoKit client
         algorand = AlgorandClient.from_clients(algod_client, algod_client)
@@ -367,23 +395,57 @@ async def call_smart_contract_settlement(policy_id: int, decision: int) -> dict:
         # Set the signer for the oracle
         algorand.set_default_signer(oracle_private_key)
 
-        # Call the oracle_settle method
+        # First, let's check if oracle is set correctly (optional - for debugging)
+        try:
+            oracle_check = app_client.call(method="get_oracle")
+            print(f"✅ Contract Oracle: {oracle_check.return_value}")
+        except Exception as e:
+            print(f"⚠️ Could not check oracle (might not be set): {e}")
+
+        print(f"🔄 Calling oracle_settle with policy_id={policy_id}, approved={decision}")
+
+        # Call the oracle_settle method with proper parameter types
         result = app_client.call(
             method="oracle_settle",
-            args=[policy_id, decision]
+            args={
+                "policy_id": policy_id,
+                "approved": decision
+            }
         )
+
+        # The contract returns the actual payout amount
+        actual_payout = result.return_value if hasattr(result, 'return_value') else expected_payout
+
+        print(f"💰 Settlement Result - Actual Payout: {actual_payout}, Transaction ID: {result.tx_id if hasattr(result, 'tx_id') else 'N/A'}")
+
+        # If decision was to approve but payout is 0, this indicates an issue
+        if decision == 1 and actual_payout == 0:
+            print("⚠️ WARNING: Decision was approve but payout amount is 0!")
+            return {
+                "success": False,
+                "transaction_id": result.tx_id if hasattr(result, 'tx_id') else None,
+                "payout_amount": 0,
+                "expected_payout": expected_payout,
+                "decision": decision,
+                "error": "Payout amount is 0 despite approval decision"
+            }
 
         return {
             "success": True,
-            "transaction_id": result.tx_id,
-            "payout_amount": result.return_value
+            "transaction_id": result.tx_id if hasattr(result, 'tx_id') else None,
+            "payout_amount": actual_payout,
+            "expected_payout": expected_payout,
+            "decision": decision
         }
 
     except Exception as e:
+        print(f"❌ Smart contract settlement failed: {str(e)}")
         return {
             "success": False,
             "transaction_id": None,
             "payout_amount": 0,
+            "expected_payout": expected_payout,
+            "decision": decision,
             "error": str(e)
         }
 
@@ -421,13 +483,25 @@ async def oracle_settle(request: OracleSettlementRequest):
         # Call smart contract if decision is to approve
         transaction_success = False
         transaction_id = None
+        actual_payout = 0
 
         if decision == 1:
-            contract_result = await call_smart_contract_settlement(request.policy_id, decision)
+            # Only call smart contract for approvals
+            contract_result = await call_smart_contract_settlement(
+                request.policy_id,
+                decision,
+                settlement_amount
+            )
             transaction_success = contract_result["success"]
             transaction_id = contract_result["transaction_id"]
+            actual_payout = contract_result["payout_amount"]
         else:
-            transaction_success = True  # Rejection is also a successful decision
+            # For rejections, no transaction needed
+            transaction_success = True
+            actual_payout = 0
+
+        # Use actual payout from contract if available, otherwise use expected
+        final_settlement_amount = actual_payout if actual_payout > 0 else settlement_amount
 
         return OracleSettlementResponse(
             decision=decision,
@@ -435,13 +509,105 @@ async def oracle_settle(request: OracleSettlementRequest):
             reasoning_steps=analysis_data["reasoning_steps"],
             web_sources=analysis_data["web_sources"],
             confidence=analysis_data["confidence"],
-            settlement_amount=settlement_amount,
+            settlement_amount=final_settlement_amount,
             transaction_success=transaction_success,
             transaction_id=transaction_id
         )
 
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Oracle settlement failed: {str(e)}")
+
+@app.post("/set-oracle", response_model=SetOracleResponse)
+async def set_oracle(request: SetOracleRequest):
+    """Set the oracle account on the smart contract (admin only)"""
+    try:
+        # Set up Algorand client
+        from algosdk.v2client import algod
+        algod_client = algod.AlgodClient(ALGOD_TOKEN, f"{ALGOD_SERVER}:{ALGOD_PORT}")
+
+        # For setting oracle, we need admin account (you might want to use a different approach)
+        # For now, we'll use the oracle account as admin for simplicity
+        oracle_private_key = mnemonic.to_private_key(ORACLE_MNEMONIC)
+        oracle_address = account.address_from_private_key(oracle_private_key)
+
+        print(f"🔑 Setting Oracle Address: {request.oracle_address}")
+
+        # Create AlgoKit client
+        algorand = AlgorandClient.from_clients(algod_client, algod_client)
+
+        # Create app client
+        from smart_contracts.artifacts.insurance.agri_guard_insurance_client import AgriGuardInsuranceClient, APP_SPEC
+
+        app_client = algorand.application_client(
+            app_id=int(APP_ID),
+            app_spec=APP_SPEC,
+            sender=oracle_address  # Using oracle as sender (should be admin)
+        )
+
+        # Set the signer
+        algorand.set_default_signer(oracle_private_key)
+
+        print(f"🔄 Calling set_oracle with address={request.oracle_address}")
+
+        # Call the set_oracle method
+        result = app_client.call(
+            method="set_oracle",
+            args={
+                "oracle": request.oracle_address
+            }
+        )
+
+        print(f"✅ Oracle set successfully! Transaction ID: {result.tx_id if hasattr(result, 'tx_id') else 'N/A'}")
+
+        return SetOracleResponse(
+            success=True,
+            transaction_id=result.tx_id if hasattr(result, 'tx_id') else None,
+            oracle_address=request.oracle_address
+        )
+
+    except Exception as e:
+        print(f"❌ Failed to set oracle: {str(e)}")
+        return SetOracleResponse(
+            success=False,
+            oracle_address=request.oracle_address,
+            error=str(e)
+        )
+
+@app.get("/get-oracle")
+async def get_oracle():
+    """Get the current oracle account from the smart contract"""
+    try:
+        # Set up Algorand client
+        from algosdk.v2client import algod
+        algod_client = algod.AlgodClient(ALGOD_TOKEN, f"{ALGOD_SERVER}:{ALGOD_PORT}")
+
+        # Create AlgoKit client
+        algorand = AlgorandClient.from_clients(algod_client, algod_client)
+
+        # Create app client (no sender needed for readonly call)
+        from smart_contracts.artifacts.insurance.agri_guard_insurance_client import AgriGuardInsuranceClient, APP_SPEC
+
+        app_client = algorand.application_client(
+            app_id=int(APP_ID),
+            app_spec=APP_SPEC
+        )
+
+        # Call the get_oracle method
+        result = app_client.call(method="get_oracle")
+
+        oracle_address = result.return_value if hasattr(result, 'return_value') else "Not set"
+
+        return {
+            "oracle_address": oracle_address,
+            "success": True
+        }
+
+    except Exception as e:
+        return {
+            "oracle_address": "Error retrieving",
+            "success": False,
+            "error": str(e)
+        }
 
 if __name__ == "__main__":
     import uvicorn

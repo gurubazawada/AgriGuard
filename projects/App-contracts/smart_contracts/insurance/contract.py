@@ -135,6 +135,11 @@ class AgriGuardInsurance(ARC4Contract):
         """Set oracle account (admin only)"""
         assert Txn.sender == self.admin, "Only admin can set oracle"
         self.oracle = oracle.native
+
+    @abimethod(readonly=True)
+    def get_oracle(self) -> Address:
+        """Get current oracle account address"""
+        return Address(self.oracle)
         
     @abimethod
     def buy_policy_with_payment(
