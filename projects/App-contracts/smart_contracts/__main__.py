@@ -62,14 +62,23 @@ def has_contract_file(directory: Path) -> bool:
 
 # Use the current directory (root_path) as the base for contract folders and exclude
 # folders that start with '_' (internal helpers).
+# Also include subdirectories that contain contract.py files
+def find_contract_directories(base_path: Path) -> list[Path]:
+    """Find all directories containing contract.py files, including subdirectories."""
+    contract_dirs = []
+    for item in base_path.rglob("*"):
+        if item.is_dir() and has_contract_file(item) and not item.name.startswith("_"):
+            contract_dirs.append(item)
+    return contract_dirs
+
+contract_dirs = find_contract_directories(root_path)
 contracts: list[SmartContract] = [
     SmartContract(
         path=import_contract(folder),
         name=folder.name,
         deploy=import_deploy_if_exists(folder),
     )
-    for folder in root_path.iterdir()
-    if folder.is_dir() and has_contract_file(folder) and not folder.name.startswith("_")
+    for folder in contract_dirs
 ]
 
 # -------------------------- Build Logic -------------------------- #

@@ -3,7 +3,7 @@
   "sources": [
     "../../insurance/contract.py"
   ],
-  "mappings": "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",
+  "mappings": "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",
   "op_pc_offset": 0,
   "pc_events": {
     "1": {
@@ -14,9 +14,9 @@
       "op": "intcblock 1 0 100 2 1000"
     },
     "9": {
-      "op": "bytecblock \"next_policy_id\" 0x151f7c75 \"policies\" \"admin\" \"oracle\" 0x0062 0x0000000000000000"
+      "op": "bytecblock 0x151f7c75 \"next_policy_id\" 0x0000000000000000 \"policies\" \"admin\" \"oracle\" 0x0000000000000001 0x0062"
     },
-    "65": {
+    "74": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%0#0"
@@ -25,60 +25,60 @@
         "tmp%0#0"
       ]
     },
-    "67": {
+    "76": {
       "op": "bnz main_after_if_else@2",
       "stack_out": []
     },
-    "70": {
-      "op": "bytec_3 // \"admin\"",
-      "defined_out": [
-        "\"admin\""
-      ],
-      "stack_out": [
-        "\"admin\""
-      ]
-    },
-    "71": {
-      "op": "global ZeroAddress",
-      "defined_out": [
-        "\"admin\"",
-        "materialized_values%0#0"
-      ],
-      "stack_out": [
-        "\"admin\"",
-        "materialized_values%0#0"
-      ]
-    },
-    "73": {
-      "op": "app_global_put",
-      "stack_out": []
-    },
-    "74": {
-      "op": "bytec 4 // \"oracle\"",
-      "defined_out": [
-        "\"oracle\""
-      ],
-      "stack_out": [
-        "\"oracle\""
-      ]
-    },
-    "76": {
-      "op": "global ZeroAddress",
-      "defined_out": [
-        "\"oracle\"",
-        "materialized_values%1#0"
-      ],
-      "stack_out": [
-        "\"oracle\"",
-        "materialized_values%1#0"
-      ]
-    },
-    "78": {
-      "op": "app_global_put",
-      "stack_out": []
-    },
     "79": {
-      "op": "bytec_0 // \"next_policy_id\"",
+      "op": "bytec 4 // \"admin\"",
+      "defined_out": [
+        "\"admin\""
+      ],
+      "stack_out": [
+        "\"admin\""
+      ]
+    },
+    "81": {
+      "op": "global ZeroAddress",
+      "defined_out": [
+        "\"admin\"",
+        "materialized_values%0#0"
+      ],
+      "stack_out": [
+        "\"admin\"",
+        "materialized_values%0#0"
+      ]
+    },
+    "83": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "84": {
+      "op": "bytec 5 // \"oracle\"",
+      "defined_out": [
+        "\"oracle\""
+      ],
+      "stack_out": [
+        "\"oracle\""
+      ]
+    },
+    "86": {
+      "op": "global ZeroAddress",
+      "defined_out": [
+        "\"oracle\"",
+        "materialized_values%1#0"
+      ],
+      "stack_out": [
+        "\"oracle\"",
+        "materialized_values%1#0"
+      ]
+    },
+    "88": {
+      "op": "app_global_put",
+      "stack_out": []
+    },
+    "89": {
+      "op": "bytec_1 // \"next_policy_id\"",
       "defined_out": [
         "\"next_policy_id\""
       ],
@@ -86,7 +86,7 @@
         "\"next_policy_id\""
       ]
     },
-    "80": {
+    "90": {
       "op": "intc_0 // 1",
       "defined_out": [
         "\"next_policy_id\"",
@@ -97,11 +97,11 @@
         "1"
       ]
     },
-    "81": {
+    "91": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "82": {
+    "92": {
       "block": "main_after_if_else@2",
       "stack_in": [],
       "op": "txn NumAppArgs",
@@ -112,17 +112,19 @@
         "tmp%0#2"
       ]
     },
-    "84": {
-      "op": "bz main_after_if_else@15",
+    "94": {
+      "op": "bz main_after_if_else@17",
       "stack_out": []
     },
-    "87": {
-      "op": "pushbytess 0x894a716e 0x3368f556 0x671721d6 0x50f992ac 0xef909f38 0xeb0de02b 0x3f78f6e3 0xabf6d51a 0xfa20020c 0x1a0e2048 // method \"create_application(address)void\", method \"set_oracle(address)void\", method \"buy_policy_with_payment(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64\", method \"buy_policy(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64\", method \"oracle_settle(uint64,uint64)uint64\", method \"get_policy(uint64)(address,string,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64)\", method \"get_policies_by_owner(address)(uint64,uint64)\", method \"get_policy_count()uint64\", method \"calculate_fee(uint64,uint64,uint64,uint64)uint64\", method \"get_globals()(address,address,uint64)\"",
+    "97": {
+      "op": "pushbytess 0x894a716e 0x3368f556 0x671721d6 0x50f992ac 0xef909f38 0x5c1689a2 0xeb0de02b 0x3f78f6e3 0xabf6d51a 0xfa20020c 0xdce31bbe 0x1a0e2048 // method \"create_application(address)void\", method \"set_oracle(address)void\", method \"buy_policy_with_payment(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64\", method \"buy_policy(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64\", method \"oracle_settle(uint64,uint64)uint64\", method \"dispute_settlement(uint64,string)uint64\", method \"get_policy(uint64)(address,string,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64)\", method \"get_policies_by_owner(address)(uint64,uint64)\", method \"get_policy_count()uint64\", method \"calculate_fee(uint64,uint64,uint64,uint64)uint64\", method \"delete_policy(uint64)uint64\", method \"get_globals()(address,address,uint64)\"",
       "defined_out": [
         "Method(buy_policy(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64)",
         "Method(buy_policy_with_payment(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64)",
         "Method(calculate_fee(uint64,uint64,uint64,uint64)uint64)",
         "Method(create_application(address)void)",
+        "Method(delete_policy(uint64)uint64)",
+        "Method(dispute_settlement(uint64,string)uint64)",
         "Method(get_globals()(address,address,uint64))",
         "Method(get_policies_by_owner(address)(uint64,uint64))",
         "Method(get_policy(uint64)(address,string,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64))",
@@ -136,20 +138,24 @@
         "Method(buy_policy_with_payment(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64)",
         "Method(buy_policy(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64)",
         "Method(oracle_settle(uint64,uint64)uint64)",
+        "Method(dispute_settlement(uint64,string)uint64)",
         "Method(get_policy(uint64)(address,string,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64))",
         "Method(get_policies_by_owner(address)(uint64,uint64))",
         "Method(get_policy_count()uint64)",
         "Method(calculate_fee(uint64,uint64,uint64,uint64)uint64)",
+        "Method(delete_policy(uint64)uint64)",
         "Method(get_globals()(address,address,uint64))"
       ]
     },
-    "139": {
+    "159": {
       "op": "txna ApplicationArgs 0",
       "defined_out": [
         "Method(buy_policy(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64)",
         "Method(buy_policy_with_payment(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64)",
         "Method(calculate_fee(uint64,uint64,uint64,uint64)uint64)",
         "Method(create_application(address)void)",
+        "Method(delete_policy(uint64)uint64)",
+        "Method(dispute_settlement(uint64,string)uint64)",
         "Method(get_globals()(address,address,uint64))",
         "Method(get_policies_by_owner(address)(uint64,uint64))",
         "Method(get_policy(uint64)(address,string,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64))",
@@ -164,20 +170,22 @@
         "Method(buy_policy_with_payment(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64)",
         "Method(buy_policy(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64)",
         "Method(oracle_settle(uint64,uint64)uint64)",
+        "Method(dispute_settlement(uint64,string)uint64)",
         "Method(get_policy(uint64)(address,string,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64))",
         "Method(get_policies_by_owner(address)(uint64,uint64))",
         "Method(get_policy_count()uint64)",
         "Method(calculate_fee(uint64,uint64,uint64,uint64)uint64)",
+        "Method(delete_policy(uint64)uint64)",
         "Method(get_globals()(address,address,uint64))",
         "tmp%2#0"
       ]
     },
-    "142": {
-      "op": "match main_create_application_route@5 main_set_oracle_route@6 main_buy_policy_with_payment_route@7 main_buy_policy_route@8 main_oracle_settle_route@9 main_get_policy_route@10 main_get_policies_by_owner_route@11 main_get_policy_count_route@12 main_calculate_fee_route@13 main_get_globals_route@14",
+    "162": {
+      "op": "match main_create_application_route@5 main_set_oracle_route@6 main_buy_policy_with_payment_route@7 main_buy_policy_route@8 main_oracle_settle_route@9 main_dispute_settlement_route@10 main_get_policy_route@11 main_get_policies_by_owner_route@12 main_get_policy_count_route@13 main_calculate_fee_route@14 main_delete_policy_route@15 main_get_globals_route@16",
       "stack_out": []
     },
-    "164": {
-      "block": "main_after_if_else@15",
+    "188": {
+      "block": "main_after_if_else@17",
       "stack_in": [],
       "op": "intc_1 // 0",
       "defined_out": [
@@ -187,325 +195,193 @@
         "tmp%0#0"
       ]
     },
-    "165": {
-      "op": "return",
-      "stack_out": []
-    },
-    "166": {
-      "block": "main_get_globals_route@14",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%55#0"
-      ],
-      "stack_out": [
-        "tmp%55#0"
-      ]
-    },
-    "168": {
-      "op": "!",
-      "defined_out": [
-        "tmp%56#0"
-      ],
-      "stack_out": [
-        "tmp%56#0"
-      ]
-    },
-    "169": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "170": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%57#0"
-      ],
-      "stack_out": [
-        "tmp%57#0"
-      ]
-    },
-    "172": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "173": {
-      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.get_globals",
-      "op": "callsub get_globals",
-      "defined_out": [
-        "tmp%59#0"
-      ],
-      "stack_out": [
-        "tmp%59#0"
-      ]
-    },
-    "176": {
-      "op": "bytec_1 // 0x151f7c75",
-      "defined_out": [
-        "0x151f7c75",
-        "tmp%59#0"
-      ],
-      "stack_out": [
-        "tmp%59#0",
-        "0x151f7c75"
-      ]
-    },
-    "177": {
-      "op": "swap",
-      "stack_out": [
-        "0x151f7c75",
-        "tmp%59#0"
-      ]
-    },
-    "178": {
-      "op": "concat",
-      "defined_out": [
-        "tmp%60#0"
-      ],
-      "stack_out": [
-        "tmp%60#0"
-      ]
-    },
-    "179": {
-      "op": "log",
-      "stack_out": []
-    },
-    "180": {
-      "op": "intc_0 // 1",
-      "defined_out": [
-        "tmp%0#0"
-      ],
-      "stack_out": [
-        "tmp%0#0"
-      ]
-    },
-    "181": {
-      "op": "return",
-      "stack_out": []
-    },
-    "182": {
-      "block": "main_calculate_fee_route@13",
-      "stack_in": [],
-      "op": "txn OnCompletion",
-      "defined_out": [
-        "tmp%49#0"
-      ],
-      "stack_out": [
-        "tmp%49#0"
-      ]
-    },
-    "184": {
-      "op": "!",
-      "defined_out": [
-        "tmp%50#0"
-      ],
-      "stack_out": [
-        "tmp%50#0"
-      ]
-    },
-    "185": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
-      "stack_out": []
-    },
-    "186": {
-      "op": "txn ApplicationID",
-      "defined_out": [
-        "tmp%51#0"
-      ],
-      "stack_out": [
-        "tmp%51#0"
-      ]
-    },
-    "188": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
     "189": {
-      "op": "txna ApplicationArgs 1",
+      "op": "return",
+      "stack_out": []
+    },
+    "190": {
+      "block": "main_get_globals_route@16",
+      "stack_in": [],
+      "op": "txn OnCompletion",
       "defined_out": [
-        "reinterpret_bytes[8]%17#0"
+        "tmp%68#0"
       ],
       "stack_out": [
-        "reinterpret_bytes[8]%17#0"
+        "tmp%68#0"
       ]
     },
     "192": {
-      "op": "txna ApplicationArgs 2",
+      "op": "!",
       "defined_out": [
-        "reinterpret_bytes[8]%17#0",
-        "reinterpret_bytes[8]%18#0"
+        "tmp%69#0"
       ],
       "stack_out": [
-        "reinterpret_bytes[8]%17#0",
-        "reinterpret_bytes[8]%18#0"
+        "tmp%69#0"
       ]
     },
-    "195": {
-      "op": "txna ApplicationArgs 3",
+    "193": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "194": {
+      "op": "txn ApplicationID",
       "defined_out": [
-        "reinterpret_bytes[8]%17#0",
-        "reinterpret_bytes[8]%18#0",
-        "reinterpret_bytes[8]%19#0"
+        "tmp%70#0"
       ],
       "stack_out": [
-        "reinterpret_bytes[8]%17#0",
-        "reinterpret_bytes[8]%18#0",
-        "reinterpret_bytes[8]%19#0"
+        "tmp%70#0"
       ]
     },
-    "198": {
-      "op": "txna ApplicationArgs 4",
+    "196": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "197": {
+      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.get_globals",
+      "op": "callsub get_globals",
       "defined_out": [
-        "reinterpret_bytes[8]%17#0",
-        "reinterpret_bytes[8]%18#0",
-        "reinterpret_bytes[8]%19#0",
-        "reinterpret_bytes[8]%20#0"
+        "tmp%72#0"
       ],
       "stack_out": [
-        "reinterpret_bytes[8]%17#0",
-        "reinterpret_bytes[8]%18#0",
-        "reinterpret_bytes[8]%19#0",
-        "reinterpret_bytes[8]%20#0"
+        "tmp%72#0"
+      ]
+    },
+    "200": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%72#0"
+      ],
+      "stack_out": [
+        "tmp%72#0",
+        "0x151f7c75"
       ]
     },
     "201": {
-      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.calculate_fee",
-      "op": "callsub calculate_fee",
-      "defined_out": [
-        "tmp%53#0"
-      ],
+      "op": "swap",
       "stack_out": [
-        "tmp%53#0"
+        "0x151f7c75",
+        "tmp%72#0"
       ]
     },
-    "204": {
-      "op": "bytec_1 // 0x151f7c75",
+    "202": {
+      "op": "concat",
       "defined_out": [
-        "0x151f7c75",
-        "tmp%53#0"
+        "tmp%73#0"
       ],
       "stack_out": [
-        "tmp%53#0",
-        "0x151f7c75"
+        "tmp%73#0"
+      ]
+    },
+    "203": {
+      "op": "log",
+      "stack_out": []
+    },
+    "204": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
       ]
     },
     "205": {
-      "op": "swap",
-      "stack_out": [
-        "0x151f7c75",
-        "tmp%53#0"
-      ]
-    },
-    "206": {
-      "op": "concat",
-      "defined_out": [
-        "tmp%54#0"
-      ],
-      "stack_out": [
-        "tmp%54#0"
-      ]
-    },
-    "207": {
-      "op": "log",
+      "op": "return",
       "stack_out": []
     },
-    "208": {
-      "op": "intc_0 // 1",
+    "206": {
+      "block": "main_delete_policy_route@15",
+      "stack_in": [],
+      "op": "txn OnCompletion",
       "defined_out": [
-        "tmp%0#0"
+        "tmp%62#0"
       ],
       "stack_out": [
-        "tmp%0#0"
+        "tmp%62#0"
+      ]
+    },
+    "208": {
+      "op": "!",
+      "defined_out": [
+        "tmp%63#0"
+      ],
+      "stack_out": [
+        "tmp%63#0"
       ]
     },
     "209": {
-      "op": "return",
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
     "210": {
-      "block": "main_get_policy_count_route@12",
-      "stack_in": [],
-      "op": "txn OnCompletion",
+      "op": "txn ApplicationID",
       "defined_out": [
-        "tmp%43#0"
+        "tmp%64#0"
       ],
       "stack_out": [
-        "tmp%43#0"
+        "tmp%64#0"
       ]
     },
     "212": {
-      "op": "!",
-      "defined_out": [
-        "tmp%44#0"
-      ],
-      "stack_out": [
-        "tmp%44#0"
-      ]
-    },
-    "213": {
-      "error": "OnCompletion is not NoOp",
-      "op": "assert // OnCompletion is not NoOp",
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "214": {
-      "op": "txn ApplicationID",
+    "213": {
+      "op": "txna ApplicationArgs 1",
       "defined_out": [
-        "tmp%45#0"
+        "reinterpret_bytes[8]%22#0"
       ],
       "stack_out": [
-        "tmp%45#0"
+        "reinterpret_bytes[8]%22#0"
       ]
     },
     "216": {
-      "error": "can only call when not creating",
-      "op": "assert // can only call when not creating",
-      "stack_out": []
-    },
-    "217": {
-      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.get_policy_count",
-      "op": "callsub get_policy_count",
+      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.delete_policy",
+      "op": "callsub delete_policy",
       "defined_out": [
-        "tmp%47#0"
+        "tmp%66#0"
       ],
       "stack_out": [
-        "tmp%47#0"
+        "tmp%66#0"
+      ]
+    },
+    "219": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%66#0"
+      ],
+      "stack_out": [
+        "tmp%66#0",
+        "0x151f7c75"
       ]
     },
     "220": {
-      "op": "bytec_1 // 0x151f7c75",
-      "defined_out": [
-        "0x151f7c75",
-        "tmp%47#0"
-      ],
+      "op": "swap",
       "stack_out": [
-        "tmp%47#0",
-        "0x151f7c75"
+        "0x151f7c75",
+        "tmp%66#0"
       ]
     },
     "221": {
-      "op": "swap",
+      "op": "concat",
+      "defined_out": [
+        "tmp%67#0"
+      ],
       "stack_out": [
-        "0x151f7c75",
-        "tmp%47#0"
+        "tmp%67#0"
       ]
     },
     "222": {
-      "op": "concat",
-      "defined_out": [
-        "tmp%48#0"
-      ],
-      "stack_out": [
-        "tmp%48#0"
-      ]
-    },
-    "223": {
       "op": "log",
       "stack_out": []
     },
-    "224": {
+    "223": {
       "op": "intc_0 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -514,100 +390,139 @@
         "tmp%0#0"
       ]
     },
-    "225": {
+    "224": {
       "op": "return",
       "stack_out": []
     },
-    "226": {
-      "block": "main_get_policies_by_owner_route@11",
+    "225": {
+      "block": "main_calculate_fee_route@14",
       "stack_in": [],
       "op": "txn OnCompletion",
       "defined_out": [
-        "tmp%37#0"
+        "tmp%56#0"
       ],
       "stack_out": [
-        "tmp%37#0"
+        "tmp%56#0"
+      ]
+    },
+    "227": {
+      "op": "!",
+      "defined_out": [
+        "tmp%57#0"
+      ],
+      "stack_out": [
+        "tmp%57#0"
       ]
     },
     "228": {
-      "op": "!",
-      "defined_out": [
-        "tmp%38#0"
-      ],
-      "stack_out": [
-        "tmp%38#0"
-      ]
-    },
-    "229": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "230": {
+    "229": {
       "op": "txn ApplicationID",
       "defined_out": [
-        "tmp%39#0"
+        "tmp%58#0"
       ],
       "stack_out": [
-        "tmp%39#0"
+        "tmp%58#0"
       ]
     },
-    "232": {
+    "231": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "233": {
+    "232": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
-        "reinterpret_bytes[32]%2#0"
+        "reinterpret_bytes[8]%18#0"
       ],
       "stack_out": [
-        "reinterpret_bytes[32]%2#0"
+        "reinterpret_bytes[8]%18#0"
       ]
     },
-    "236": {
-      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.get_policies_by_owner",
-      "op": "callsub get_policies_by_owner",
+    "235": {
+      "op": "txna ApplicationArgs 2",
       "defined_out": [
-        "tmp%41#0"
+        "reinterpret_bytes[8]%18#0",
+        "reinterpret_bytes[8]%19#0"
       ],
       "stack_out": [
-        "tmp%41#0"
+        "reinterpret_bytes[8]%18#0",
+        "reinterpret_bytes[8]%19#0"
       ]
     },
-    "239": {
-      "op": "bytec_1 // 0x151f7c75",
+    "238": {
+      "op": "txna ApplicationArgs 3",
       "defined_out": [
-        "0x151f7c75",
-        "tmp%41#0"
+        "reinterpret_bytes[8]%18#0",
+        "reinterpret_bytes[8]%19#0",
+        "reinterpret_bytes[8]%20#0"
       ],
       "stack_out": [
-        "tmp%41#0",
-        "0x151f7c75"
-      ]
-    },
-    "240": {
-      "op": "swap",
-      "stack_out": [
-        "0x151f7c75",
-        "tmp%41#0"
+        "reinterpret_bytes[8]%18#0",
+        "reinterpret_bytes[8]%19#0",
+        "reinterpret_bytes[8]%20#0"
       ]
     },
     "241": {
-      "op": "concat",
+      "op": "txna ApplicationArgs 4",
       "defined_out": [
-        "tmp%42#0"
+        "reinterpret_bytes[8]%18#0",
+        "reinterpret_bytes[8]%19#0",
+        "reinterpret_bytes[8]%20#0",
+        "reinterpret_bytes[8]%21#0"
       ],
       "stack_out": [
-        "tmp%42#0"
+        "reinterpret_bytes[8]%18#0",
+        "reinterpret_bytes[8]%19#0",
+        "reinterpret_bytes[8]%20#0",
+        "reinterpret_bytes[8]%21#0"
       ]
     },
-    "242": {
+    "244": {
+      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.calculate_fee",
+      "op": "callsub calculate_fee",
+      "defined_out": [
+        "tmp%60#0"
+      ],
+      "stack_out": [
+        "tmp%60#0"
+      ]
+    },
+    "247": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%60#0"
+      ],
+      "stack_out": [
+        "tmp%60#0",
+        "0x151f7c75"
+      ]
+    },
+    "248": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%60#0"
+      ]
+    },
+    "249": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%61#0"
+      ],
+      "stack_out": [
+        "tmp%61#0"
+      ]
+    },
+    "250": {
       "op": "log",
       "stack_out": []
     },
-    "243": {
+    "251": {
       "op": "intc_0 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -616,12 +531,309 @@
         "tmp%0#0"
       ]
     },
-    "244": {
+    "252": {
       "op": "return",
       "stack_out": []
     },
-    "245": {
-      "block": "main_get_policy_route@10",
+    "253": {
+      "block": "main_get_policy_count_route@13",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%50#0"
+      ],
+      "stack_out": [
+        "tmp%50#0"
+      ]
+    },
+    "255": {
+      "op": "!",
+      "defined_out": [
+        "tmp%51#0"
+      ],
+      "stack_out": [
+        "tmp%51#0"
+      ]
+    },
+    "256": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "257": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%52#0"
+      ],
+      "stack_out": [
+        "tmp%52#0"
+      ]
+    },
+    "259": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "260": {
+      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.get_policy_count",
+      "op": "callsub get_policy_count",
+      "defined_out": [
+        "tmp%54#0"
+      ],
+      "stack_out": [
+        "tmp%54#0"
+      ]
+    },
+    "263": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%54#0"
+      ],
+      "stack_out": [
+        "tmp%54#0",
+        "0x151f7c75"
+      ]
+    },
+    "264": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%54#0"
+      ]
+    },
+    "265": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%55#0"
+      ],
+      "stack_out": [
+        "tmp%55#0"
+      ]
+    },
+    "266": {
+      "op": "log",
+      "stack_out": []
+    },
+    "267": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "268": {
+      "op": "return",
+      "stack_out": []
+    },
+    "269": {
+      "block": "main_get_policies_by_owner_route@12",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%44#0"
+      ],
+      "stack_out": [
+        "tmp%44#0"
+      ]
+    },
+    "271": {
+      "op": "!",
+      "defined_out": [
+        "tmp%45#0"
+      ],
+      "stack_out": [
+        "tmp%45#0"
+      ]
+    },
+    "272": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "273": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%46#0"
+      ],
+      "stack_out": [
+        "tmp%46#0"
+      ]
+    },
+    "275": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "276": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[32]%2#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[32]%2#0"
+      ]
+    },
+    "279": {
+      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.get_policies_by_owner",
+      "op": "callsub get_policies_by_owner",
+      "defined_out": [
+        "tmp%48#0"
+      ],
+      "stack_out": [
+        "tmp%48#0"
+      ]
+    },
+    "282": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%48#0"
+      ],
+      "stack_out": [
+        "tmp%48#0",
+        "0x151f7c75"
+      ]
+    },
+    "283": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%48#0"
+      ]
+    },
+    "284": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%49#0"
+      ],
+      "stack_out": [
+        "tmp%49#0"
+      ]
+    },
+    "285": {
+      "op": "log",
+      "stack_out": []
+    },
+    "286": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "287": {
+      "op": "return",
+      "stack_out": []
+    },
+    "288": {
+      "block": "main_get_policy_route@11",
+      "stack_in": [],
+      "op": "txn OnCompletion",
+      "defined_out": [
+        "tmp%38#0"
+      ],
+      "stack_out": [
+        "tmp%38#0"
+      ]
+    },
+    "290": {
+      "op": "!",
+      "defined_out": [
+        "tmp%39#0"
+      ],
+      "stack_out": [
+        "tmp%39#0"
+      ]
+    },
+    "291": {
+      "error": "OnCompletion is not NoOp",
+      "op": "assert // OnCompletion is not NoOp",
+      "stack_out": []
+    },
+    "292": {
+      "op": "txn ApplicationID",
+      "defined_out": [
+        "tmp%40#0"
+      ],
+      "stack_out": [
+        "tmp%40#0"
+      ]
+    },
+    "294": {
+      "error": "can only call when not creating",
+      "op": "assert // can only call when not creating",
+      "stack_out": []
+    },
+    "295": {
+      "op": "txna ApplicationArgs 1",
+      "defined_out": [
+        "reinterpret_bytes[8]%17#0"
+      ],
+      "stack_out": [
+        "reinterpret_bytes[8]%17#0"
+      ]
+    },
+    "298": {
+      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.get_policy",
+      "op": "callsub get_policy",
+      "defined_out": [
+        "tmp%42#0"
+      ],
+      "stack_out": [
+        "tmp%42#0"
+      ]
+    },
+    "301": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%42#0"
+      ],
+      "stack_out": [
+        "tmp%42#0",
+        "0x151f7c75"
+      ]
+    },
+    "302": {
+      "op": "swap",
+      "stack_out": [
+        "0x151f7c75",
+        "tmp%42#0"
+      ]
+    },
+    "303": {
+      "op": "concat",
+      "defined_out": [
+        "tmp%43#0"
+      ],
+      "stack_out": [
+        "tmp%43#0"
+      ]
+    },
+    "304": {
+      "op": "log",
+      "stack_out": []
+    },
+    "305": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "tmp%0#0"
+      ]
+    },
+    "306": {
+      "op": "return",
+      "stack_out": []
+    },
+    "307": {
+      "block": "main_dispute_settlement_route@10",
       "stack_in": [],
       "op": "txn OnCompletion",
       "defined_out": [
@@ -631,7 +843,7 @@
         "tmp%31#0"
       ]
     },
-    "247": {
+    "309": {
       "op": "!",
       "defined_out": [
         "tmp%32#0"
@@ -640,12 +852,12 @@
         "tmp%32#0"
       ]
     },
-    "248": {
+    "310": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "249": {
+    "311": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%33#0"
@@ -654,12 +866,12 @@
         "tmp%33#0"
       ]
     },
-    "251": {
+    "313": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "252": {
+    "314": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "reinterpret_bytes[8]%16#0"
@@ -668,48 +880,59 @@
         "reinterpret_bytes[8]%16#0"
       ]
     },
-    "255": {
-      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.get_policy",
-      "op": "callsub get_policy",
+    "317": {
+      "op": "txna ApplicationArgs 2",
       "defined_out": [
+        "reinterpret_bytes[8]%16#0",
         "tmp%35#0"
       ],
       "stack_out": [
+        "reinterpret_bytes[8]%16#0",
         "tmp%35#0"
       ]
     },
-    "258": {
-      "op": "bytec_1 // 0x151f7c75",
+    "320": {
+      "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.dispute_settlement",
+      "op": "callsub dispute_settlement",
       "defined_out": [
-        "0x151f7c75",
-        "tmp%35#0"
+        "tmp%36#0"
       ],
       "stack_out": [
-        "tmp%35#0",
+        "tmp%36#0"
+      ]
+    },
+    "323": {
+      "op": "bytec_0 // 0x151f7c75",
+      "defined_out": [
+        "0x151f7c75",
+        "tmp%36#0"
+      ],
+      "stack_out": [
+        "tmp%36#0",
         "0x151f7c75"
       ]
     },
-    "259": {
+    "324": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
-        "tmp%35#0"
+        "tmp%36#0"
       ]
     },
-    "260": {
+    "325": {
       "op": "concat",
       "defined_out": [
-        "tmp%36#0"
+        "tmp%37#0"
       ],
       "stack_out": [
-        "tmp%36#0"
+        "tmp%37#0"
       ]
     },
-    "261": {
+    "326": {
       "op": "log",
       "stack_out": []
     },
-    "262": {
+    "327": {
       "op": "intc_0 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -718,11 +941,11 @@
         "tmp%0#0"
       ]
     },
-    "263": {
+    "328": {
       "op": "return",
       "stack_out": []
     },
-    "264": {
+    "329": {
       "block": "main_oracle_settle_route@9",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -733,7 +956,7 @@
         "tmp%25#0"
       ]
     },
-    "266": {
+    "331": {
       "op": "!",
       "defined_out": [
         "tmp%26#0"
@@ -742,12 +965,12 @@
         "tmp%26#0"
       ]
     },
-    "267": {
+    "332": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "268": {
+    "333": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%27#0"
@@ -756,12 +979,12 @@
         "tmp%27#0"
       ]
     },
-    "270": {
+    "335": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "271": {
+    "336": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "reinterpret_bytes[8]%14#0"
@@ -770,7 +993,7 @@
         "reinterpret_bytes[8]%14#0"
       ]
     },
-    "274": {
+    "339": {
       "op": "txna ApplicationArgs 2",
       "defined_out": [
         "reinterpret_bytes[8]%14#0",
@@ -781,7 +1004,7 @@
         "reinterpret_bytes[8]%15#0"
       ]
     },
-    "277": {
+    "342": {
       "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.oracle_settle",
       "op": "callsub oracle_settle",
       "defined_out": [
@@ -791,8 +1014,8 @@
         "tmp%29#0"
       ]
     },
-    "280": {
-      "op": "bytec_1 // 0x151f7c75",
+    "345": {
+      "op": "bytec_0 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
         "tmp%29#0"
@@ -802,14 +1025,14 @@
         "0x151f7c75"
       ]
     },
-    "281": {
+    "346": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "tmp%29#0"
       ]
     },
-    "282": {
+    "347": {
       "op": "concat",
       "defined_out": [
         "tmp%30#0"
@@ -818,11 +1041,11 @@
         "tmp%30#0"
       ]
     },
-    "283": {
+    "348": {
       "op": "log",
       "stack_out": []
     },
-    "284": {
+    "349": {
       "op": "intc_0 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -831,11 +1054,11 @@
         "tmp%0#0"
       ]
     },
-    "285": {
+    "350": {
       "op": "return",
       "stack_out": []
     },
-    "286": {
+    "351": {
       "block": "main_buy_policy_route@8",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -846,7 +1069,7 @@
         "tmp%18#0"
       ]
     },
-    "288": {
+    "353": {
       "op": "!",
       "defined_out": [
         "tmp%19#0"
@@ -855,12 +1078,12 @@
         "tmp%19#0"
       ]
     },
-    "289": {
+    "354": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "290": {
+    "355": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%20#0"
@@ -869,12 +1092,12 @@
         "tmp%20#0"
       ]
     },
-    "292": {
+    "357": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "293": {
+    "358": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "tmp%22#0"
@@ -883,7 +1106,7 @@
         "tmp%22#0"
       ]
     },
-    "296": {
+    "361": {
       "op": "txna ApplicationArgs 2",
       "defined_out": [
         "reinterpret_bytes[8]%7#0",
@@ -894,7 +1117,7 @@
         "reinterpret_bytes[8]%7#0"
       ]
     },
-    "299": {
+    "364": {
       "op": "txna ApplicationArgs 3",
       "defined_out": [
         "reinterpret_bytes[8]%7#0",
@@ -907,7 +1130,7 @@
         "reinterpret_bytes[8]%8#0"
       ]
     },
-    "302": {
+    "367": {
       "op": "txna ApplicationArgs 4",
       "defined_out": [
         "reinterpret_bytes[8]%7#0",
@@ -922,7 +1145,7 @@
         "reinterpret_bytes[8]%9#0"
       ]
     },
-    "305": {
+    "370": {
       "op": "txna ApplicationArgs 5",
       "defined_out": [
         "reinterpret_bytes[8]%10#0",
@@ -939,7 +1162,7 @@
         "reinterpret_bytes[8]%10#0"
       ]
     },
-    "308": {
+    "373": {
       "op": "txna ApplicationArgs 6",
       "defined_out": [
         "reinterpret_bytes[8]%10#0",
@@ -958,7 +1181,7 @@
         "reinterpret_bytes[8]%11#0"
       ]
     },
-    "311": {
+    "376": {
       "op": "txna ApplicationArgs 7",
       "defined_out": [
         "reinterpret_bytes[8]%10#0",
@@ -979,7 +1202,7 @@
         "reinterpret_bytes[8]%12#0"
       ]
     },
-    "314": {
+    "379": {
       "op": "txna ApplicationArgs 8",
       "defined_out": [
         "reinterpret_bytes[8]%10#0",
@@ -1002,7 +1225,7 @@
         "reinterpret_bytes[8]%13#0"
       ]
     },
-    "317": {
+    "382": {
       "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.buy_policy",
       "op": "callsub buy_policy",
       "defined_out": [
@@ -1012,8 +1235,8 @@
         "tmp%23#0"
       ]
     },
-    "320": {
-      "op": "bytec_1 // 0x151f7c75",
+    "385": {
+      "op": "bytec_0 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
         "tmp%23#0"
@@ -1023,14 +1246,14 @@
         "0x151f7c75"
       ]
     },
-    "321": {
+    "386": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "tmp%23#0"
       ]
     },
-    "322": {
+    "387": {
       "op": "concat",
       "defined_out": [
         "tmp%24#0"
@@ -1039,11 +1262,11 @@
         "tmp%24#0"
       ]
     },
-    "323": {
+    "388": {
       "op": "log",
       "stack_out": []
     },
-    "324": {
+    "389": {
       "op": "intc_0 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -1052,11 +1275,11 @@
         "tmp%0#0"
       ]
     },
-    "325": {
+    "390": {
       "op": "return",
       "stack_out": []
     },
-    "326": {
+    "391": {
       "block": "main_buy_policy_with_payment_route@7",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -1067,7 +1290,7 @@
         "tmp%11#0"
       ]
     },
-    "328": {
+    "393": {
       "op": "!",
       "defined_out": [
         "tmp%12#0"
@@ -1076,12 +1299,12 @@
         "tmp%12#0"
       ]
     },
-    "329": {
+    "394": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "330": {
+    "395": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%13#0"
@@ -1090,12 +1313,12 @@
         "tmp%13#0"
       ]
     },
-    "332": {
+    "397": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "333": {
+    "398": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "tmp%15#0"
@@ -1104,7 +1327,7 @@
         "tmp%15#0"
       ]
     },
-    "336": {
+    "401": {
       "op": "txna ApplicationArgs 2",
       "defined_out": [
         "reinterpret_bytes[8]%0#0",
@@ -1115,7 +1338,7 @@
         "reinterpret_bytes[8]%0#0"
       ]
     },
-    "339": {
+    "404": {
       "op": "txna ApplicationArgs 3",
       "defined_out": [
         "reinterpret_bytes[8]%0#0",
@@ -1128,7 +1351,7 @@
         "reinterpret_bytes[8]%1#0"
       ]
     },
-    "342": {
+    "407": {
       "op": "txna ApplicationArgs 4",
       "defined_out": [
         "reinterpret_bytes[8]%0#0",
@@ -1143,7 +1366,7 @@
         "reinterpret_bytes[8]%2#0"
       ]
     },
-    "345": {
+    "410": {
       "op": "txna ApplicationArgs 5",
       "defined_out": [
         "reinterpret_bytes[8]%0#0",
@@ -1160,7 +1383,7 @@
         "reinterpret_bytes[8]%3#0"
       ]
     },
-    "348": {
+    "413": {
       "op": "txna ApplicationArgs 6",
       "defined_out": [
         "reinterpret_bytes[8]%0#0",
@@ -1179,7 +1402,7 @@
         "reinterpret_bytes[8]%4#0"
       ]
     },
-    "351": {
+    "416": {
       "op": "txna ApplicationArgs 7",
       "defined_out": [
         "reinterpret_bytes[8]%0#0",
@@ -1200,7 +1423,7 @@
         "reinterpret_bytes[8]%5#0"
       ]
     },
-    "354": {
+    "419": {
       "op": "txna ApplicationArgs 8",
       "defined_out": [
         "reinterpret_bytes[8]%0#0",
@@ -1223,7 +1446,7 @@
         "reinterpret_bytes[8]%6#0"
       ]
     },
-    "357": {
+    "422": {
       "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.buy_policy_with_payment",
       "op": "callsub buy_policy_with_payment",
       "defined_out": [
@@ -1233,8 +1456,8 @@
         "tmp%16#0"
       ]
     },
-    "360": {
-      "op": "bytec_1 // 0x151f7c75",
+    "425": {
+      "op": "bytec_0 // 0x151f7c75",
       "defined_out": [
         "0x151f7c75",
         "tmp%16#0"
@@ -1244,14 +1467,14 @@
         "0x151f7c75"
       ]
     },
-    "361": {
+    "426": {
       "op": "swap",
       "stack_out": [
         "0x151f7c75",
         "tmp%16#0"
       ]
     },
-    "362": {
+    "427": {
       "op": "concat",
       "defined_out": [
         "tmp%17#0"
@@ -1260,11 +1483,11 @@
         "tmp%17#0"
       ]
     },
-    "363": {
+    "428": {
       "op": "log",
       "stack_out": []
     },
-    "364": {
+    "429": {
       "op": "intc_0 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -1273,11 +1496,11 @@
         "tmp%0#0"
       ]
     },
-    "365": {
+    "430": {
       "op": "return",
       "stack_out": []
     },
-    "366": {
+    "431": {
       "block": "main_set_oracle_route@6",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -1288,7 +1511,7 @@
         "tmp%7#0"
       ]
     },
-    "368": {
+    "433": {
       "op": "!",
       "defined_out": [
         "tmp%8#0"
@@ -1297,12 +1520,12 @@
         "tmp%8#0"
       ]
     },
-    "369": {
+    "434": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "370": {
+    "435": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%9#0"
@@ -1311,12 +1534,12 @@
         "tmp%9#0"
       ]
     },
-    "372": {
+    "437": {
       "error": "can only call when not creating",
       "op": "assert // can only call when not creating",
       "stack_out": []
     },
-    "373": {
+    "438": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "reinterpret_bytes[32]%1#0"
@@ -1325,12 +1548,12 @@
         "reinterpret_bytes[32]%1#0"
       ]
     },
-    "376": {
+    "441": {
       "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.set_oracle",
       "op": "callsub set_oracle",
       "stack_out": []
     },
-    "379": {
+    "444": {
       "op": "intc_0 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -1339,11 +1562,11 @@
         "tmp%0#0"
       ]
     },
-    "380": {
+    "445": {
       "op": "return",
       "stack_out": []
     },
-    "381": {
+    "446": {
       "block": "main_create_application_route@5",
       "stack_in": [],
       "op": "txn OnCompletion",
@@ -1354,7 +1577,7 @@
         "tmp%3#0"
       ]
     },
-    "383": {
+    "448": {
       "op": "!",
       "defined_out": [
         "tmp%4#0"
@@ -1363,12 +1586,12 @@
         "tmp%4#0"
       ]
     },
-    "384": {
+    "449": {
       "error": "OnCompletion is not NoOp",
       "op": "assert // OnCompletion is not NoOp",
       "stack_out": []
     },
-    "385": {
+    "450": {
       "op": "txn ApplicationID",
       "defined_out": [
         "tmp%5#0"
@@ -1377,7 +1600,7 @@
         "tmp%5#0"
       ]
     },
-    "387": {
+    "452": {
       "op": "!",
       "defined_out": [
         "tmp%6#0"
@@ -1386,12 +1609,12 @@
         "tmp%6#0"
       ]
     },
-    "388": {
+    "453": {
       "error": "can only call when creating",
       "op": "assert // can only call when creating",
       "stack_out": []
     },
-    "389": {
+    "454": {
       "op": "txna ApplicationArgs 1",
       "defined_out": [
         "reinterpret_bytes[32]%0#0"
@@ -1400,12 +1623,12 @@
         "reinterpret_bytes[32]%0#0"
       ]
     },
-    "392": {
+    "457": {
       "callsub": "smart_contracts.insurance.contract.AgriGuardInsurance.create_application",
       "op": "callsub create_application",
       "stack_out": []
     },
-    "395": {
+    "460": {
       "op": "intc_0 // 1",
       "defined_out": [
         "tmp%0#0"
@@ -1414,11 +1637,11 @@
         "tmp%0#0"
       ]
     },
-    "396": {
+    "461": {
       "op": "return",
       "stack_out": []
     },
-    "397": {
+    "462": {
       "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.create_application",
       "params": {
         "admin#0": "bytes"
@@ -1427,8 +1650,8 @@
       "stack_in": [],
       "op": "proto 1 0"
     },
-    "400": {
-      "op": "bytec_3 // \"admin\"",
+    "465": {
+      "op": "bytec 4 // \"admin\"",
       "defined_out": [
         "\"admin\""
       ],
@@ -1436,7 +1659,7 @@
         "\"admin\""
       ]
     },
-    "401": {
+    "467": {
       "op": "frame_dig -1",
       "defined_out": [
         "\"admin\"",
@@ -1447,15 +1670,15 @@
         "admin#0 (copy)"
       ]
     },
-    "403": {
+    "469": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "404": {
+    "470": {
       "retsub": true,
       "op": "retsub"
     },
-    "405": {
+    "471": {
       "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.set_oracle",
       "params": {
         "oracle#0": "bytes"
@@ -1464,7 +1687,7 @@
       "stack_in": [],
       "op": "proto 1 0"
     },
-    "408": {
+    "474": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%0#0"
@@ -1473,7 +1696,7 @@
         "tmp%0#0"
       ]
     },
-    "410": {
+    "476": {
       "op": "intc_1 // 0",
       "defined_out": [
         "0",
@@ -1484,8 +1707,8 @@
         "0"
       ]
     },
-    "411": {
-      "op": "bytec_3 // \"admin\"",
+    "477": {
+      "op": "bytec 4 // \"admin\"",
       "defined_out": [
         "\"admin\"",
         "0",
@@ -1497,7 +1720,7 @@
         "\"admin\""
       ]
     },
-    "412": {
+    "479": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1510,7 +1733,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "413": {
+    "480": {
       "error": "check self.admin exists",
       "op": "assert // check self.admin exists",
       "stack_out": [
@@ -1518,7 +1741,7 @@
         "maybe_value%0#0"
       ]
     },
-    "414": {
+    "481": {
       "op": "==",
       "defined_out": [
         "tmp%1#0"
@@ -1527,13 +1750,13 @@
         "tmp%1#0"
       ]
     },
-    "415": {
+    "482": {
       "error": "Only admin can set oracle",
       "op": "assert // Only admin can set oracle",
       "stack_out": []
     },
-    "416": {
-      "op": "bytec 4 // \"oracle\"",
+    "483": {
+      "op": "bytec 5 // \"oracle\"",
       "defined_out": [
         "\"oracle\""
       ],
@@ -1541,7 +1764,7 @@
         "\"oracle\""
       ]
     },
-    "418": {
+    "485": {
       "op": "frame_dig -1",
       "defined_out": [
         "\"oracle\"",
@@ -1552,15 +1775,15 @@
         "oracle#0 (copy)"
       ]
     },
-    "420": {
+    "487": {
       "op": "app_global_put",
       "stack_out": []
     },
-    "421": {
+    "488": {
       "retsub": true,
       "op": "retsub"
     },
-    "422": {
+    "489": {
       "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.buy_policy_with_payment",
       "params": {
         "zip_code#0": "bytes",
@@ -1576,7 +1799,7 @@
       "stack_in": [],
       "op": "proto 8 1"
     },
-    "425": {
+    "492": {
       "op": "global GroupSize",
       "defined_out": [
         "tmp%0#0"
@@ -1585,7 +1808,7 @@
         "tmp%0#0"
       ]
     },
-    "427": {
+    "494": {
       "op": "intc_3 // 2",
       "defined_out": [
         "2",
@@ -1596,7 +1819,7 @@
         "2"
       ]
     },
-    "428": {
+    "495": {
       "op": "==",
       "defined_out": [
         "tmp%1#0"
@@ -1605,12 +1828,12 @@
         "tmp%1#0"
       ]
     },
-    "429": {
+    "496": {
       "error": "Must be called in group transaction",
       "op": "assert // Must be called in group transaction",
       "stack_out": []
     },
-    "430": {
+    "497": {
       "op": "intc_1 // 0",
       "defined_out": [
         "0"
@@ -1619,8 +1842,8 @@
         "0"
       ]
     },
-    "431": {
-      "op": "bytec_0 // \"next_policy_id\"",
+    "498": {
+      "op": "bytec_1 // \"next_policy_id\"",
       "defined_out": [
         "\"next_policy_id\"",
         "0"
@@ -1630,7 +1853,7 @@
         "\"next_policy_id\""
       ]
     },
-    "432": {
+    "499": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -1641,14 +1864,14 @@
         "maybe_exists%0#0"
       ]
     },
-    "433": {
+    "500": {
       "error": "check self.next_policy_id exists",
       "op": "assert // check self.next_policy_id exists",
       "stack_out": [
         "policy_id#0"
       ]
     },
-    "434": {
+    "501": {
       "op": "dup",
       "defined_out": [
         "policy_id#0",
@@ -1659,7 +1882,7 @@
         "policy_id#0 (copy)"
       ]
     },
-    "435": {
+    "502": {
       "op": "intc_0 // 1",
       "defined_out": [
         "1",
@@ -1672,7 +1895,7 @@
         "1"
       ]
     },
-    "436": {
+    "503": {
       "op": "+",
       "defined_out": [
         "materialized_values%0#0",
@@ -1683,15 +1906,15 @@
         "materialized_values%0#0"
       ]
     },
-    "437": {
-      "op": "bytec_0 // \"next_policy_id\"",
+    "504": {
+      "op": "bytec_1 // \"next_policy_id\"",
       "stack_out": [
         "policy_id#0",
         "materialized_values%0#0",
         "\"next_policy_id\""
       ]
     },
-    "438": {
+    "505": {
       "op": "swap",
       "stack_out": [
         "policy_id#0",
@@ -1699,13 +1922,13 @@
         "materialized_values%0#0"
       ]
     },
-    "439": {
+    "506": {
       "op": "app_global_put",
       "stack_out": [
         "policy_id#0"
       ]
     },
-    "440": {
+    "507": {
       "op": "txn Sender",
       "defined_out": [
         "policy_id#0",
@@ -1716,8 +1939,8 @@
         "tmp%2#0"
       ]
     },
-    "442": {
-      "op": "bytec 5 // 0x0062",
+    "509": {
+      "op": "bytec 7 // 0x0062",
       "defined_out": [
         "0x0062",
         "policy_id#0",
@@ -1729,7 +1952,7 @@
         "0x0062"
       ]
     },
-    "444": {
+    "511": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%2#0",
@@ -1740,7 +1963,7 @@
         "encoded_tuple_buffer%2#0"
       ]
     },
-    "445": {
+    "512": {
       "op": "frame_dig -7",
       "defined_out": [
         "encoded_tuple_buffer%2#0",
@@ -1753,7 +1976,7 @@
         "t0#0 (copy)"
       ]
     },
-    "447": {
+    "514": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%3#0",
@@ -1764,7 +1987,7 @@
         "encoded_tuple_buffer%3#0"
       ]
     },
-    "448": {
+    "515": {
       "op": "frame_dig -6",
       "defined_out": [
         "encoded_tuple_buffer%3#0",
@@ -1777,7 +2000,7 @@
         "t1#0 (copy)"
       ]
     },
-    "450": {
+    "517": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%4#0",
@@ -1788,7 +2011,7 @@
         "encoded_tuple_buffer%4#0"
       ]
     },
-    "451": {
+    "518": {
       "op": "frame_dig -5",
       "defined_out": [
         "cap#0 (copy)",
@@ -1801,7 +2024,7 @@
         "cap#0 (copy)"
       ]
     },
-    "453": {
+    "520": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%5#0",
@@ -1812,7 +2035,7 @@
         "encoded_tuple_buffer%5#0"
       ]
     },
-    "454": {
+    "521": {
       "op": "frame_dig -4",
       "defined_out": [
         "direction#0 (copy)",
@@ -1825,7 +2048,7 @@
         "direction#0 (copy)"
       ]
     },
-    "456": {
+    "523": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%6#0",
@@ -1836,7 +2059,7 @@
         "encoded_tuple_buffer%6#0"
       ]
     },
-    "457": {
+    "524": {
       "op": "frame_dig -3",
       "defined_out": [
         "encoded_tuple_buffer%6#0",
@@ -1849,7 +2072,7 @@
         "threshold#0 (copy)"
       ]
     },
-    "459": {
+    "526": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%7#0",
@@ -1860,7 +2083,7 @@
         "encoded_tuple_buffer%7#0"
       ]
     },
-    "460": {
+    "527": {
       "op": "frame_dig -2",
       "defined_out": [
         "encoded_tuple_buffer%7#0",
@@ -1873,7 +2096,7 @@
         "slope#0 (copy)"
       ]
     },
-    "462": {
+    "529": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%8#0",
@@ -1884,7 +2107,7 @@
         "encoded_tuple_buffer%8#0"
       ]
     },
-    "463": {
+    "530": {
       "op": "frame_dig -1",
       "defined_out": [
         "encoded_tuple_buffer%8#0",
@@ -1897,7 +2120,7 @@
         "fee#0 (copy)"
       ]
     },
-    "465": {
+    "532": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%9#0",
@@ -1908,8 +2131,8 @@
         "encoded_tuple_buffer%9#0"
       ]
     },
-    "466": {
-      "op": "bytec 6 // 0x0000000000000000",
+    "533": {
+      "op": "bytec_2 // 0x0000000000000000",
       "defined_out": [
         "0x0000000000000000",
         "encoded_tuple_buffer%9#0",
@@ -1921,7 +2144,7 @@
         "0x0000000000000000"
       ]
     },
-    "468": {
+    "534": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%10#0",
@@ -1932,7 +2155,7 @@
         "encoded_tuple_buffer%10#0"
       ]
     },
-    "469": {
+    "535": {
       "op": "frame_dig -8",
       "defined_out": [
         "encoded_tuple_buffer%10#0",
@@ -1945,7 +2168,7 @@
         "zip_code#0 (copy)"
       ]
     },
-    "471": {
+    "537": {
       "op": "concat",
       "defined_out": [
         "policy_data#0",
@@ -1956,14 +2179,14 @@
         "policy_data#0"
       ]
     },
-    "472": {
+    "538": {
       "op": "swap",
       "stack_out": [
         "policy_data#0",
         "policy_id#0"
       ]
     },
-    "473": {
+    "539": {
       "op": "itob",
       "defined_out": [
         "encoded_value%0#0",
@@ -1974,8 +2197,8 @@
         "encoded_value%0#0"
       ]
     },
-    "474": {
-      "op": "bytec_2 // \"policies\"",
+    "540": {
+      "op": "bytec_3 // \"policies\"",
       "defined_out": [
         "\"policies\"",
         "encoded_value%0#0",
@@ -1987,7 +2210,7 @@
         "\"policies\""
       ]
     },
-    "475": {
+    "541": {
       "op": "dig 1",
       "defined_out": [
         "\"policies\"",
@@ -2002,7 +2225,7 @@
         "encoded_value%0#0 (copy)"
       ]
     },
-    "477": {
+    "543": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2015,7 +2238,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "478": {
+    "544": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2030,7 +2253,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "479": {
+    "545": {
       "op": "box_del",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2045,7 +2268,7 @@
         "{box_del}"
       ]
     },
-    "480": {
+    "546": {
       "op": "pop",
       "stack_out": [
         "policy_data#0",
@@ -2053,7 +2276,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "481": {
+    "547": {
       "op": "uncover 2",
       "stack_out": [
         "encoded_value%0#0",
@@ -2061,17 +2284,17 @@
         "policy_data#0"
       ]
     },
-    "483": {
+    "549": {
       "op": "box_put",
       "stack_out": [
         "encoded_value%0#0"
       ]
     },
-    "484": {
+    "550": {
       "retsub": true,
       "op": "retsub"
     },
-    "485": {
+    "551": {
       "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.buy_policy",
       "params": {
         "zip_code#0": "bytes",
@@ -2087,7 +2310,7 @@
       "stack_in": [],
       "op": "proto 8 1"
     },
-    "488": {
+    "554": {
       "op": "intc_1 // 0",
       "defined_out": [
         "0"
@@ -2096,8 +2319,8 @@
         "0"
       ]
     },
-    "489": {
-      "op": "bytec_0 // \"next_policy_id\"",
+    "555": {
+      "op": "bytec_1 // \"next_policy_id\"",
       "defined_out": [
         "\"next_policy_id\"",
         "0"
@@ -2107,7 +2330,7 @@
         "\"next_policy_id\""
       ]
     },
-    "490": {
+    "556": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -2118,14 +2341,14 @@
         "maybe_exists%0#0"
       ]
     },
-    "491": {
+    "557": {
       "error": "check self.next_policy_id exists",
       "op": "assert // check self.next_policy_id exists",
       "stack_out": [
         "policy_id#0"
       ]
     },
-    "492": {
+    "558": {
       "op": "dup",
       "defined_out": [
         "policy_id#0",
@@ -2136,7 +2359,7 @@
         "policy_id#0 (copy)"
       ]
     },
-    "493": {
+    "559": {
       "op": "intc_0 // 1",
       "defined_out": [
         "1",
@@ -2149,7 +2372,7 @@
         "1"
       ]
     },
-    "494": {
+    "560": {
       "op": "+",
       "defined_out": [
         "materialized_values%0#0",
@@ -2160,15 +2383,15 @@
         "materialized_values%0#0"
       ]
     },
-    "495": {
-      "op": "bytec_0 // \"next_policy_id\"",
+    "561": {
+      "op": "bytec_1 // \"next_policy_id\"",
       "stack_out": [
         "policy_id#0",
         "materialized_values%0#0",
         "\"next_policy_id\""
       ]
     },
-    "496": {
+    "562": {
       "op": "swap",
       "stack_out": [
         "policy_id#0",
@@ -2176,13 +2399,13 @@
         "materialized_values%0#0"
       ]
     },
-    "497": {
+    "563": {
       "op": "app_global_put",
       "stack_out": [
         "policy_id#0"
       ]
     },
-    "498": {
+    "564": {
       "op": "txn Sender",
       "defined_out": [
         "policy_id#0",
@@ -2193,8 +2416,8 @@
         "tmp%0#0"
       ]
     },
-    "500": {
-      "op": "bytec 5 // 0x0062",
+    "566": {
+      "op": "bytec 7 // 0x0062",
       "defined_out": [
         "0x0062",
         "policy_id#0",
@@ -2206,7 +2429,7 @@
         "0x0062"
       ]
     },
-    "502": {
+    "568": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%2#0",
@@ -2217,7 +2440,7 @@
         "encoded_tuple_buffer%2#0"
       ]
     },
-    "503": {
+    "569": {
       "op": "frame_dig -7",
       "defined_out": [
         "encoded_tuple_buffer%2#0",
@@ -2230,7 +2453,7 @@
         "t0#0 (copy)"
       ]
     },
-    "505": {
+    "571": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%3#0",
@@ -2241,7 +2464,7 @@
         "encoded_tuple_buffer%3#0"
       ]
     },
-    "506": {
+    "572": {
       "op": "frame_dig -6",
       "defined_out": [
         "encoded_tuple_buffer%3#0",
@@ -2254,7 +2477,7 @@
         "t1#0 (copy)"
       ]
     },
-    "508": {
+    "574": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%4#0",
@@ -2265,7 +2488,7 @@
         "encoded_tuple_buffer%4#0"
       ]
     },
-    "509": {
+    "575": {
       "op": "frame_dig -5",
       "defined_out": [
         "cap#0 (copy)",
@@ -2278,7 +2501,7 @@
         "cap#0 (copy)"
       ]
     },
-    "511": {
+    "577": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%5#0",
@@ -2289,7 +2512,7 @@
         "encoded_tuple_buffer%5#0"
       ]
     },
-    "512": {
+    "578": {
       "op": "frame_dig -4",
       "defined_out": [
         "direction#0 (copy)",
@@ -2302,7 +2525,7 @@
         "direction#0 (copy)"
       ]
     },
-    "514": {
+    "580": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%6#0",
@@ -2313,7 +2536,7 @@
         "encoded_tuple_buffer%6#0"
       ]
     },
-    "515": {
+    "581": {
       "op": "frame_dig -3",
       "defined_out": [
         "encoded_tuple_buffer%6#0",
@@ -2326,7 +2549,7 @@
         "threshold#0 (copy)"
       ]
     },
-    "517": {
+    "583": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%7#0",
@@ -2337,7 +2560,7 @@
         "encoded_tuple_buffer%7#0"
       ]
     },
-    "518": {
+    "584": {
       "op": "frame_dig -2",
       "defined_out": [
         "encoded_tuple_buffer%7#0",
@@ -2350,7 +2573,7 @@
         "slope#0 (copy)"
       ]
     },
-    "520": {
+    "586": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%8#0",
@@ -2361,7 +2584,7 @@
         "encoded_tuple_buffer%8#0"
       ]
     },
-    "521": {
+    "587": {
       "op": "frame_dig -1",
       "defined_out": [
         "encoded_tuple_buffer%8#0",
@@ -2374,7 +2597,7 @@
         "fee#0 (copy)"
       ]
     },
-    "523": {
+    "589": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%9#0",
@@ -2385,8 +2608,8 @@
         "encoded_tuple_buffer%9#0"
       ]
     },
-    "524": {
-      "op": "bytec 6 // 0x0000000000000000",
+    "590": {
+      "op": "bytec_2 // 0x0000000000000000",
       "defined_out": [
         "0x0000000000000000",
         "encoded_tuple_buffer%9#0",
@@ -2398,7 +2621,7 @@
         "0x0000000000000000"
       ]
     },
-    "526": {
+    "591": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%10#0",
@@ -2409,7 +2632,7 @@
         "encoded_tuple_buffer%10#0"
       ]
     },
-    "527": {
+    "592": {
       "op": "frame_dig -8",
       "defined_out": [
         "encoded_tuple_buffer%10#0",
@@ -2422,7 +2645,7 @@
         "zip_code#0 (copy)"
       ]
     },
-    "529": {
+    "594": {
       "op": "concat",
       "defined_out": [
         "policy_data#0",
@@ -2433,14 +2656,14 @@
         "policy_data#0"
       ]
     },
-    "530": {
+    "595": {
       "op": "swap",
       "stack_out": [
         "policy_data#0",
         "policy_id#0"
       ]
     },
-    "531": {
+    "596": {
       "op": "itob",
       "defined_out": [
         "encoded_value%0#0",
@@ -2451,8 +2674,8 @@
         "encoded_value%0#0"
       ]
     },
-    "532": {
-      "op": "bytec_2 // \"policies\"",
+    "597": {
+      "op": "bytec_3 // \"policies\"",
       "defined_out": [
         "\"policies\"",
         "encoded_value%0#0",
@@ -2464,7 +2687,7 @@
         "\"policies\""
       ]
     },
-    "533": {
+    "598": {
       "op": "dig 1",
       "defined_out": [
         "\"policies\"",
@@ -2479,7 +2702,7 @@
         "encoded_value%0#0 (copy)"
       ]
     },
-    "535": {
+    "600": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2492,7 +2715,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "536": {
+    "601": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2507,7 +2730,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "537": {
+    "602": {
       "op": "box_del",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2522,7 +2745,7 @@
         "{box_del}"
       ]
     },
-    "538": {
+    "603": {
       "op": "pop",
       "stack_out": [
         "policy_data#0",
@@ -2530,7 +2753,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "539": {
+    "604": {
       "op": "uncover 2",
       "stack_out": [
         "encoded_value%0#0",
@@ -2538,17 +2761,17 @@
         "policy_data#0"
       ]
     },
-    "541": {
+    "606": {
       "op": "box_put",
       "stack_out": [
         "encoded_value%0#0"
       ]
     },
-    "542": {
+    "607": {
       "retsub": true,
       "op": "retsub"
     },
-    "543": {
+    "608": {
       "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.oracle_settle",
       "params": {
         "policy_id#0": "bytes",
@@ -2558,7 +2781,7 @@
       "stack_in": [],
       "op": "proto 2 1"
     },
-    "546": {
+    "611": {
       "op": "txn Sender",
       "defined_out": [
         "tmp%0#0"
@@ -2567,7 +2790,7 @@
         "tmp%0#0"
       ]
     },
-    "548": {
+    "613": {
       "op": "intc_1 // 0",
       "defined_out": [
         "0",
@@ -2578,8 +2801,8 @@
         "0"
       ]
     },
-    "549": {
-      "op": "bytec 4 // \"oracle\"",
+    "614": {
+      "op": "bytec 5 // \"oracle\"",
       "defined_out": [
         "\"oracle\"",
         "0",
@@ -2591,7 +2814,7 @@
         "\"oracle\""
       ]
     },
-    "551": {
+    "616": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -2604,7 +2827,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "552": {
+    "617": {
       "error": "check self.oracle exists",
       "op": "assert // check self.oracle exists",
       "stack_out": [
@@ -2612,7 +2835,7 @@
         "maybe_value%0#0"
       ]
     },
-    "553": {
+    "618": {
       "op": "==",
       "defined_out": [
         "tmp%1#0"
@@ -2621,12 +2844,12 @@
         "tmp%1#0"
       ]
     },
-    "554": {
+    "619": {
       "error": "Only oracle",
       "op": "assert // Only oracle",
       "stack_out": []
     },
-    "555": {
+    "620": {
       "op": "frame_dig -2",
       "defined_out": [
         "policy_id#0 (copy)"
@@ -2635,7 +2858,7 @@
         "policy_id#0 (copy)"
       ]
     },
-    "557": {
+    "622": {
       "op": "btoi",
       "defined_out": [
         "pid#0"
@@ -2644,7 +2867,7 @@
         "pid#0"
       ]
     },
-    "558": {
+    "623": {
       "op": "itob",
       "defined_out": [
         "encoded_value%0#0"
@@ -2653,8 +2876,8 @@
         "encoded_value%0#0"
       ]
     },
-    "559": {
-      "op": "bytec_2 // \"policies\"",
+    "624": {
+      "op": "bytec_3 // \"policies\"",
       "defined_out": [
         "\"policies\"",
         "encoded_value%0#0"
@@ -2664,14 +2887,14 @@
         "\"policies\""
       ]
     },
-    "560": {
+    "625": {
       "op": "swap",
       "stack_out": [
         "\"policies\"",
         "encoded_value%0#0"
       ]
     },
-    "561": {
+    "626": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0"
@@ -2680,7 +2903,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "562": {
+    "627": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0"
@@ -2690,7 +2913,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "563": {
+    "628": {
       "op": "box_get",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2703,14 +2926,14 @@
         "maybe_exists%1#0"
       ]
     },
-    "564": {
+    "629": {
       "op": "pop",
       "stack_out": [
         "box_prefixed_key%0#0",
         "policy_data#0"
       ]
     },
-    "565": {
+    "630": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2722,7 +2945,7 @@
         "policy_data#0"
       ]
     },
-    "566": {
+    "631": {
       "op": "pushint 90 // 90",
       "defined_out": [
         "90",
@@ -2736,7 +2959,7 @@
         "90"
       ]
     },
-    "568": {
+    "633": {
       "op": "extract_uint64",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2749,7 +2972,7 @@
         "tmp%3#0"
       ]
     },
-    "569": {
+    "634": {
       "op": "!",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2762,7 +2985,7 @@
         "tmp%4#0"
       ]
     },
-    "570": {
+    "635": {
       "error": "Policy already settled",
       "op": "assert // Policy already settled",
       "stack_out": [
@@ -2770,10 +2993,10 @@
         "policy_data#0"
       ]
     },
-    "571": {
+    "636": {
       "op": "intc_1 // 0"
     },
-    "572": {
+    "637": {
       "op": "frame_dig -1",
       "defined_out": [
         "approved#0 (copy)",
@@ -2788,7 +3011,7 @@
         "approved#0 (copy)"
       ]
     },
-    "574": {
+    "639": {
       "op": "btoi",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2803,7 +3026,7 @@
         "tmp%5#0"
       ]
     },
-    "575": {
+    "640": {
       "op": "intc_0 // 1",
       "defined_out": [
         "1",
@@ -2820,7 +3043,7 @@
         "1"
       ]
     },
-    "576": {
+    "641": {
       "op": "==",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -2835,7 +3058,7 @@
         "tmp%6#0"
       ]
     },
-    "577": {
+    "642": {
       "op": "bz oracle_settle_after_if_else@2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -2843,7 +3066,7 @@
         "payout#0"
       ]
     },
-    "580": {
+    "645": {
       "op": "frame_dig 1",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -2852,7 +3075,7 @@
         "policy_data#0"
       ]
     },
-    "582": {
+    "647": {
       "op": "pushint 50 // 50",
       "defined_out": [
         "50",
@@ -2868,7 +3091,7 @@
         "50"
       ]
     },
-    "584": {
+    "649": {
       "op": "extract_uint64",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -2877,7 +3100,7 @@
         "payout#0"
       ]
     },
-    "585": {
+    "650": {
       "op": "frame_bury 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -2885,7 +3108,7 @@
         "payout#0"
       ]
     },
-    "587": {
+    "652": {
       "block": "oracle_settle_after_if_else@2",
       "stack_in": [
         "box_prefixed_key%0#0",
@@ -2903,7 +3126,7 @@
         "payout#0"
       ]
     },
-    "589": {
+    "654": {
       "op": "bz oracle_settle_after_if_else@5",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -2911,10 +3134,10 @@
         "payout#0"
       ]
     },
-    "592": {
+    "657": {
       "op": "itxn_begin"
     },
-    "593": {
+    "658": {
       "op": "frame_dig 1",
       "defined_out": [
         "payout#0",
@@ -2927,7 +3150,7 @@
         "policy_data#0"
       ]
     },
-    "595": {
+    "660": {
       "error": "Index access is out of bounds",
       "op": "extract 0 32 // on error: Index access is out of bounds",
       "defined_out": [
@@ -2942,7 +3165,7 @@
         "reinterpret_bytes[32]%0#0"
       ]
     },
-    "598": {
+    "663": {
       "op": "frame_dig 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -2952,7 +3175,7 @@
         "payout#0"
       ]
     },
-    "600": {
+    "665": {
       "op": "itxn_field Amount",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -2961,7 +3184,7 @@
         "reinterpret_bytes[32]%0#0"
       ]
     },
-    "602": {
+    "667": {
       "op": "itxn_field Receiver",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -2969,7 +3192,7 @@
         "payout#0"
       ]
     },
-    "604": {
+    "669": {
       "op": "intc_0 // pay",
       "defined_out": [
         "pay",
@@ -2983,7 +3206,7 @@
         "pay"
       ]
     },
-    "605": {
+    "670": {
       "op": "itxn_field TypeEnum",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -2991,7 +3214,7 @@
         "payout#0"
       ]
     },
-    "607": {
+    "672": {
       "op": "intc 4 // 1000",
       "defined_out": [
         "1000",
@@ -3005,7 +3228,7 @@
         "1000"
       ]
     },
-    "609": {
+    "674": {
       "op": "itxn_field Fee",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3013,10 +3236,10 @@
         "payout#0"
       ]
     },
-    "611": {
+    "676": {
       "op": "itxn_submit"
     },
-    "612": {
+    "677": {
       "block": "oracle_settle_after_if_else@5",
       "stack_in": [
         "box_prefixed_key%0#0",
@@ -3034,8 +3257,8 @@
         "policy_data#0"
       ]
     },
-    "614": {
-      "op": "pushbytes 0x0000000000000001",
+    "679": {
+      "op": "bytec 6 // 0x0000000000000001",
       "defined_out": [
         "0x0000000000000001",
         "policy_data#0"
@@ -3048,7 +3271,7 @@
         "0x0000000000000001"
       ]
     },
-    "624": {
+    "681": {
       "op": "replace2 90",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3057,7 +3280,7 @@
         "policy_data#0"
       ]
     },
-    "626": {
+    "683": {
       "op": "frame_dig 0",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3071,7 +3294,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "628": {
+    "685": {
       "op": "dup",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3087,7 +3310,7 @@
         "box_prefixed_key%0#0 (copy)"
       ]
     },
-    "629": {
+    "686": {
       "op": "box_del",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3103,7 +3326,7 @@
         "{box_del}"
       ]
     },
-    "630": {
+    "687": {
       "op": "pop",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3113,7 +3336,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "631": {
+    "688": {
       "op": "swap",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3123,7 +3346,7 @@
         "policy_data#0"
       ]
     },
-    "632": {
+    "689": {
       "op": "box_put",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3131,7 +3354,7 @@
         "payout#0"
       ]
     },
-    "633": {
+    "690": {
       "op": "frame_dig 2",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3145,7 +3368,7 @@
         "payout#0"
       ]
     },
-    "635": {
+    "692": {
       "op": "itob",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3160,14 +3383,320 @@
         "val_as_bytes%0#0"
       ]
     },
-    "636": {
+    "693": {
       "op": "frame_bury 0"
     },
-    "638": {
+    "695": {
       "retsub": true,
       "op": "retsub"
     },
-    "639": {
+    "696": {
+      "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.dispute_settlement",
+      "params": {
+        "policy_id#0": "bytes",
+        "reason#0": "bytes"
+      },
+      "block": "dispute_settlement",
+      "stack_in": [],
+      "op": "proto 2 1"
+    },
+    "699": {
+      "op": "frame_dig -2",
+      "defined_out": [
+        "policy_id#0 (copy)"
+      ],
+      "stack_out": [
+        "policy_id#0 (copy)"
+      ]
+    },
+    "701": {
+      "op": "btoi",
+      "defined_out": [
+        "pid#0"
+      ],
+      "stack_out": [
+        "pid#0"
+      ]
+    },
+    "702": {
+      "op": "txn Sender",
+      "defined_out": [
+        "caller#0",
+        "pid#0"
+      ],
+      "stack_out": [
+        "pid#0",
+        "caller#0"
+      ]
+    },
+    "704": {
+      "op": "swap",
+      "defined_out": [
+        "caller#0",
+        "pid#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "pid#0"
+      ]
+    },
+    "705": {
+      "op": "itob",
+      "defined_out": [
+        "caller#0",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "encoded_value%0#0"
+      ]
+    },
+    "706": {
+      "op": "bytec_3 // \"policies\"",
+      "defined_out": [
+        "\"policies\"",
+        "caller#0",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "encoded_value%0#0",
+        "\"policies\""
+      ]
+    },
+    "707": {
+      "op": "swap",
+      "stack_out": [
+        "caller#0",
+        "\"policies\"",
+        "encoded_value%0#0"
+      ]
+    },
+    "708": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "caller#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "709": {
+      "op": "box_get",
+      "defined_out": [
+        "caller#0",
+        "exists#0",
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "exists#0"
+      ]
+    },
+    "710": {
+      "op": "bnz dispute_settlement_after_if_else@2",
+      "stack_out": [
+        "caller#0",
+        "policy_data#0"
+      ]
+    },
+    "713": {
+      "op": "bytec_2 // 0x0000000000000000",
+      "defined_out": [
+        "0x0000000000000000",
+        "caller#0",
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "0x0000000000000000"
+      ]
+    },
+    "714": {
+      "op": "frame_bury 0"
+    },
+    "716": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "717": {
+      "block": "dispute_settlement_after_if_else@2",
+      "stack_in": [
+        "caller#0",
+        "policy_data#0"
+      ],
+      "op": "frame_dig 1",
+      "defined_out": [
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "policy_data#0"
+      ]
+    },
+    "719": {
+      "error": "Index access is out of bounds",
+      "op": "extract 0 32 // on error: Index access is out of bounds",
+      "defined_out": [
+        "policy_data#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "tmp%0#0"
+      ]
+    },
+    "722": {
+      "op": "frame_dig 0",
+      "defined_out": [
+        "caller#0",
+        "policy_data#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "tmp%0#0",
+        "caller#0"
+      ]
+    },
+    "724": {
+      "op": "!=",
+      "defined_out": [
+        "caller#0",
+        "policy_data#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "tmp%1#0"
+      ]
+    },
+    "725": {
+      "op": "bz dispute_settlement_after_if_else@4",
+      "stack_out": [
+        "caller#0",
+        "policy_data#0"
+      ]
+    },
+    "728": {
+      "op": "bytec_2 // 0x0000000000000000",
+      "defined_out": [
+        "0x0000000000000000",
+        "caller#0",
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "0x0000000000000000"
+      ]
+    },
+    "729": {
+      "op": "frame_bury 0"
+    },
+    "731": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "732": {
+      "block": "dispute_settlement_after_if_else@4",
+      "stack_in": [
+        "caller#0",
+        "policy_data#0"
+      ],
+      "op": "frame_dig 1",
+      "defined_out": [
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "policy_data#0"
+      ]
+    },
+    "734": {
+      "op": "pushint 90 // 90",
+      "defined_out": [
+        "90",
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "policy_data#0",
+        "90"
+      ]
+    },
+    "736": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "policy_data#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "tmp%3#0"
+      ]
+    },
+    "737": {
+      "op": "bnz dispute_settlement_after_if_else@6",
+      "stack_out": [
+        "caller#0",
+        "policy_data#0"
+      ]
+    },
+    "740": {
+      "op": "bytec_2 // 0x0000000000000000",
+      "defined_out": [
+        "0x0000000000000000",
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "0x0000000000000000"
+      ]
+    },
+    "741": {
+      "op": "frame_bury 0"
+    },
+    "743": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "744": {
+      "block": "dispute_settlement_after_if_else@6",
+      "stack_in": [
+        "caller#0",
+        "policy_data#0"
+      ],
+      "op": "bytec 6 // 0x0000000000000001",
+      "defined_out": [
+        "0x0000000000000001"
+      ],
+      "stack_out": [
+        "caller#0",
+        "policy_data#0",
+        "0x0000000000000001"
+      ]
+    },
+    "746": {
+      "op": "frame_bury 0"
+    },
+    "748": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "749": {
       "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.get_policy",
       "params": {
         "policy_id#0": "bytes"
@@ -3176,7 +3705,7 @@
       "stack_in": [],
       "op": "proto 1 1"
     },
-    "642": {
+    "752": {
       "op": "frame_dig -1",
       "defined_out": [
         "policy_id#0 (copy)"
@@ -3185,7 +3714,7 @@
         "policy_id#0 (copy)"
       ]
     },
-    "644": {
+    "754": {
       "op": "btoi",
       "defined_out": [
         "materialized_values%0#0"
@@ -3194,7 +3723,7 @@
         "materialized_values%0#0"
       ]
     },
-    "645": {
+    "755": {
       "op": "itob",
       "defined_out": [
         "encoded_value%0#0"
@@ -3203,8 +3732,8 @@
         "encoded_value%0#0"
       ]
     },
-    "646": {
-      "op": "bytec_2 // \"policies\"",
+    "756": {
+      "op": "bytec_3 // \"policies\"",
       "defined_out": [
         "\"policies\"",
         "encoded_value%0#0"
@@ -3214,14 +3743,14 @@
         "\"policies\""
       ]
     },
-    "647": {
+    "757": {
       "op": "swap",
       "stack_out": [
         "\"policies\"",
         "encoded_value%0#0"
       ]
     },
-    "648": {
+    "758": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0"
@@ -3230,7 +3759,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "649": {
+    "759": {
       "op": "box_get",
       "defined_out": [
         "maybe_exists%0#0",
@@ -3241,17 +3770,17 @@
         "maybe_exists%0#0"
       ]
     },
-    "650": {
+    "760": {
       "op": "pop",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "651": {
+    "761": {
       "retsub": true,
       "op": "retsub"
     },
-    "652": {
+    "762": {
       "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.get_policies_by_owner",
       "params": {
         "owner#0": "bytes"
@@ -3260,20 +3789,20 @@
       "stack_in": [],
       "op": "proto 1 1"
     },
-    "655": {
+    "765": {
       "op": "intc_1 // 0",
       "stack_out": [
         "box_prefixed_key%0#0"
       ]
     },
-    "656": {
+    "766": {
       "op": "pushbytes \"\"",
       "stack_out": [
         "box_prefixed_key%0#0",
         "count#10"
       ]
     },
-    "658": {
+    "768": {
       "op": "dup",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3281,14 +3810,14 @@
         "first_policy_id#10"
       ]
     },
-    "659": {
+    "769": {
       "op": "intc_1 // 0"
     },
-    "660": {
+    "770": {
       "op": "dupn 2"
     },
-    "662": {
-      "op": "bytec_0 // \"next_policy_id\"",
+    "772": {
+      "op": "bytec_1 // \"next_policy_id\"",
       "defined_out": [
         "\"next_policy_id\"",
         "0",
@@ -3305,7 +3834,7 @@
         "\"next_policy_id\""
       ]
     },
-    "663": {
+    "773": {
       "op": "app_global_get_ex",
       "defined_out": [
         "count#0",
@@ -3323,7 +3852,7 @@
         "maybe_exists%0#0"
       ]
     },
-    "664": {
+    "774": {
       "error": "check self.next_policy_id exists",
       "op": "assert // check self.next_policy_id exists",
       "stack_out": [
@@ -3335,7 +3864,7 @@
         "maybe_value%0#0"
       ]
     },
-    "665": {
+    "775": {
       "op": "intc_0 // 1",
       "defined_out": [
         "count#0",
@@ -3353,7 +3882,7 @@
         "i#0"
       ]
     },
-    "666": {
+    "776": {
       "block": "get_policies_by_owner_for_header@1",
       "stack_in": [
         "box_prefixed_key%0#0",
@@ -3379,7 +3908,7 @@
         "i#0"
       ]
     },
-    "668": {
+    "778": {
       "op": "frame_dig 5",
       "defined_out": [
         "i#0",
@@ -3397,7 +3926,7 @@
         "maybe_value%0#0"
       ]
     },
-    "670": {
+    "780": {
       "op": "<",
       "defined_out": [
         "continue_looping%0#0",
@@ -3415,7 +3944,7 @@
         "continue_looping%0#0"
       ]
     },
-    "671": {
+    "781": {
       "op": "bz get_policies_by_owner_after_for@10",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3427,7 +3956,7 @@
         "i#0"
       ]
     },
-    "674": {
+    "784": {
       "op": "frame_dig 6",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3440,7 +3969,7 @@
         "i#0"
       ]
     },
-    "676": {
+    "786": {
       "op": "itob",
       "defined_out": [
         "encoded_value%0#0",
@@ -3458,8 +3987,8 @@
         "encoded_value%0#0"
       ]
     },
-    "677": {
-      "op": "bytec_2 // \"policies\"",
+    "787": {
+      "op": "bytec_3 // \"policies\"",
       "defined_out": [
         "\"policies\"",
         "encoded_value%0#0",
@@ -3478,7 +4007,7 @@
         "\"policies\""
       ]
     },
-    "678": {
+    "788": {
       "op": "swap",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3492,7 +4021,7 @@
         "encoded_value%0#0"
       ]
     },
-    "679": {
+    "789": {
       "op": "concat",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3510,7 +4039,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "680": {
+    "790": {
       "op": "dup",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3524,7 +4053,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "681": {
+    "791": {
       "op": "frame_bury 0",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3542,7 +4071,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "683": {
+    "793": {
       "op": "box_get",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3563,7 +4092,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "684": {
+    "794": {
       "op": "bury 1",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3576,7 +4105,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "686": {
+    "796": {
       "op": "frame_dig 4",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3597,7 +4126,7 @@
         "first_policy_id#10"
       ]
     },
-    "688": {
+    "798": {
       "op": "frame_bury 2",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3617,7 +4146,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "690": {
+    "800": {
       "op": "frame_dig 3",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3639,7 +4168,7 @@
         "count#10"
       ]
     },
-    "692": {
+    "802": {
       "op": "frame_bury 1",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3660,7 +4189,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "694": {
+    "804": {
       "op": "bz get_policies_by_owner_after_if_else@8",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3672,7 +4201,7 @@
         "i#0"
       ]
     },
-    "697": {
+    "807": {
       "op": "frame_dig 0",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3685,7 +4214,7 @@
         "box_prefixed_key%0#0"
       ]
     },
-    "699": {
+    "809": {
       "op": "box_get",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3708,7 +4237,7 @@
         "maybe_exists%2#0"
       ]
     },
-    "700": {
+    "810": {
       "op": "pop",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3721,7 +4250,7 @@
         "policy_data#0"
       ]
     },
-    "701": {
+    "811": {
       "error": "Index access is out of bounds",
       "op": "extract 0 32 // on error: Index access is out of bounds",
       "defined_out": [
@@ -3743,7 +4272,7 @@
         "reinterpret_bytes[32]%0#0"
       ]
     },
-    "704": {
+    "814": {
       "op": "frame_dig -1",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3766,7 +4295,7 @@
         "owner#0 (copy)"
       ]
     },
-    "706": {
+    "816": {
       "op": "==",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3787,7 +4316,7 @@
         "tmp%0#0"
       ]
     },
-    "707": {
+    "817": {
       "op": "frame_dig 4",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3801,7 +4330,7 @@
         "first_policy_id#10"
       ]
     },
-    "709": {
+    "819": {
       "op": "frame_bury 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3814,7 +4343,7 @@
         "tmp%0#0"
       ]
     },
-    "711": {
+    "821": {
       "op": "frame_dig 3",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3828,7 +4357,7 @@
         "count#10"
       ]
     },
-    "713": {
+    "823": {
       "op": "frame_bury 1",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3841,7 +4370,7 @@
         "tmp%0#0"
       ]
     },
-    "715": {
+    "825": {
       "op": "bz get_policies_by_owner_after_if_else@7",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3853,7 +4382,7 @@
         "i#0"
       ]
     },
-    "718": {
+    "828": {
       "op": "frame_dig 3",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3874,7 +4403,7 @@
         "count#0"
       ]
     },
-    "720": {
+    "830": {
       "op": "intc_0 // 1",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3888,7 +4417,7 @@
         "1"
       ]
     },
-    "721": {
+    "831": {
       "op": "+",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3901,7 +4430,7 @@
         "count#0"
       ]
     },
-    "722": {
+    "832": {
       "op": "frame_bury 3",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3913,7 +4442,7 @@
         "i#0"
       ]
     },
-    "724": {
+    "834": {
       "op": "frame_dig 4",
       "defined_out": [
         "box_prefixed_key%0#0",
@@ -3935,7 +4464,7 @@
         "first_policy_id#0"
       ]
     },
-    "726": {
+    "836": {
       "op": "dup",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3949,7 +4478,7 @@
         "first_policy_id#10"
       ]
     },
-    "727": {
+    "837": {
       "op": "frame_bury 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3962,7 +4491,7 @@
         "first_policy_id#0"
       ]
     },
-    "729": {
+    "839": {
       "op": "bnz get_policies_by_owner_after_if_else@6",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3974,7 +4503,7 @@
         "i#0"
       ]
     },
-    "732": {
+    "842": {
       "op": "frame_dig 6",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3987,7 +4516,7 @@
         "first_policy_id#10"
       ]
     },
-    "734": {
+    "844": {
       "op": "frame_bury 2",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -3999,7 +4528,7 @@
         "i#0"
       ]
     },
-    "736": {
+    "846": {
       "block": "get_policies_by_owner_after_if_else@6",
       "stack_in": [
         "box_prefixed_key%0#0",
@@ -4025,7 +4554,7 @@
         "count#10"
       ]
     },
-    "738": {
+    "848": {
       "op": "frame_bury 1",
       "defined_out": [
         "count#10"
@@ -4040,7 +4569,7 @@
         "i#0"
       ]
     },
-    "740": {
+    "850": {
       "block": "get_policies_by_owner_after_if_else@7",
       "stack_in": [
         "box_prefixed_key%0#0",
@@ -4059,7 +4588,7 @@
         "first_policy_id#10"
       ]
     },
-    "743": {
+    "853": {
       "block": "get_policies_by_owner_after_if_else@8",
       "stack_in": [
         "box_prefixed_key%0#0",
@@ -4085,7 +4614,7 @@
         "first_policy_id#0"
       ]
     },
-    "745": {
+    "855": {
       "op": "frame_bury 4",
       "defined_out": [
         "first_policy_id#0"
@@ -4100,7 +4629,7 @@
         "i#0"
       ]
     },
-    "747": {
+    "857": {
       "op": "frame_dig 1",
       "defined_out": [
         "count#0",
@@ -4117,7 +4646,7 @@
         "count#0"
       ]
     },
-    "749": {
+    "859": {
       "op": "frame_bury 3",
       "defined_out": [
         "count#0",
@@ -4133,7 +4662,7 @@
         "i#0"
       ]
     },
-    "751": {
+    "861": {
       "op": "frame_dig 6",
       "defined_out": [
         "count#0",
@@ -4151,7 +4680,7 @@
         "i#0"
       ]
     },
-    "753": {
+    "863": {
       "op": "intc_0 // 1",
       "defined_out": [
         "1",
@@ -4171,7 +4700,7 @@
         "1"
       ]
     },
-    "754": {
+    "864": {
       "op": "+",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -4184,7 +4713,7 @@
         "i#0"
       ]
     },
-    "755": {
+    "865": {
       "op": "frame_bury 6",
       "stack_out": [
         "box_prefixed_key%0#0",
@@ -4196,10 +4725,10 @@
         "i#0"
       ]
     },
-    "757": {
+    "867": {
       "op": "b get_policies_by_owner_for_header@1"
     },
-    "760": {
+    "870": {
       "block": "get_policies_by_owner_after_for@10",
       "stack_in": [
         "box_prefixed_key%0#0",
@@ -4225,7 +4754,7 @@
         "count#0"
       ]
     },
-    "762": {
+    "872": {
       "op": "itob",
       "defined_out": [
         "count#0",
@@ -4242,7 +4771,7 @@
         "val_as_bytes%0#0"
       ]
     },
-    "763": {
+    "873": {
       "op": "frame_dig 4",
       "defined_out": [
         "count#0",
@@ -4261,7 +4790,7 @@
         "first_policy_id#0"
       ]
     },
-    "765": {
+    "875": {
       "op": "itob",
       "defined_out": [
         "count#0",
@@ -4281,7 +4810,7 @@
         "val_as_bytes%1#0"
       ]
     },
-    "766": {
+    "876": {
       "op": "concat",
       "defined_out": [
         "count#0",
@@ -4299,14 +4828,14 @@
         "encoded_tuple_buffer%2#0"
       ]
     },
-    "767": {
+    "877": {
       "op": "frame_bury 0"
     },
-    "769": {
+    "879": {
       "retsub": true,
       "op": "retsub"
     },
-    "770": {
+    "880": {
       "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.get_policy_count",
       "params": {},
       "block": "get_policy_count",
@@ -4319,8 +4848,8 @@
         "0"
       ]
     },
-    "771": {
-      "op": "bytec_0 // \"next_policy_id\"",
+    "881": {
+      "op": "bytec_1 // \"next_policy_id\"",
       "defined_out": [
         "\"next_policy_id\"",
         "0"
@@ -4330,7 +4859,7 @@
         "\"next_policy_id\""
       ]
     },
-    "772": {
+    "882": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -4341,14 +4870,14 @@
         "maybe_exists%0#0"
       ]
     },
-    "773": {
+    "883": {
       "error": "check self.next_policy_id exists",
       "op": "assert // check self.next_policy_id exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "774": {
+    "884": {
       "op": "intc_0 // 1",
       "defined_out": [
         "1",
@@ -4359,7 +4888,7 @@
         "1"
       ]
     },
-    "775": {
+    "885": {
       "op": "-",
       "defined_out": [
         "to_encode%0#0"
@@ -4368,7 +4897,7 @@
         "to_encode%0#0"
       ]
     },
-    "776": {
+    "886": {
       "op": "itob",
       "defined_out": [
         "val_as_bytes%0#0"
@@ -4377,11 +4906,11 @@
         "val_as_bytes%0#0"
       ]
     },
-    "777": {
+    "887": {
       "retsub": true,
       "op": "retsub"
     },
-    "778": {
+    "888": {
       "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.calculate_fee",
       "params": {
         "cap#0": "bytes",
@@ -4393,7 +4922,7 @@
       "stack_in": [],
       "op": "proto 4 1"
     },
-    "781": {
+    "891": {
       "op": "frame_dig -4",
       "defined_out": [
         "cap#0 (copy)"
@@ -4402,7 +4931,7 @@
         "cap#0 (copy)"
       ]
     },
-    "783": {
+    "893": {
       "op": "btoi",
       "defined_out": [
         "tmp%0#0"
@@ -4411,7 +4940,7 @@
         "tmp%0#0"
       ]
     },
-    "784": {
+    "894": {
       "op": "intc_2 // 100",
       "defined_out": [
         "100",
@@ -4422,7 +4951,7 @@
         "100"
       ]
     },
-    "785": {
+    "895": {
       "op": "/",
       "defined_out": [
         "base_fee#0"
@@ -4431,7 +4960,7 @@
         "base_fee#0"
       ]
     },
-    "786": {
+    "896": {
       "op": "frame_dig -3",
       "defined_out": [
         "base_fee#0",
@@ -4442,7 +4971,7 @@
         "risk_score#0 (copy)"
       ]
     },
-    "788": {
+    "898": {
       "op": "btoi",
       "defined_out": [
         "base_fee#0",
@@ -4453,7 +4982,7 @@
         "tmp%1#0"
       ]
     },
-    "789": {
+    "899": {
       "op": "intc_3 // 2",
       "defined_out": [
         "2",
@@ -4466,7 +4995,7 @@
         "2"
       ]
     },
-    "790": {
+    "900": {
       "op": "/",
       "defined_out": [
         "base_fee#0",
@@ -4477,7 +5006,7 @@
         "tmp%2#0"
       ]
     },
-    "791": {
+    "901": {
       "op": "intc_2 // 100",
       "stack_out": [
         "base_fee#0",
@@ -4485,7 +5014,7 @@
         "100"
       ]
     },
-    "792": {
+    "902": {
       "op": "+",
       "defined_out": [
         "base_fee#0",
@@ -4496,7 +5025,7 @@
         "risk_multiplier#0"
       ]
     },
-    "793": {
+    "903": {
       "op": "frame_dig -2",
       "defined_out": [
         "base_fee#0",
@@ -4509,7 +5038,7 @@
         "uncertainty#0 (copy)"
       ]
     },
-    "795": {
+    "905": {
       "op": "btoi",
       "defined_out": [
         "base_fee#0",
@@ -4522,7 +5051,7 @@
         "tmp%3#0"
       ]
     },
-    "796": {
+    "906": {
       "op": "intc_2 // 100",
       "stack_out": [
         "base_fee#0",
@@ -4531,7 +5060,7 @@
         "100"
       ]
     },
-    "797": {
+    "907": {
       "op": "+",
       "defined_out": [
         "base_fee#0",
@@ -4544,7 +5073,7 @@
         "uncertainty_multiplier#0"
       ]
     },
-    "798": {
+    "908": {
       "op": "frame_dig -1",
       "defined_out": [
         "base_fee#0",
@@ -4559,7 +5088,7 @@
         "duration_days#0 (copy)"
       ]
     },
-    "800": {
+    "910": {
       "op": "btoi",
       "defined_out": [
         "base_fee#0",
@@ -4574,7 +5103,7 @@
         "tmp%4#0"
       ]
     },
-    "801": {
+    "911": {
       "op": "intc_3 // 2",
       "stack_out": [
         "base_fee#0",
@@ -4584,7 +5113,7 @@
         "2"
       ]
     },
-    "802": {
+    "912": {
       "op": "/",
       "defined_out": [
         "base_fee#0",
@@ -4599,7 +5128,7 @@
         "tmp%5#0"
       ]
     },
-    "803": {
+    "913": {
       "op": "intc_2 // 100",
       "stack_out": [
         "base_fee#0",
@@ -4609,7 +5138,7 @@
         "100"
       ]
     },
-    "804": {
+    "914": {
       "op": "+",
       "defined_out": [
         "base_fee#0",
@@ -4624,7 +5153,7 @@
         "duration_multiplier#0"
       ]
     },
-    "805": {
+    "915": {
       "op": "uncover 3",
       "stack_out": [
         "risk_multiplier#0",
@@ -4633,7 +5162,7 @@
         "base_fee#0"
       ]
     },
-    "807": {
+    "917": {
       "op": "uncover 3",
       "stack_out": [
         "uncertainty_multiplier#0",
@@ -4642,7 +5171,7 @@
         "risk_multiplier#0"
       ]
     },
-    "809": {
+    "919": {
       "op": "*",
       "defined_out": [
         "duration_multiplier#0",
@@ -4655,7 +5184,7 @@
         "tmp%6#0"
       ]
     },
-    "810": {
+    "920": {
       "op": "uncover 2",
       "stack_out": [
         "duration_multiplier#0",
@@ -4663,7 +5192,7 @@
         "uncertainty_multiplier#0"
       ]
     },
-    "812": {
+    "922": {
       "op": "*",
       "defined_out": [
         "duration_multiplier#0",
@@ -4674,7 +5203,7 @@
         "tmp%7#0"
       ]
     },
-    "813": {
+    "923": {
       "op": "*",
       "defined_out": [
         "tmp%8#0"
@@ -4683,7 +5212,7 @@
         "tmp%8#0"
       ]
     },
-    "814": {
+    "924": {
       "op": "pushint 1000000 // 1000000",
       "defined_out": [
         "1000000",
@@ -4694,7 +5223,7 @@
         "1000000"
       ]
     },
-    "818": {
+    "928": {
       "op": "/",
       "defined_out": [
         "fee#0"
@@ -4703,7 +5232,7 @@
         "fee#0"
       ]
     },
-    "819": {
+    "929": {
       "op": "dup",
       "defined_out": [
         "fee#0"
@@ -4713,7 +5242,7 @@
         "fee#0"
       ]
     },
-    "820": {
+    "930": {
       "op": "intc 4 // 1000",
       "defined_out": [
         "1000",
@@ -4725,7 +5254,7 @@
         "1000"
       ]
     },
-    "822": {
+    "932": {
       "op": "<",
       "defined_out": [
         "fee#0",
@@ -4736,26 +5265,26 @@
         "tmp%11#0"
       ]
     },
-    "823": {
+    "933": {
       "op": "bz calculate_fee_after_if_else@2",
       "stack_out": [
         "fee#0"
       ]
     },
-    "826": {
+    "936": {
       "op": "intc 4 // 1000",
       "stack_out": [
         "fee#0",
         "fee#0"
       ]
     },
-    "828": {
+    "938": {
       "op": "frame_bury 0",
       "stack_out": [
         "fee#0"
       ]
     },
-    "830": {
+    "940": {
       "block": "calculate_fee_after_if_else@2",
       "stack_in": [
         "fee#0"
@@ -4769,7 +5298,7 @@
         "fee#0"
       ]
     },
-    "832": {
+    "942": {
       "op": "itob",
       "defined_out": [
         "fee#0",
@@ -4780,14 +5309,356 @@
         "val_as_bytes%0#0"
       ]
     },
-    "833": {
+    "943": {
       "op": "swap"
     },
-    "834": {
+    "944": {
       "retsub": true,
       "op": "retsub"
     },
-    "835": {
+    "945": {
+      "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.delete_policy",
+      "params": {
+        "policy_id#0": "bytes"
+      },
+      "block": "delete_policy",
+      "stack_in": [],
+      "op": "proto 1 1"
+    },
+    "948": {
+      "op": "frame_dig -1",
+      "defined_out": [
+        "policy_id#0 (copy)"
+      ],
+      "stack_out": [
+        "policy_id#0 (copy)"
+      ]
+    },
+    "950": {
+      "op": "btoi",
+      "defined_out": [
+        "pid#0"
+      ],
+      "stack_out": [
+        "pid#0"
+      ]
+    },
+    "951": {
+      "op": "itob",
+      "defined_out": [
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0"
+      ]
+    },
+    "952": {
+      "op": "bytec_3 // \"policies\"",
+      "defined_out": [
+        "\"policies\"",
+        "encoded_value%0#0"
+      ],
+      "stack_out": [
+        "encoded_value%0#0",
+        "\"policies\""
+      ]
+    },
+    "953": {
+      "op": "swap",
+      "stack_out": [
+        "\"policies\"",
+        "encoded_value%0#0"
+      ]
+    },
+    "954": {
+      "op": "concat",
+      "defined_out": [
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "955": {
+      "op": "dup",
+      "defined_out": [
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "956": {
+      "op": "box_get",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "exists#0",
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "exists#0"
+      ]
+    },
+    "957": {
+      "op": "bnz delete_policy_after_if_else@2",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0"
+      ]
+    },
+    "960": {
+      "op": "bytec_2 // 0x0000000000000000",
+      "defined_out": [
+        "0x0000000000000000",
+        "box_prefixed_key%0#0",
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "0x0000000000000000"
+      ]
+    },
+    "961": {
+      "op": "frame_bury 0"
+    },
+    "963": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "964": {
+      "block": "delete_policy_after_if_else@2",
+      "stack_in": [
+        "box_prefixed_key%0#0",
+        "policy_data#0"
+      ],
+      "op": "txn Sender",
+      "defined_out": [
+        "caller#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "caller#0"
+      ]
+    },
+    "966": {
+      "op": "frame_dig 1",
+      "defined_out": [
+        "caller#0",
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "caller#0",
+        "policy_data#0"
+      ]
+    },
+    "968": {
+      "error": "Index access is out of bounds",
+      "op": "extract 0 32 // on error: Index access is out of bounds",
+      "defined_out": [
+        "caller#0",
+        "policy_data#0",
+        "tmp%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "caller#0",
+        "tmp%0#0"
+      ]
+    },
+    "971": {
+      "op": "!=",
+      "defined_out": [
+        "policy_data#0",
+        "tmp%1#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "tmp%1#0"
+      ]
+    },
+    "972": {
+      "op": "bz delete_policy_after_if_else@4",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0"
+      ]
+    },
+    "975": {
+      "op": "bytec_2 // 0x0000000000000000",
+      "defined_out": [
+        "0x0000000000000000",
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "0x0000000000000000"
+      ]
+    },
+    "976": {
+      "op": "frame_bury 0"
+    },
+    "978": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "979": {
+      "block": "delete_policy_after_if_else@4",
+      "stack_in": [
+        "box_prefixed_key%0#0",
+        "policy_data#0"
+      ],
+      "op": "frame_dig 1",
+      "defined_out": [
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "policy_data#0"
+      ]
+    },
+    "981": {
+      "op": "pushint 90 // 90",
+      "defined_out": [
+        "90",
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "policy_data#0",
+        "90"
+      ]
+    },
+    "983": {
+      "op": "extract_uint64",
+      "defined_out": [
+        "policy_data#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "tmp%3#0"
+      ]
+    },
+    "984": {
+      "op": "intc_0 // 1",
+      "defined_out": [
+        "1",
+        "policy_data#0",
+        "tmp%3#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "tmp%3#0",
+        "1"
+      ]
+    },
+    "985": {
+      "op": "==",
+      "defined_out": [
+        "policy_data#0",
+        "tmp%4#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "tmp%4#0"
+      ]
+    },
+    "986": {
+      "op": "bz delete_policy_after_if_else@6",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0"
+      ]
+    },
+    "989": {
+      "op": "bytec_2 // 0x0000000000000000",
+      "defined_out": [
+        "0x0000000000000000",
+        "policy_data#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "0x0000000000000000"
+      ]
+    },
+    "990": {
+      "op": "frame_bury 0"
+    },
+    "992": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "993": {
+      "block": "delete_policy_after_if_else@6",
+      "stack_in": [
+        "box_prefixed_key%0#0",
+        "policy_data#0"
+      ],
+      "op": "frame_dig 0",
+      "defined_out": [
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "box_prefixed_key%0#0"
+      ]
+    },
+    "995": {
+      "op": "box_del",
+      "defined_out": [
+        "box_prefixed_key%0#0",
+        "{box_del}"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "{box_del}"
+      ]
+    },
+    "996": {
+      "op": "pop",
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0"
+      ]
+    },
+    "997": {
+      "op": "bytec 6 // 0x0000000000000001",
+      "defined_out": [
+        "0x0000000000000001",
+        "box_prefixed_key%0#0"
+      ],
+      "stack_out": [
+        "box_prefixed_key%0#0",
+        "policy_data#0",
+        "0x0000000000000001"
+      ]
+    },
+    "999": {
+      "op": "frame_bury 0"
+    },
+    "1001": {
+      "retsub": true,
+      "op": "retsub"
+    },
+    "1002": {
       "subroutine": "smart_contracts.insurance.contract.AgriGuardInsurance.get_globals",
       "params": {},
       "block": "get_globals",
@@ -4800,8 +5671,8 @@
         "0"
       ]
     },
-    "836": {
-      "op": "bytec_3 // \"admin\"",
+    "1003": {
+      "op": "bytec 4 // \"admin\"",
       "defined_out": [
         "\"admin\"",
         "0"
@@ -4811,7 +5682,7 @@
         "\"admin\""
       ]
     },
-    "837": {
+    "1005": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%0#0",
@@ -4822,22 +5693,22 @@
         "maybe_exists%0#0"
       ]
     },
-    "838": {
+    "1006": {
       "error": "check self.admin exists",
       "op": "assert // check self.admin exists",
       "stack_out": [
         "maybe_value%0#0"
       ]
     },
-    "839": {
+    "1007": {
       "op": "intc_1 // 0",
       "stack_out": [
         "maybe_value%0#0",
         "0"
       ]
     },
-    "840": {
-      "op": "bytec 4 // \"oracle\"",
+    "1008": {
+      "op": "bytec 5 // \"oracle\"",
       "defined_out": [
         "\"oracle\"",
         "0",
@@ -4849,7 +5720,7 @@
         "\"oracle\""
       ]
     },
-    "842": {
+    "1010": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%1#0",
@@ -4862,7 +5733,7 @@
         "maybe_exists%1#0"
       ]
     },
-    "843": {
+    "1011": {
       "error": "check self.oracle exists",
       "op": "assert // check self.oracle exists",
       "stack_out": [
@@ -4870,7 +5741,7 @@
         "maybe_value%1#0"
       ]
     },
-    "844": {
+    "1012": {
       "op": "intc_1 // 0",
       "stack_out": [
         "maybe_value%0#0",
@@ -4878,8 +5749,8 @@
         "0"
       ]
     },
-    "845": {
-      "op": "bytec_0 // \"next_policy_id\"",
+    "1013": {
+      "op": "bytec_1 // \"next_policy_id\"",
       "defined_out": [
         "\"next_policy_id\"",
         "0",
@@ -4893,7 +5764,7 @@
         "\"next_policy_id\""
       ]
     },
-    "846": {
+    "1014": {
       "op": "app_global_get_ex",
       "defined_out": [
         "maybe_exists%2#0",
@@ -4908,7 +5779,7 @@
         "maybe_exists%2#0"
       ]
     },
-    "847": {
+    "1015": {
       "error": "check self.next_policy_id exists",
       "op": "assert // check self.next_policy_id exists",
       "stack_out": [
@@ -4917,7 +5788,7 @@
         "maybe_value%2#0"
       ]
     },
-    "848": {
+    "1016": {
       "op": "itob",
       "defined_out": [
         "maybe_value%0#0",
@@ -4930,7 +5801,7 @@
         "val_as_bytes%0#0"
       ]
     },
-    "849": {
+    "1017": {
       "op": "cover 2",
       "stack_out": [
         "val_as_bytes%0#0",
@@ -4938,7 +5809,7 @@
         "maybe_value%1#0"
       ]
     },
-    "851": {
+    "1019": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%2#0",
@@ -4949,14 +5820,14 @@
         "encoded_tuple_buffer%2#0"
       ]
     },
-    "852": {
+    "1020": {
       "op": "swap",
       "stack_out": [
         "encoded_tuple_buffer%2#0",
         "val_as_bytes%0#0"
       ]
     },
-    "853": {
+    "1021": {
       "op": "concat",
       "defined_out": [
         "encoded_tuple_buffer%3#0"
@@ -4965,7 +5836,7 @@
         "encoded_tuple_buffer%3#0"
       ]
     },
-    "854": {
+    "1022": {
       "retsub": true,
       "op": "retsub"
     }

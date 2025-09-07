@@ -11,13 +11,130 @@ import {
   ToggleButton,
   ToggleButtonGroup,
   Paper,
-  Container
+  Container,
+  createTheme,
+  ThemeProvider,
+  CssBaseline
 } from '@mui/material'
 import { styled } from '@mui/material/styles'
 import ConnectWallet from './components/ConnectWallet'
 import GuardTab from './components/GuardTab'
 import ClaimTab from './components/ClaimTab'
 import { getAlgodConfigFromViteEnvironment, getKmdConfigFromViteEnvironment } from './utils/network/getAlgoClientConfigs'
+
+// Minimalistic theme
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#000000',
+      light: '#333333',
+      dark: '#000000',
+    },
+    secondary: {
+      main: '#666666',
+      light: '#999999',
+      dark: '#333333',
+    },
+    background: {
+      default: '#ffffff',
+      paper: '#ffffff',
+    },
+    text: {
+      primary: '#000000',
+      secondary: '#666666',
+    },
+  },
+  typography: {
+    fontFamily: '"Inter", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif',
+    h1: {
+      fontWeight: 300,
+      fontSize: '2.5rem',
+      letterSpacing: '-0.02em',
+    },
+    h2: {
+      fontWeight: 300,
+      fontSize: '2rem',
+      letterSpacing: '-0.01em',
+    },
+    h3: {
+      fontWeight: 400,
+      fontSize: '1.5rem',
+      letterSpacing: '-0.01em',
+    },
+    h4: {
+      fontWeight: 400,
+      fontSize: '1.25rem',
+    },
+    h5: {
+      fontWeight: 500,
+      fontSize: '1.125rem',
+    },
+    h6: {
+      fontWeight: 500,
+      fontSize: '1rem',
+    },
+    body1: {
+      fontSize: '0.875rem',
+      lineHeight: 1.6,
+    },
+    body2: {
+      fontSize: '0.8125rem',
+      lineHeight: 1.5,
+    },
+  },
+  shape: {
+    borderRadius: 8,
+  },
+  components: {
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          textTransform: 'none',
+          fontWeight: 500,
+          borderRadius: 6,
+          padding: '8px 16px',
+          fontSize: '0.875rem',
+        },
+        contained: {
+          boxShadow: 'none',
+          '&:hover': {
+            boxShadow: '0 2px 8px rgba(0, 0, 0, 0.15)',
+          },
+        },
+      },
+    },
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+          boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+          border: '1px solid #f0f0f0',
+        },
+      },
+    },
+    MuiToggleButton: {
+      styleOverrides: {
+        root: {
+          border: 'none',
+          borderRadius: 6,
+          padding: '8px 16px',
+          fontWeight: 500,
+          fontSize: '0.875rem',
+          '&.Mui-selected': {
+            backgroundColor: '#000000',
+            color: '#ffffff',
+            '&:hover': {
+              backgroundColor: '#333333',
+            },
+          },
+          '&:hover': {
+            backgroundColor: '#f5f5f5',
+          },
+        },
+      },
+    },
+  },
+})
 
 // Configure supported wallets
 let supportedWallets: SupportedWallet[]
@@ -42,94 +159,42 @@ if (import.meta.env.VITE_ALGOD_NETWORK === 'localnet') {
 }
 
 // Styled components
-const GradientBackground = styled(Box)({
-  position: 'fixed',
-  top: 0,
-  left: 0,
-  width: '100vw',
-  height: '100vh',
-  background: 'linear-gradient(135deg, #f5f5f5 0%, #e8eaf6 25%, #f3e5f5 50%, #e8f5e8 75%, #f5f5f5 100%)',
-  backgroundAttachment: 'fixed',
-  backgroundSize: 'cover',
-  zIndex: -1,
+const MinimalAppBar = styled(AppBar)({
+  backgroundColor: '#ffffff',
+  color: '#000000',
+  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+  borderBottom: '1px solid #f0f0f0',
 })
 
-// Global styles to override default browser styling
-const GlobalStyles = styled('style')`
-  * {
-    box-sizing: border-box;
-  }
+const MinimalPaper = styled(Paper)({
+  backgroundColor: '#ffffff',
+  borderRadius: 8,
+  border: '1px solid #f0f0f0',
+  boxShadow: '0 1px 3px rgba(0, 0, 0, 0.1)',
+})
 
-  html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    overflow-x: hidden !important;
-    background: linear-gradient(135deg, #f5f5f5 0%, #e8eaf6 25%, #f3e5f5 50%, #e8f5e8 75%, #f5f5f5 100%) !important;
-  }
-
-  #root {
-    width: 100% !important;
-    height: 100% !important;
-    min-height: 100vh !important;
-  }
-`
-
-const TranslucentAppBar = styled(AppBar)(({ theme }) => ({
-  backgroundColor: 'rgba(255, 255, 255, 0.98)',
-  backdropFilter: 'blur(20px)',
-  color: theme.palette.text.primary,
-  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04)',
-  borderBottom: '1px solid rgba(0, 0, 0, 0.08)',
-  borderRadius: '16px 16px 16px 16px',
-  position: 'relative',
-  zIndex: 10,
-}))
-
-const TranslucentPaper = styled(Paper)(({ theme }) => ({
-  backgroundColor: 'rgba(255, 255, 255, 0.95)',
-  backdropFilter: 'blur(15px)',
-  border: '1px solid rgba(0, 0, 0, 0.08)',
-  boxShadow: '0 8px 32px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(0, 0, 0, 0.04)',
-  position: 'relative',
-  zIndex: 5,
-  borderRadius: 12,
-}))
-
-const StyledToggleButtonGroup = styled(ToggleButtonGroup)(({ theme }) => ({
-  backgroundColor: 'rgba(255, 255, 255, 0.9)',
-  borderRadius: theme.spacing(3),
-  padding: theme.spacing(0.5),
-  backdropFilter: 'blur(15px)',
-  border: '1px solid rgba(0, 0, 0, 0.08)',
-  boxShadow: '0 4px 20px rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04)',
-  position: 'relative',
-  zIndex: 15,
+const MinimalToggleGroup = styled(ToggleButtonGroup)({
+  backgroundColor: '#f8f8f8',
+  borderRadius: 6,
+  padding: 4,
   '& .MuiToggleButton-root': {
     border: 'none',
-    borderRadius: theme.spacing(2.5),
-    padding: theme.spacing(1.5, 4),
-    color: theme.palette.text.primary,
-    fontWeight: 600,
-    fontSize: '1rem',
-    textTransform: 'none',
-    transition: 'all 0.2s ease',
+    borderRadius: 4,
+    padding: '8px 16px',
+    fontWeight: 500,
+    fontSize: '0.875rem',
     '&.Mui-selected': {
-      backgroundColor: '#1976d2',
-      color: 'white',
-      boxShadow: '0 4px 12px rgba(25, 118, 210, 0.3)',
+      backgroundColor: '#000000',
+      color: '#ffffff',
       '&:hover': {
-        backgroundColor: '#1565c0',
-        boxShadow: '0 6px 16px rgba(25, 118, 210, 0.4)',
+        backgroundColor: '#333333',
       },
     },
     '&:hover': {
-      backgroundColor: 'rgba(25, 118, 210, 0.08)',
-      borderRadius: theme.spacing(2.5),
+      backgroundColor: '#f0f0f0',
     },
   },
-}))
+})
 
 export default function App() {
   const [activeView, setActiveView] = useState<'guard' | 'claim'>('guard')
@@ -173,21 +238,17 @@ export default function App() {
         <Chip
           label={`${activeAddress.slice(0, 6)}...${activeAddress.slice(-4)}`}
           sx={{
-            backgroundColor: '#1976d2',
-            color: 'white',
-            fontWeight: 600,
-            fontSize: '0.9rem',
-            borderRadius: 4,
+            backgroundColor: '#000000',
+            color: '#ffffff',
+            fontWeight: 500,
+            fontSize: '0.875rem',
+            borderRadius: 6,
             px: 2,
             py: 1,
-            boxShadow: '0 4px 12px rgba(25, 118, 210, 0.3)',
             '&:hover': {
-              backgroundColor: '#1565c0',
-              boxShadow: '0 6px 16px rgba(25, 118, 210, 0.4)',
-              transform: 'translateY(-1px)',
+              backgroundColor: '#333333',
             },
             cursor: 'pointer',
-            transition: 'all 0.2s ease',
           }}
           onClick={openWalletModal}
         />
@@ -196,23 +257,19 @@ export default function App() {
 
     return (
       <Button
-        variant="outlined"
+        variant="contained"
         onClick={openWalletModal}
         sx={{
-          borderColor: '#1976d2',
-          color: '#1976d2',
-          borderRadius: 4,
-          px: 4,
-          py: 1.5,
-          fontWeight: 600,
-          fontSize: '1rem',
-          borderWidth: 1,
+          backgroundColor: '#000000',
+          color: '#ffffff',
+          borderRadius: 6,
+          px: 3,
+          py: 1,
+          fontWeight: 500,
+          fontSize: '0.875rem',
           '&:hover': {
-            borderColor: '#1565c0',
-            backgroundColor: 'rgba(25, 118, 210, 0.08)',
-            transform: 'translateY(-1px)',
+            backgroundColor: '#333333',
           },
-          transition: 'all 0.2s ease',
         }}
       >
         Connect Wallet
@@ -221,81 +278,69 @@ export default function App() {
   }
 
   return (
-    <>
-      <GlobalStyles />
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
       <SnackbarProvider maxSnack={3}>
         <WalletProvider manager={walletManager}>
           <Box sx={{
-            position: 'relative',
             minHeight: '100vh',
-            width: '100vw',
-            overflowX: 'hidden'
+            backgroundColor: '#ffffff',
           }}>
-            <GradientBackground />
+            <MinimalAppBar position="static" elevation={0}>
               <Container maxWidth="lg">
-              <TranslucentAppBar position="static" elevation={0}>
-                  <Toolbar sx={{ py: 1 }}>
-                <Typography
-                  variant="h5"
-                  component="div"
-                  sx={{
-                    flexGrow: 1,
-                    fontWeight: 700,
-                    background: 'linear-gradient(45deg, #1976d2, #1565c0)',
-                    backgroundClip: 'text',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                  }}
-                >
-                  AgriGuard Insurance
-                </Typography>
-
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                  <StyledToggleButtonGroup
-                    value={activeView}
-                    exclusive
-                    onChange={handleViewChange}
-                    aria-label="view toggle"
-                  >
-                    <ToggleButton value="guard" aria-label="guard">
-                      Policy
-                    </ToggleButton>
-                    <ToggleButton value="claim" aria-label="claim">
-                      Claims
-                    </ToggleButton>
-                  </StyledToggleButtonGroup>
-
-                  <WalletButton />
-                </Box>
-                  </Toolbar>
-                </TranslucentAppBar>
-              </Container>
-
-              <Container maxWidth="lg" sx={{ py: 4 }}>
-                <TranslucentPaper sx={{
-                  p: 3,
-                  borderRadius: 6,
-                  boxShadow: '0 20px 60px rgba(0, 0, 0, 0.15), 0 0 40px rgba(25, 118, 210, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.7)',
-                  border: '1px solid rgba(255, 255, 255, 0.3)',
-                  position: 'relative',
-                  transform: 'translateY(0)',
-                  transition: 'all 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
-                  '&:hover': {
-                    transform: 'translateY(-3px)',
-                    boxShadow: '0 25px 70px rgba(0, 0, 0, 0.18), 0 0 50px rgba(25, 118, 210, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.8)',
-                  },
+                <Toolbar sx={{ 
+                  justifyContent: 'space-between',
+                  py: 2,
+                  px: 0,
                 }}>
-                  {activeView === 'guard' ? <GuardTab /> : <ClaimTab />}
-                </TranslucentPaper>
+                  <Typography 
+                    variant="h5" 
+                    component="div" 
+                    sx={{ 
+                      fontWeight: 300,
+                      color: '#000000',
+                    }}
+                  >
+                    AgriGuard
+                  </Typography>
+                  
+                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
+                    <MinimalToggleGroup
+                      value={activeView}
+                      exclusive
+                      onChange={handleViewChange}
+                      aria-label="view toggle"
+                    >
+                      <ToggleButton value="guard" aria-label="guard">
+                        Policy
+                      </ToggleButton>
+                      <ToggleButton value="claim" aria-label="claim">
+                        Claims
+                      </ToggleButton>
+                    </MinimalToggleGroup>
+                    
+                    <WalletButton />
+                  </Box>
+                </Toolbar>
               </Container>
+            </MinimalAppBar>
 
-              <ConnectWallet
-                openModal={walletModalOpen}
-                closeModal={closeWalletModal}
-              />
+            <Container maxWidth="lg" sx={{ py: 4 }}>
+              <MinimalPaper sx={{
+                p: 4,
+                minHeight: '70vh',
+              }}>
+                {activeView === 'guard' ? <GuardTab /> : <ClaimTab />}
+              </MinimalPaper>
+            </Container>
+
+            <ConnectWallet
+              openModal={walletModalOpen}
+              closeModal={closeWalletModal}
+            />
           </Box>
         </WalletProvider>
       </SnackbarProvider>
-    </>
+    </ThemeProvider>
   )
 }

@@ -1,0 +1,887 @@
+#pragma version 10
+#pragma typetrack false
+
+// smart_contracts.dispute.contract.AgriGuardDispute.__algopy_entrypoint_with_init() -> uint64:
+main:
+    intcblock 1 0 56 64
+    bytecblock 0x0000000000000000 0x151f7c75 "total_jurors" 0x0000000000000001 "admin" "next_dispute_id" "jurors" "disputes" base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) "insurance_contract" "dispute_jurors"
+    txn ApplicationID
+    bnz main_after_if_else@2
+    // smart_contracts/dispute/contract.py:67-68
+    // # Global state
+    // self.admin = Address()
+    bytec 4 // "admin"
+    global ZeroAddress
+    app_global_put
+    // smart_contracts/dispute/contract.py:69
+    // self.insurance_contract = Address()
+    bytec 9 // "insurance_contract"
+    global ZeroAddress
+    app_global_put
+    // smart_contracts/dispute/contract.py:70
+    // self.next_dispute_id = UInt64(1)
+    bytec 5 // "next_dispute_id"
+    intc_0 // 1
+    app_global_put
+    // smart_contracts/dispute/contract.py:71
+    // self.total_jurors = UInt64(0)
+    bytec_2 // "total_jurors"
+    intc_1 // 0
+    app_global_put
+
+main_after_if_else@2:
+    // smart_contracts/dispute/contract.py:59
+    // class AgriGuardDispute(ARC4Contract):
+    txn NumAppArgs
+    bz main_after_if_else@13
+    pushbytess 0x894a716e 0x56f5e3fc 0xfcba023a 0x1335cdfd 0xb4a52d05 0xa3018936 0x66483b61 0x7e273b38 // method "create_application(address)void", method "set_insurance_contract(address)uint64", method "register_juror()uint64", method "create_dispute(uint64)uint64", method "vote_on_dispute(uint64,uint64)uint64", method "get_dispute(uint64)(uint64,address,uint64,uint64,uint64,uint64)", method "get_juror_info(address)(address,uint64,uint64,uint64)", method "get_total_jurors()uint64"
+    txna ApplicationArgs 0
+    match main_create_application_route@5 main_set_insurance_contract_route@6 main_register_juror_route@7 main_create_dispute_route@8 main_vote_on_dispute_route@9 main_get_dispute_route@10 main_get_juror_info_route@11 main_get_total_jurors_route@12
+
+main_after_if_else@13:
+    // smart_contracts/dispute/contract.py:59
+    // class AgriGuardDispute(ARC4Contract):
+    intc_1 // 0
+    return
+
+main_get_total_jurors_route@12:
+    // smart_contracts/dispute/contract.py:265
+    // @abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_total_jurors
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_get_juror_info_route@11:
+    // smart_contracts/dispute/contract.py:249
+    // @abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/dispute/contract.py:59
+    // class AgriGuardDispute(ARC4Contract):
+    txna ApplicationArgs 1
+    // smart_contracts/dispute/contract.py:249
+    // @abimethod(readonly=True)
+    callsub get_juror_info
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_get_dispute_route@10:
+    // smart_contracts/dispute/contract.py:225
+    // @abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/dispute/contract.py:59
+    // class AgriGuardDispute(ARC4Contract):
+    txna ApplicationArgs 1
+    // smart_contracts/dispute/contract.py:225
+    // @abimethod(readonly=True)
+    callsub get_dispute
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_vote_on_dispute_route@9:
+    // smart_contracts/dispute/contract.py:166
+    // @abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/dispute/contract.py:59
+    // class AgriGuardDispute(ARC4Contract):
+    txna ApplicationArgs 1
+    txna ApplicationArgs 2
+    // smart_contracts/dispute/contract.py:166
+    // @abimethod
+    callsub vote_on_dispute
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_create_dispute_route@8:
+    // smart_contracts/dispute/contract.py:115
+    // @abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/dispute/contract.py:59
+    // class AgriGuardDispute(ARC4Contract):
+    txna ApplicationArgs 1
+    // smart_contracts/dispute/contract.py:115
+    // @abimethod
+    callsub create_dispute
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_register_juror_route@7:
+    // smart_contracts/dispute/contract.py:92
+    // @abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub register_juror
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_set_insurance_contract_route@6:
+    // smart_contracts/dispute/contract.py:84
+    // @abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/dispute/contract.py:59
+    // class AgriGuardDispute(ARC4Contract):
+    txna ApplicationArgs 1
+    // smart_contracts/dispute/contract.py:84
+    // @abimethod
+    callsub set_insurance_contract
+    bytec_1 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_create_application_route@5:
+    // smart_contracts/dispute/contract.py:79
+    // @abimethod(create="require")
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    !
+    assert // can only call when creating
+    // smart_contracts/dispute/contract.py:59
+    // class AgriGuardDispute(ARC4Contract):
+    txna ApplicationArgs 1
+    // smart_contracts/dispute/contract.py:79
+    // @abimethod(create="require")
+    callsub create_application
+    intc_0 // 1
+    return
+
+
+// smart_contracts.dispute.contract.AgriGuardDispute.create_application(admin: bytes) -> void:
+create_application:
+    // smart_contracts/dispute/contract.py:79-80
+    // @abimethod(create="require")
+    // def create_application(self, admin: Address) -> None:
+    proto 1 0
+    // smart_contracts/dispute/contract.py:82
+    // self.admin = admin
+    bytec 4 // "admin"
+    frame_dig -1
+    app_global_put
+    retsub
+
+
+// smart_contracts.dispute.contract.AgriGuardDispute.set_insurance_contract(contract_address: bytes) -> bytes:
+set_insurance_contract:
+    // smart_contracts/dispute/contract.py:84-85
+    // @abimethod
+    // def set_insurance_contract(self, contract_address: Address) -> ARC4UInt64:
+    proto 1 1
+    // smart_contracts/dispute/contract.py:87
+    // assert Txn.sender == self.admin, "Only admin"
+    intc_1 // 0
+    bytec 4 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    txn Sender
+    ==
+    assert // Only admin
+    // smart_contracts/dispute/contract.py:89
+    // self.insurance_contract = contract_address
+    bytec 9 // "insurance_contract"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/dispute/contract.py:90
+    // return ARC4UInt64(1)
+    bytec_3 // 0x0000000000000001
+    retsub
+
+
+// smart_contracts.dispute.contract.AgriGuardDispute.register_juror() -> bytes:
+register_juror:
+    // smart_contracts/dispute/contract.py:92-93
+    // @abimethod
+    // def register_juror(self) -> ARC4UInt64:
+    proto 0 1
+    // smart_contracts/dispute/contract.py:95
+    // caller = Address.from_bytes(Txn.sender.bytes)
+    txn Sender
+    // smart_contracts/dispute/contract.py:97-98
+    // # Check if already registered
+    // existing_juror = self.jurors.maybe(caller)[1]
+    bytec 6 // "jurors"
+    // smart_contracts/dispute/contract.py:95
+    // caller = Address.from_bytes(Txn.sender.bytes)
+    txn Sender
+    // smart_contracts/dispute/contract.py:97-98
+    // # Check if already registered
+    // existing_juror = self.jurors.maybe(caller)[1]
+    concat
+    dup
+    box_get
+    bury 1
+    // smart_contracts/dispute/contract.py:99
+    // if existing_juror:
+    bz register_juror_after_if_else@2
+    // smart_contracts/dispute/contract.py:100
+    // return ARC4UInt64(0)  # Already registered
+    bytec_0 // 0x0000000000000000
+    frame_bury 0
+    retsub
+
+register_juror_after_if_else@2:
+    // smart_contracts/dispute/contract.py:102-108
+    // # Register new juror
+    // juror_data = JurorData(
+    //     address=caller,
+    //     reputation=ARC4UInt64(100),  # Start with 100 reputation points
+    //     total_votes=ARC4UInt64(0),
+    //     correct_votes=ARC4UInt64(0)
+    // )
+    frame_dig 0
+    // smart_contracts/dispute/contract.py:105
+    // reputation=ARC4UInt64(100),  # Start with 100 reputation points
+    pushbytes 0x0000000000000064
+    // smart_contracts/dispute/contract.py:102-108
+    // # Register new juror
+    // juror_data = JurorData(
+    //     address=caller,
+    //     reputation=ARC4UInt64(100),  # Start with 100 reputation points
+    //     total_votes=ARC4UInt64(0),
+    //     correct_votes=ARC4UInt64(0)
+    // )
+    concat
+    // smart_contracts/dispute/contract.py:106
+    // total_votes=ARC4UInt64(0),
+    bytec_0 // 0x0000000000000000
+    // smart_contracts/dispute/contract.py:102-108
+    // # Register new juror
+    // juror_data = JurorData(
+    //     address=caller,
+    //     reputation=ARC4UInt64(100),  # Start with 100 reputation points
+    //     total_votes=ARC4UInt64(0),
+    //     correct_votes=ARC4UInt64(0)
+    // )
+    concat
+    // smart_contracts/dispute/contract.py:107
+    // correct_votes=ARC4UInt64(0)
+    bytec_0 // 0x0000000000000000
+    // smart_contracts/dispute/contract.py:102-108
+    // # Register new juror
+    // juror_data = JurorData(
+    //     address=caller,
+    //     reputation=ARC4UInt64(100),  # Start with 100 reputation points
+    //     total_votes=ARC4UInt64(0),
+    //     correct_votes=ARC4UInt64(0)
+    // )
+    concat
+    // smart_contracts/dispute/contract.py:110
+    // self.jurors[caller] = juror_data.copy()
+    frame_dig 1
+    swap
+    box_put
+    // smart_contracts/dispute/contract.py:111
+    // self.total_jurors += UInt64(1)
+    intc_1 // 0
+    bytec_2 // "total_jurors"
+    app_global_get_ex
+    assert // check self.total_jurors exists
+    intc_0 // 1
+    +
+    bytec_2 // "total_jurors"
+    swap
+    app_global_put
+    // smart_contracts/dispute/contract.py:113
+    // return ARC4UInt64(1)
+    bytec_3 // 0x0000000000000001
+    frame_bury 0
+    retsub
+
+
+// smart_contracts.dispute.contract.AgriGuardDispute.create_dispute(policy_id: bytes) -> bytes:
+create_dispute:
+    // smart_contracts/dispute/contract.py:115-116
+    // @abimethod
+    // def create_dispute(self, policy_id: ARC4UInt64) -> ARC4UInt64:
+    proto 1 1
+    intc_1 // 0
+    dupn 2
+    pushbytes ""
+    dupn 2
+    // smart_contracts/dispute/contract.py:118
+    // caller = Address.from_bytes(Txn.sender.bytes)
+    txn Sender
+    // smart_contracts/dispute/contract.py:120-121
+    // # Check if caller is registered as juror
+    // juror_exists = self.jurors.maybe(caller)[1]
+    bytec 6 // "jurors"
+    // smart_contracts/dispute/contract.py:118
+    // caller = Address.from_bytes(Txn.sender.bytes)
+    txn Sender
+    // smart_contracts/dispute/contract.py:120-121
+    // # Check if caller is registered as juror
+    // juror_exists = self.jurors.maybe(caller)[1]
+    concat
+    box_get
+    bury 1
+    // smart_contracts/dispute/contract.py:122
+    // if not juror_exists:
+    bnz create_dispute_after_if_else@2
+    // smart_contracts/dispute/contract.py:123
+    // return ARC4UInt64(0)  # Not registered as juror
+    bytec_0 // 0x0000000000000000
+    frame_bury 0
+    retsub
+
+create_dispute_after_if_else@2:
+    // smart_contracts/dispute/contract.py:125-126
+    // # Create dispute
+    // dispute_id = self.next_dispute_id
+    intc_1 // 0
+    bytec 5 // "next_dispute_id"
+    app_global_get_ex
+    assert // check self.next_dispute_id exists
+    // smart_contracts/dispute/contract.py:127
+    // self.next_dispute_id += UInt64(1)
+    dup
+    intc_0 // 1
+    +
+    bytec 5 // "next_dispute_id"
+    swap
+    app_global_put
+    // smart_contracts/dispute/contract.py:132
+    // created_at=ARC4UInt64(Global.latest_timestamp),
+    global LatestTimestamp
+    itob
+    // smart_contracts/dispute/contract.py:129-136
+    // dispute_data = DisputeData(
+    //     policy_id=policy_id,
+    //     claimant=caller,
+    //     created_at=ARC4UInt64(Global.latest_timestamp),
+    //     status=ARC4UInt64(0),  # Active
+    //     yes_votes=ARC4UInt64(0),
+    //     no_votes=ARC4UInt64(0)
+    // )
+    frame_dig -1
+    frame_dig 6
+    concat
+    swap
+    concat
+    // smart_contracts/dispute/contract.py:133
+    // status=ARC4UInt64(0),  # Active
+    bytec_0 // 0x0000000000000000
+    // smart_contracts/dispute/contract.py:129-136
+    // dispute_data = DisputeData(
+    //     policy_id=policy_id,
+    //     claimant=caller,
+    //     created_at=ARC4UInt64(Global.latest_timestamp),
+    //     status=ARC4UInt64(0),  # Active
+    //     yes_votes=ARC4UInt64(0),
+    //     no_votes=ARC4UInt64(0)
+    // )
+    concat
+    // smart_contracts/dispute/contract.py:134
+    // yes_votes=ARC4UInt64(0),
+    bytec_0 // 0x0000000000000000
+    // smart_contracts/dispute/contract.py:129-136
+    // dispute_data = DisputeData(
+    //     policy_id=policy_id,
+    //     claimant=caller,
+    //     created_at=ARC4UInt64(Global.latest_timestamp),
+    //     status=ARC4UInt64(0),  # Active
+    //     yes_votes=ARC4UInt64(0),
+    //     no_votes=ARC4UInt64(0)
+    // )
+    concat
+    // smart_contracts/dispute/contract.py:135
+    // no_votes=ARC4UInt64(0)
+    bytec_0 // 0x0000000000000000
+    // smart_contracts/dispute/contract.py:129-136
+    // dispute_data = DisputeData(
+    //     policy_id=policy_id,
+    //     claimant=caller,
+    //     created_at=ARC4UInt64(Global.latest_timestamp),
+    //     status=ARC4UInt64(0),  # Active
+    //     yes_votes=ARC4UInt64(0),
+    //     no_votes=ARC4UInt64(0)
+    // )
+    concat
+    // smart_contracts/dispute/contract.py:138
+    // self.disputes[dispute_id] = dispute_data.copy()
+    swap
+    itob
+    dup
+    frame_bury 0
+    bytec 7 // "disputes"
+    swap
+    concat
+    swap
+    box_put
+    // smart_contracts/dispute/contract.py:148-150
+    // # For now, we'll use a simplified approach
+    // # In a real implementation, this would use proper random selection
+    // selected_jurors = Bytes(b"")
+    pushbytes 0x
+    frame_bury 1
+    // smart_contracts/dispute/contract.py:151
+    // juror_count = UInt64(0)
+    intc_1 // 0
+    frame_bury 3
+    // smart_contracts/dispute/contract.py:152
+    // juror_index = UInt64(1)
+    intc_0 // 1
+    frame_bury 5
+
+create_dispute_while_top@4:
+    // smart_contracts/dispute/contract.py:154-155
+    // # Select up to 10 jurors
+    // while juror_count < UInt64(10) and juror_index <= self.total_jurors:
+    frame_dig 3
+    pushint 10 // 10
+    <
+    bz create_dispute_after_while@9
+    intc_1 // 0
+    bytec_2 // "total_jurors"
+    app_global_get_ex
+    assert // check self.total_jurors exists
+    frame_dig 5
+    >=
+    bz create_dispute_after_while@9
+    // smart_contracts/dispute/contract.py:156-157
+    // # For now, we'll use a simplified approach
+    // juror_index += UInt64(1)
+    frame_dig 5
+    intc_0 // 1
+    +
+    dup
+    frame_bury 5
+    // smart_contracts/dispute/contract.py:159
+    // if juror_index <= self.total_jurors:
+    intc_1 // 0
+    bytec_2 // "total_jurors"
+    app_global_get_ex
+    assert // check self.total_jurors exists
+    <=
+    frame_dig 1
+    frame_bury 2
+    frame_dig 3
+    frame_bury 4
+    bz create_dispute_after_if_else@8
+    // smart_contracts/dispute/contract.py:160
+    // juror_count += UInt64(1)
+    frame_dig 3
+    intc_0 // 1
+    +
+    // smart_contracts/dispute/contract.py:161-162
+    // # Add juror address to selected list (simplified)
+    // selected_jurors = selected_jurors + Bytes(b"juror")
+    frame_dig 1
+    pushbytes 0x6a75726f72
+    concat
+    frame_bury 2
+    frame_bury 4
+
+create_dispute_after_if_else@8:
+    frame_dig 2
+    frame_bury 1
+    frame_dig 4
+    frame_bury 3
+    b create_dispute_while_top@4
+
+create_dispute_after_while@9:
+    // smart_contracts/dispute/contract.py:164
+    // self.dispute_jurors[dispute_id] = selected_jurors
+    bytec 10 // "dispute_jurors"
+    frame_dig 0
+    dup
+    cover 2
+    concat
+    dup
+    box_del
+    pop
+    frame_dig 1
+    box_put
+    // smart_contracts/dispute/contract.py:143
+    // return ARC4UInt64(dispute_id)
+    frame_bury 0
+    retsub
+
+
+// smart_contracts.dispute.contract.AgriGuardDispute.vote_on_dispute(dispute_id: bytes, vote: bytes) -> bytes:
+vote_on_dispute:
+    // smart_contracts/dispute/contract.py:166-167
+    // @abimethod
+    // def vote_on_dispute(self, dispute_id: ARC4UInt64, vote: ARC4UInt64) -> ARC4UInt64:
+    proto 2 1
+    intc_1 // 0
+    pushbytes ""
+    // smart_contracts/dispute/contract.py:169
+    // caller = Address.from_bytes(Txn.sender.bytes)
+    txn Sender
+    // smart_contracts/dispute/contract.py:170
+    // dispute_id_uint = dispute_id.native
+    frame_dig -2
+    btoi
+    // smart_contracts/dispute/contract.py:172-173
+    // # Check if dispute exists
+    // dispute_data = self.disputes.maybe(dispute_id_uint)[0].copy()
+    itob
+    dup
+    bytec 7 // "disputes"
+    swap
+    concat
+    dup
+    box_get
+    pop
+    dup
+    // smart_contracts/dispute/contract.py:174-181
+    // if dispute_data == DisputeData(
+    //     policy_id=ARC4UInt64(0),
+    //     claimant=Address(Global.zero_address),
+    //     created_at=ARC4UInt64(0),
+    //     status=ARC4UInt64(0),
+    //     yes_votes=ARC4UInt64(0),
+    //     no_votes=ARC4UInt64(0)
+    // ):
+    bytec 8 // base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+    ==
+    bz vote_on_dispute_after_if_else@2
+    // smart_contracts/dispute/contract.py:182
+    // return ARC4UInt64(0)  # Dispute not found
+    bytec_0 // 0x0000000000000000
+    frame_bury 0
+    retsub
+
+vote_on_dispute_after_if_else@2:
+    // smart_contracts/dispute/contract.py:184-185
+    // # Check if caller is selected juror
+    // juror_list = self.dispute_jurors.maybe(dispute_id_uint)[0]
+    bytec 10 // "dispute_jurors"
+    frame_dig 3
+    concat
+    box_get
+    pop
+    // smart_contracts/dispute/contract.py:186
+    // if juror_list == Bytes(b""):
+    pushbytes 0x
+    ==
+    bz vote_on_dispute_after_if_else@4
+    // smart_contracts/dispute/contract.py:187
+    // return ARC4UInt64(0)  # No jurors selected
+    bytec_0 // 0x0000000000000000
+    frame_bury 0
+    retsub
+
+vote_on_dispute_after_if_else@4:
+    // smart_contracts/dispute/contract.py:189-190
+    // # Check if caller already voted
+    // vote_key = Bytes(b"vote") + caller.bytes
+    pushbytes 0x766f7465
+    frame_dig 2
+    concat
+    // smart_contracts/dispute/contract.py:191
+    // existing_vote = self.juror_votes.maybe(vote_key)[1]
+    pushbytes "juror_votes"
+    swap
+    concat
+    dup
+    frame_bury 0
+    box_get
+    bury 1
+    // smart_contracts/dispute/contract.py:193
+    // if existing_vote:
+    bz vote_on_dispute_after_if_else@6
+    // smart_contracts/dispute/contract.py:194
+    // return ARC4UInt64(0)  # Already voted
+    bytec_0 // 0x0000000000000000
+    frame_bury 0
+    retsub
+
+vote_on_dispute_after_if_else@6:
+    // smart_contracts/dispute/contract.py:200
+    // timestamp=ARC4UInt64(Global.latest_timestamp)
+    global LatestTimestamp
+    itob
+    // smart_contracts/dispute/contract.py:196-201
+    // # Record vote
+    // vote_data = VoteData(
+    //     juror=caller,
+    //     vote=vote,
+    //     timestamp=ARC4UInt64(Global.latest_timestamp)
+    // )
+    frame_dig 2
+    frame_dig -1
+    concat
+    swap
+    concat
+    // smart_contracts/dispute/contract.py:203
+    // self.juror_votes[vote_key] = vote_data.copy()
+    frame_dig 0
+    swap
+    box_put
+    // smart_contracts/dispute/contract.py:205-206
+    // # Update dispute vote counts
+    // if vote == ARC4UInt64(1):
+    frame_dig -1
+    bytec_3 // 0x0000000000000001
+    b==
+    bz vote_on_dispute_else_body@8
+    // smart_contracts/dispute/contract.py:207
+    // dispute_data.yes_votes = ARC4UInt64(dispute_data.yes_votes.native + 1)
+    frame_dig 5
+    dup
+    intc_2 // 56
+    extract_uint64
+    intc_0 // 1
+    +
+    itob
+    replace2 56
+    frame_bury 5
+
+vote_on_dispute_after_if_else@9:
+    // smart_contracts/dispute/contract.py:211
+    // self.disputes[dispute_id_uint] = dispute_data.copy()
+    frame_dig 4
+    frame_dig 5
+    dup
+    cover 2
+    box_put
+    // smart_contracts/dispute/contract.py:213-214
+    // # Check if we have enough votes to resolve
+    // total_votes = dispute_data.yes_votes.native + dispute_data.no_votes.native
+    dup
+    intc_2 // 56
+    extract_uint64
+    dup
+    cover 2
+    frame_bury 1
+    intc_3 // 64
+    extract_uint64
+    +
+    // smart_contracts/dispute/contract.py:215
+    // if total_votes >= 7:  # Need at least 7 votes
+    pushint 7 // 7
+    >=
+    bz vote_on_dispute_after_if_else@14
+    // smart_contracts/dispute/contract.py:216
+    // if dispute_data.yes_votes.native >= 7:
+    frame_dig 1
+    pushint 7 // 7
+    >=
+    bz vote_on_dispute_else_body@12
+    // smart_contracts/dispute/contract.py:217
+    // dispute_data.status = ARC4UInt64(1)  # Resolved (approved)
+    frame_dig 5
+    bytec_3 // 0x0000000000000001
+    replace2 48
+    frame_bury 5
+
+vote_on_dispute_after_if_else@13:
+    // smart_contracts/dispute/contract.py:221
+    // self.disputes[dispute_id_uint] = dispute_data.copy()
+    frame_dig 4
+    frame_dig 5
+    box_put
+
+vote_on_dispute_after_if_else@14:
+    // smart_contracts/dispute/contract.py:223
+    // return ARC4UInt64(1)
+    bytec_3 // 0x0000000000000001
+    frame_bury 0
+    retsub
+
+vote_on_dispute_else_body@12:
+    // smart_contracts/dispute/contract.py:219
+    // dispute_data.status = ARC4UInt64(2)  # Rejected
+    frame_dig 5
+    pushbytes 0x0000000000000002
+    replace2 48
+    frame_bury 5
+    b vote_on_dispute_after_if_else@13
+
+vote_on_dispute_else_body@8:
+    // smart_contracts/dispute/contract.py:209
+    // dispute_data.no_votes = ARC4UInt64(dispute_data.no_votes.native + 1)
+    frame_dig 5
+    dup
+    intc_3 // 64
+    extract_uint64
+    intc_0 // 1
+    +
+    itob
+    replace2 64
+    frame_bury 5
+    b vote_on_dispute_after_if_else@9
+
+
+// smart_contracts.dispute.contract.AgriGuardDispute.get_dispute(dispute_id: bytes) -> bytes:
+get_dispute:
+    // smart_contracts/dispute/contract.py:225-226
+    // @abimethod(readonly=True)
+    // def get_dispute(self, dispute_id: ARC4UInt64) -> DisputeData:
+    proto 1 1
+    // smart_contracts/dispute/contract.py:228
+    // dispute_data = self.disputes.maybe(dispute_id.native)[0].copy()
+    frame_dig -1
+    btoi
+    itob
+    bytec 7 // "disputes"
+    swap
+    concat
+    box_get
+    pop
+    dup
+    // smart_contracts/dispute/contract.py:230-237
+    // if dispute_data == DisputeData(
+    //     policy_id=ARC4UInt64(0),
+    //     claimant=Address(Global.zero_address),
+    //     created_at=ARC4UInt64(0),
+    //     status=ARC4UInt64(0),
+    //     yes_votes=ARC4UInt64(0),
+    //     no_votes=ARC4UInt64(0)
+    // ):
+    bytec 8 // base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+    ==
+    bz get_dispute_after_if_else@2
+    // smart_contracts/dispute/contract.py:238-245
+    // return DisputeData(
+    //     policy_id=ARC4UInt64(0),
+    //     claimant=Address(Global.zero_address),
+    //     created_at=ARC4UInt64(0),
+    //     status=ARC4UInt64(0),
+    //     yes_votes=ARC4UInt64(0),
+    //     no_votes=ARC4UInt64(0)
+    // )
+    bytec 8 // base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+    swap
+    retsub
+
+get_dispute_after_if_else@2:
+    // smart_contracts/dispute/contract.py:247
+    // return dispute_data
+    frame_dig 0
+    swap
+    retsub
+
+
+// smart_contracts.dispute.contract.AgriGuardDispute.get_juror_info(juror_address: bytes) -> bytes:
+get_juror_info:
+    // smart_contracts/dispute/contract.py:249-250
+    // @abimethod(readonly=True)
+    // def get_juror_info(self, juror_address: Address) -> JurorData:
+    proto 1 1
+    // smart_contracts/dispute/contract.py:252
+    // juror_data = self.jurors.maybe(juror_address)[0].copy()
+    bytec 6 // "jurors"
+    frame_dig -1
+    concat
+    box_get
+    // smart_contracts/dispute/contract.py:255
+    // if not exists:
+    bnz get_juror_info_after_if_else@2
+    // smart_contracts/dispute/contract.py:256-261
+    // return JurorData(
+    //     address=juror_address,
+    //     reputation=ARC4UInt64(0),
+    //     total_votes=ARC4UInt64(0),
+    //     correct_votes=ARC4UInt64(0)
+    // )
+    frame_dig -1
+    // smart_contracts/dispute/contract.py:258
+    // reputation=ARC4UInt64(0),
+    bytec_0 // 0x0000000000000000
+    // smart_contracts/dispute/contract.py:256-261
+    // return JurorData(
+    //     address=juror_address,
+    //     reputation=ARC4UInt64(0),
+    //     total_votes=ARC4UInt64(0),
+    //     correct_votes=ARC4UInt64(0)
+    // )
+    concat
+    // smart_contracts/dispute/contract.py:259
+    // total_votes=ARC4UInt64(0),
+    bytec_0 // 0x0000000000000000
+    // smart_contracts/dispute/contract.py:256-261
+    // return JurorData(
+    //     address=juror_address,
+    //     reputation=ARC4UInt64(0),
+    //     total_votes=ARC4UInt64(0),
+    //     correct_votes=ARC4UInt64(0)
+    // )
+    concat
+    // smart_contracts/dispute/contract.py:260
+    // correct_votes=ARC4UInt64(0)
+    bytec_0 // 0x0000000000000000
+    // smart_contracts/dispute/contract.py:256-261
+    // return JurorData(
+    //     address=juror_address,
+    //     reputation=ARC4UInt64(0),
+    //     total_votes=ARC4UInt64(0),
+    //     correct_votes=ARC4UInt64(0)
+    // )
+    concat
+    swap
+    retsub
+
+get_juror_info_after_if_else@2:
+    // smart_contracts/dispute/contract.py:263
+    // return juror_data
+    frame_dig 0
+    swap
+    retsub
+
+
+// smart_contracts.dispute.contract.AgriGuardDispute.get_total_jurors() -> bytes:
+get_total_jurors:
+    // smart_contracts/dispute/contract.py:268
+    // return ARC4UInt64(self.total_jurors)
+    intc_1 // 0
+    bytec_2 // "total_jurors"
+    app_global_get_ex
+    assert // check self.total_jurors exists
+    itob
+    retsub
