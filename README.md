@@ -1,45 +1,79 @@
-# App
+Here’s a more concise version of your README, with placeholders left for screenshots and demo video links:
 
-This starter full stack project has been generated using AlgoKit. See below for default getting started instructions.
+---
 
-## Setup
+# 🚜 AgriGuard: Decentralized Agricultural Insurance on Algorand
 
-### Initial setup
-1. Clone this repository to your local machine.
-2. Ensure [Docker](https://www.docker.com/) is installed and operational. Then, install `AlgoKit` following this [guide](https://github.com/algorandfoundation/algokit-cli#install).
-3. Run `algokit project bootstrap all` in the project directory. This command sets up your environment by installing necessary dependencies, setting up a Python virtual environment, and preparing your `.env` file.
-4. In the case of a smart contract project, execute `algokit generate env-file -a target_network localnet` from the `App-contracts` directory to create a `.env.localnet` file with default configuration for `localnet`.
-5. To build your project, execute `algokit project run build`. This compiles your project and prepares it for running.
-6. For project-specific instructions, refer to the READMEs of the child projects:
-   - Smart Contracts: [App-contracts](projects/App-contracts/README.md)
-   - Frontend Application: [App-frontend](projects/App-frontend/README.md)
+<div align="center">
+  <img src="https://img.shields.io/badge/Algorand-Blockchain-blue?style=for-the-badge&logo=algorand"/>
+  <img src="https://img.shields.io/badge/React-Frontend-61dafb?style=for-the-badge&logo=react"/>
+  <img src="https://img.shields.io/badge/FastAPI-Backend-009688?style=for-the-badge&logo=fastapi"/>
+  <img src="https://img.shields.io/badge/Google%20Gemini-AI-4285f4?style=for-the-badge&logo=google"/>
+</div>
 
-> This project is structured as a monorepo, refer to the [documentation](https://github.com/algorandfoundation/algokit-cli/blob/main/docs/features/project/run.md) to learn more about custom command orchestration via `algokit project run`.
+## 🌟 Overview
 
-### Subsequently
+**AgriGuard** is a decentralized insurance platform that protects farmers against agricultural risks using Algorand smart contracts, AI-driven risk assessment, and community dispute resolution.
 
-1. If you update to the latest source code and there are new dependencies, you will need to run `algokit project bootstrap all` again.
-2. Follow step 3 above.
+* **Instant payouts** via smart contracts
+* **Transparent AI risk assessment** with Google Gemini
+* **Community governance** for disputes
+* **Low-cost, global access** for farmers
 
-## Tools
+## 📝 Short Summary
 
-This project makes use of Python and React to build Algorand smart contracts and to provide a base project configuration to develop frontends for your Algorand dApps and interactions with smart contracts. The following tools are in use:
+AgriGuard: Blockchain insurance for farmers with AI risk assessment and community governance.
 
-- Algorand, AlgoKit, and AlgoKit Utils
-- Python dependencies including Poetry, Black, Ruff or Flake8, mypy, pytest, and pip-audit
-- React and related dependencies including AlgoKit Utils, Tailwind CSS, daisyUI, use-wallet, npm, jest, playwright, Prettier, ESLint, and Github Actions workflows for build validation
+## 🏗️ How It Works
 
-### VS Code
+* **Smart Contracts**: Automate policy creation, claim validation, and payouts.
+* **AI Integration**: Google Gemini analyzes weather, crop, and market data to set premiums fairly.
+* **Community Disputes**: Juror voting ensures transparent, fair resolution.
+* **Algorand**: Low fees (0.001 ALGO) and 3.3s block times enable instant global access.
 
-It has also been configured to have a productive dev experience out of the box in [VS Code](https://code.visualstudio.com/), see the [backend .vscode](./backend/.vscode) and [frontend .vscode](./frontend/.vscode) folders for more details.
+## 🛠️ Tech Stack
 
-## Integrating with smart contracts and application clients
+* **Frontend**: React + TypeScript, MUI, Wallet integration
+* **Backend**: FastAPI, Gemini AI, AlgoKit Utils
+* **Smart Contracts**: algopy (Python), ARC4 interfaces, box storage & inner transactions
 
-Refer to the [App-contracts](projects/App-contracts/README.md) folder for overview of working with smart contracts, [projects/App-frontend](projects/App-frontend/README.md) for overview of the React project and the [projects/App-frontend/contracts](projects/App-frontend/src/contracts/README.md) folder for README on adding new smart contracts from backend as application clients on your frontend. The templates provided in these folders will help you get started.
-When you compile and generate smart contract artifacts, your frontend component will automatically generate typescript application clients from smart contract artifacts and move them to `frontend/src/contracts` folder, see [`generate:app-clients` in package.json](projects/App-frontend/package.json). Afterwards, you are free to import and use them in your frontend application.
+## 🚀 Key Features
 
-The frontend starter also provides an example of interactions with your InsuranceClient in [`AppCalls.tsx`](projects/App-frontend/src/components/AppCalls.tsx) component by default.
+* One-click policy creation & AI-driven pricing
+* Automated payouts on-chain
+* Multi-asset premium & payout support
+* Juror-based dispute resolution with audit trail
+* Real-time analytics and logging
 
-## Next Steps
+## 🎬 Demo
 
-You can take this project and customize it to build your own decentralized applications on Algorand. Make sure to understand how to use AlgoKit and how to write smart contracts for Algorand before you start.
+📹 \[**Demo Video + Audio + WalkThrough**]– https://drive.google.com/file/d/1OURWDF6LVYveYnqPvc-f33AepKs5SEwx/view?usp=sharing]
+
+## 📸 Screenshots
+
+
+
+* Policy Creation – <img width="2608" height="1488" alt="image" src="https://github.com/user-attachments/assets/5475f357-c346-4d01-a3af-77a6973dbf77" />
+
+* Policy Management – <img width="2672" height="1478" alt="image" src="https://github.com/user-attachments/assets/2cfd1eb3-b662-4298-9cc4-0e5177923857" />
+
+* Dispute Resolution – <img width="2498" height="1272" alt="image" src="https://github.com/user-attachments/assets/13f512b3-a6f8-4f8f-b1b4-bf6c90e7cdc9" />
+
+
+## ⚡ Quick Start
+
+1. Clone repo & bootstrap:
+
+   ```bash
+   git clone <repo>
+   cd AgriGuard/App
+   algokit project bootstrap all
+   ```
+2. Start LocalNet: `algokit localnet start`
+3. Deploy Contracts: `algokit project deploy localnet`
+4. Configure `.env` for backend & frontend
+5. Run backend (`uvicorn main:app`) and frontend (`npm run dev`)
+
+---
+
+Would you like me to **also trim down the deep-dive technical sections** (Algorand features, architecture diagrams, security, testing) into a shorter “Additional Details” appendix at the bottom—so the core README stays hackathon-judge friendly?
