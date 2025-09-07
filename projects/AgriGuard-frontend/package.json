@@ -1,5 +1,5 @@
 {
-  "name": "App-frontend",
+  "name": "AgriGuard-frontend",
   "version": "0.1.0",
   "author": {
     "name": "gurubazawada",
@@ -24,8 +24,12 @@
     "vite-plugin-node-polyfills": "^0.22.0"
   },
   "dependencies": {
-    "@algorandfoundation/algokit-utils": "^9.0.0",
+    "@algorandfoundation/algokit-utils": "^9.1.2",
     "@blockshake/defly-connect": "^1.2.1",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.2",
+    "@mui/material": "^7.3.2",
     "@perawallet/connect": "^1.4.1",
     "@txnlab/use-wallet": "^4.0.0",
     "@txnlab/use-wallet-react": "^4.0.0",

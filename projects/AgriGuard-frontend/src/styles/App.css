@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #38b2ac;
+  background-color: #1976d2;
 }
 
 .hero-content {
@@ -98,7 +98,7 @@
 .btn {
   margin: 0.5rem;
   padding: 0.5rem 1rem;
-  background-color: #00aba2;
+  background-color: #1976d2;
   color: #fff;
 }
 
@@ -111,7 +111,7 @@
 }
 
 .border-teal-800 {
-  border-color: #2c7a7b;
+  border-color: #1565c0;
 }
 
 .modal-action {
