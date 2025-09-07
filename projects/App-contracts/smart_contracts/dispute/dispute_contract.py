@@ -183,7 +183,7 @@ class AgriGuardDispute(ARC4Contract):
             if juror_index <= self.total_jurors:
                 juror_count += UInt64(1)
                 # Add juror address to selected list (simplified)
-                selected_jurors = selected_jurors + Bytes(str(juror_index).encode())
+                selected_jurors = selected_jurors + Bytes(b"juror")
 
         return selected_jurors
 
@@ -213,7 +213,7 @@ class AgriGuardDispute(ARC4Contract):
             return ARC4UInt64(0)  # No jurors selected
 
         # Check if caller already voted
-        vote_key = Bytes(str(pid).encode()) + Bytes(caller.bytes)
+        vote_key = Bytes(b"vote_key") + caller.bytes
         existing_vote = self.juror_votes.maybe(vote_key)[1]
 
         if existing_vote:

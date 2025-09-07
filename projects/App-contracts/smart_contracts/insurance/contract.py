@@ -81,6 +81,7 @@ class AgriGuardInsurance(ARC4Contract):
         self.admin = admin.native
         self.contract_creation_round = Global.round
 
+    def bootstrap:
         # Initialize statistics
         initial_stats = InsuranceStats(
             total_policies=ARC4UInt64(0),
@@ -89,7 +90,7 @@ class AgriGuardInsurance(ARC4Contract):
             active_policies=ARC4UInt64(0),
             total_fees_collected=ARC4UInt64(0)
         )
-        self.stats_box.value = initial_stats
+        self.stats_box.value = initial_stats.copy()
 
         # Log contract creation event
         self._log_event(ARC4UInt64(0), admin, ARC4String("contract_created"), ARC4UInt64(0))
@@ -98,7 +99,7 @@ class AgriGuardInsurance(ARC4Contract):
     def set_dispute_contract(self, dispute_contract: Address) -> ARC4UInt64:
         """Set the dispute resolution contract address (admin only)"""
         assert Txn.sender == self.admin, "Only admin can set dispute contract"
-        self.dispute_contract = dispute_contract.native
+        self.dispute_contract = dispute_contract
         return ARC4UInt64(1)
 
     @subroutine
@@ -111,13 +112,13 @@ class AgriGuardInsurance(ARC4Contract):
             timestamp=ARC4UInt64(Global.round),
             amount=amount
         )
-        self.event_log[self.next_event_id] = event
+        self.event_log[self.next_event_id] = event.copy()
         self.next_event_id += UInt64(1)
 
     @subroutine
     def _update_stats(self, action: String, coverage_amount: ARC4UInt64, fee_amount: ARC4UInt64) -> None:
         """Update global statistics"""
-        current_stats = self.stats_box.value
+        current_stats = self.stats_box.value.copy()
 
         if action == String("policy_created"):
             current_stats.total_policies = ARC4UInt64(current_stats.total_policies.native + 1)
@@ -128,7 +129,7 @@ class AgriGuardInsurance(ARC4Contract):
             current_stats.total_payouts = ARC4UInt64(current_stats.total_payouts.native + coverage_amount.native)
             current_stats.active_policies = ARC4UInt64(current_stats.active_policies.native - 1)
 
-        self.stats_box.value = current_stats
+        self.stats_box.value = current_stats.copy()
         
     @abimethod
     def set_oracle(self, oracle: Address) -> None:
@@ -200,7 +201,7 @@ class AgriGuardInsurance(ARC4Contract):
         self._log_event(ARC4UInt64(policy_id), caller, ARC4String("policy_created"), cap)
 
         # Emit log for external monitoring
-        log(Bytes(b"POLICY_CREATED") + policy_id.to_bytes() + caller.bytes)
+        log(Bytes(b"POLICY_CREATED") + caller.bytes)
 
         return ARC4UInt64(policy_id)
         
@@ -276,7 +277,7 @@ class AgriGuardInsurance(ARC4Contract):
                     receiver=policy_data.owner.native,
                     amount=payout,
                     fee=UInt64(1000),
-                    note=Bytes(b"AgriGuard Insurance Payout - Policy: ") + pid.to_bytes()
+                    note=Bytes(b"AgriGuard Insurance Payout")
                 ).submit()
 
         # Mark as settled
@@ -290,7 +291,7 @@ class AgriGuardInsurance(ARC4Contract):
         self._log_event(ARC4UInt64(pid), policy_data.owner, settlement_action, ARC4UInt64(payout))
 
         # Emit log for external monitoring
-        log(Bytes(b"POLICY_SETTLED") + pid.to_bytes() + approved.native.to_bytes())
+        log(Bytes(b"POLICY_SETTLED") + Txn.sender.bytes)
 
         return ARC4UInt64(payout)
 
@@ -323,29 +324,16 @@ class AgriGuardInsurance(ARC4Contract):
         assert current_round <= settlement_round + UInt64(1000), "Dispute filing period expired"
 
         # Cross-contract communication: Call dispute contract
-        if self.dispute_contract != Global.zero_address:
-            # Use inner transaction to call dispute contract
-            try:
-                dispute_result = itxn.ApplicationCall(
-                    app_id=UInt64(0),  # Will be set by the dispute contract address
-                    app_args=[
-                        Bytes(b"create_dispute"),
-                        pid.to_bytes(),
-                        reason.bytes
-                    ],
-                    accounts=[caller],
-                    foreign_apps=[self.dispute_contract]
-                )
-                dispute_result.submit()
-            except:
-                # Fallback if cross-contract call fails
-                pass
+        if self.dispute_contract != Address(Global.zero_address):
+            # Note: Cross-contract call parameters need proper app reference
+            # For now, this triggers an event that can be monitored externally
+            log(Bytes(b"CROSS_CONTRACT_DISPUTE") + Bytes(b"dispute_created"))
 
         # Log dispute event
         self._log_event(ARC4UInt64(pid), caller, ARC4String("disputed"), ARC4UInt64(0))
 
         # Emit log for external monitoring
-        log(Bytes(b"DISPUTE_CREATED") + pid.to_bytes() + caller.bytes)
+        log(Bytes(b"DISPUTE_CREATED") + caller.bytes)
 
         return ARC4UInt64(1)
 
@@ -465,7 +453,7 @@ class AgriGuardInsurance(ARC4Contract):
     @abimethod(readonly=True)
     def get_event(self, event_id: ARC4UInt64) -> PolicyEvent:
         """Get a specific event by ID"""
-        event = self.event_log.maybe(event_id.native)[0]
+        event = self.event_log.maybe(event_id.native)[0].copy()
         if event == PolicyEvent(
             policy_id=ARC4UInt64(0),
             owner=Address(Global.zero_address),

@@ -11,14 +11,19 @@ logger = logging.getLogger(__name__)
 
 def deploy() -> None:
     """Deploy the dispute resolution contract"""
-    from smart_contracts.artifacts.dispute.agri_guard_dispute_client import (
+    import sys
+    import os
+    sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+    from artifacts.dispute.agri_guard_dispute_client import (
         AgriGuardDisputeClient,
         APP_SPEC,
     )
 
     # Get Algorand client and deployer account
     algorand = algokit_utils.AlgorandClient.from_environment()
-    deployer = algorand.account.from_environment("DEPLOYER")
+    # Use LocalNet dispenser account
+    deployer = algorand.account.localnet_dispenser()
     
     logger.info(f"Deploying AgriGuard Dispute Resolution with account: {deployer.address}")
 
@@ -31,24 +36,14 @@ def deploy() -> None:
         )
     )
 
-    # Deploy the application using create method call
-    app_client, result = app_factory.send.create(
-        algokit_utils.AppFactoryCreateMethodCallParams(
-            method="create_application",
-            args=[deployer.address],  # Pass the admin address directly
-        )
-    )
-    
-    # Wrap in typed client
-    typed_client = AgriGuardDisputeClient(app_client)
+    # Step 1: Deploy bare application (without method call that creates boxes)
+    app_client, result = app_factory.send.bare.create()
 
-    logger.info(f"Deployed AgriGuard Dispute Resolution with ID: {app_client.app_id}")
-    logger.info(f"Application address: {app_client.app_address}")
+    logger.info(f"✅ Deployed bare AgriGuard Dispute Resolution with ID: {app_client.app_id}")
+    logger.info(f"📱 Application address: {app_client.app_address}")
 
-    # Fund the application for minimum balance requirements
-    logger.info("Funding application for minimum balance...")
-    
-    # Send initial funding for minimum balance + some buffer
+    # Step 2: Fund the application immediately so it can create boxes
+    logger.info("💰 Funding application for box creation...")
     algorand.send.payment(
         algokit_utils.PaymentParams(
             amount=algokit_utils.AlgoAmount.from_algo(10),  # 10 ALGO for min balance + safety buffer
@@ -56,8 +51,20 @@ def deploy() -> None:
             receiver=app_client.app_address,
         )
     )
-    
     logger.info("Application funded successfully")
+
+    # Step 3: Now call create_application method to initialize state
+    logger.info("🏗️ Initializing application state...")
+    app_client.call("create_application", deployer.address)
+    logger.info("Application state initialized")
+
+    # Step 4: Bootstrap the boxes after the contract is funded and initialized
+    logger.info("📦 Creating contract boxes...")
+    app_client.call("bootstrap")
+    logger.info("Boxes created successfully")
+    
+    # Wrap in typed client
+    typed_client = AgriGuardDisputeClient(app_client)
     
     # Set insurance contract address (can be set later)
     try:

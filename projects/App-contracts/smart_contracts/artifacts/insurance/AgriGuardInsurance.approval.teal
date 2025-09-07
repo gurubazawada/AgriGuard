@@ -3,44 +3,138 @@
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.__algopy_entrypoint_with_init() -> uint64:
 main:
-    intcblock 1 0 100 2 1000
-    bytecblock 0x151f7c75 "next_policy_id" 0x0000000000000000 "policies" "admin" "oracle" 0x0000000000000001 0x0062
+    intcblock 1 0 100 90 1000
+    bytecblock 0x151f7c75 0x0000000000000000 "next_policy_id" "policies" "admin" "oracle" 0x0000000000000001 "next_event_id" "stats_box" "dispute_contract" "contract_creation_round" "event_log" "policy_created" "policy_settled" 0x0062
     txn ApplicationID
     bnz main_after_if_else@2
-    // smart_contracts/insurance/contract.py:35-36
+    // smart_contracts/insurance/contract.py:61-62
     // # Global state
     // self.admin = Account()
     bytec 4 // "admin"
     global ZeroAddress
     app_global_put
-    // smart_contracts/insurance/contract.py:37
+    // smart_contracts/insurance/contract.py:63
     // self.oracle = Account()
     bytec 5 // "oracle"
     global ZeroAddress
     app_global_put
-    // smart_contracts/insurance/contract.py:38
+    // smart_contracts/insurance/contract.py:64
+    // self.dispute_contract = Address()  # Linked dispute resolution contract
+    bytec 9 // "dispute_contract"
+    global ZeroAddress
+    app_global_put
+    // smart_contracts/insurance/contract.py:65
     // self.next_policy_id = UInt64(1)
-    bytec_1 // "next_policy_id"
+    bytec_2 // "next_policy_id"
+    intc_0 // 1
+    app_global_put
+    // smart_contracts/insurance/contract.py:66
+    // self.contract_creation_round = UInt64(0)  # Track when contract was created
+    bytec 10 // "contract_creation_round"
+    intc_1 // 0
+    app_global_put
+    // smart_contracts/insurance/contract.py:76
+    // self.next_event_id = UInt64(1)
+    bytec 7 // "next_event_id"
     intc_0 // 1
     app_global_put
 
 main_after_if_else@2:
-    // smart_contracts/insurance/contract.py:23
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     txn NumAppArgs
-    bz main_after_if_else@17
-    pushbytess 0x894a716e 0x3368f556 0x671721d6 0x50f992ac 0xef909f38 0x5c1689a2 0xeb0de02b 0x3f78f6e3 0xabf6d51a 0xfa20020c 0xdce31bbe 0x1a0e2048 // method "create_application(address)void", method "set_oracle(address)void", method "buy_policy_with_payment(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64", method "buy_policy(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64", method "oracle_settle(uint64,uint64)uint64", method "dispute_settlement(uint64,string)uint64", method "get_policy(uint64)(address,string,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64)", method "get_policies_by_owner(address)(uint64,uint64)", method "get_policy_count()uint64", method "calculate_fee(uint64,uint64,uint64,uint64)uint64", method "delete_policy(uint64)uint64", method "get_globals()(address,address,uint64)"
+    bz main_after_if_else@23
+    pushbytess 0x894a716e 0x47d7ef35 0x3368f556 0xa92e691c 0x671721d6 0x50f992ac 0xef909f38 0x5c1689a2 0xeb0de02b 0x3f78f6e3 0xabf6d51a 0xfa20020c 0xdce31bbe 0x1a0e2048 0x140d1f47 0x457f7252 0x615bb30f 0x927446e0 // method "create_application(address)void", method "set_dispute_contract(address)uint64", method "set_oracle(address)void", method "get_oracle()address", method "buy_policy_with_payment(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64", method "buy_policy(byte[],uint64,uint64,uint64,uint64,uint64,uint64,uint64)uint64", method "oracle_settle(uint64,uint64)uint64", method "dispute_settlement(uint64,string)uint64", method "get_policy(uint64)(address,string,uint64,uint64,uint64,uint64,uint64,uint64,uint64,uint64)", method "get_policies_by_owner(address)(uint64,uint64)", method "get_policy_count()uint64", method "calculate_fee(uint64,uint64,uint64,uint64)uint64", method "delete_policy(uint64)uint64", method "get_globals()(address,address,uint64)", method "get_statistics()(uint64,uint64,uint64,uint64,uint64)", method "get_event(uint64)(uint64,address,string,uint64,uint64)", method "get_recent_events(uint64)(uint64,uint64)", method "validate_policy_timing(uint64)uint64"
     txna ApplicationArgs 0
-    match main_create_application_route@5 main_set_oracle_route@6 main_buy_policy_with_payment_route@7 main_buy_policy_route@8 main_oracle_settle_route@9 main_dispute_settlement_route@10 main_get_policy_route@11 main_get_policies_by_owner_route@12 main_get_policy_count_route@13 main_calculate_fee_route@14 main_delete_policy_route@15 main_get_globals_route@16
+    match main_create_application_route@5 main_set_dispute_contract_route@6 main_set_oracle_route@7 main_get_oracle_route@8 main_buy_policy_with_payment_route@9 main_buy_policy_route@10 main_oracle_settle_route@11 main_dispute_settlement_route@12 main_get_policy_route@13 main_get_policies_by_owner_route@14 main_get_policy_count_route@15 main_calculate_fee_route@16 main_delete_policy_route@17 main_get_globals_route@18 main_get_statistics_route@19 main_get_event_route@20 main_get_recent_events_route@21 main_validate_policy_timing_route@22
 
-main_after_if_else@17:
-    // smart_contracts/insurance/contract.py:23
+main_after_if_else@23:
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     intc_1 // 0
     return
 
-main_get_globals_route@16:
-    // smart_contracts/insurance/contract.py:299
+main_validate_policy_timing_route@22:
+    // smart_contracts/insurance/contract.py:482
+    // @abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/insurance/contract.py:46
+    // class AgriGuardInsurance(ARC4Contract):
+    txna ApplicationArgs 1
+    // smart_contracts/insurance/contract.py:482
+    // @abimethod(readonly=True)
+    callsub validate_policy_timing
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_get_recent_events_route@21:
+    // smart_contracts/insurance/contract.py:472
+    // @abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/insurance/contract.py:46
+    // class AgriGuardInsurance(ARC4Contract):
+    txna ApplicationArgs 1
+    // smart_contracts/insurance/contract.py:472
+    // @abimethod(readonly=True)
+    callsub get_recent_events
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_get_event_route@20:
+    // smart_contracts/insurance/contract.py:452
+    // @abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/insurance/contract.py:46
+    // class AgriGuardInsurance(ARC4Contract):
+    txna ApplicationArgs 1
+    // smart_contracts/insurance/contract.py:452
+    // @abimethod(readonly=True)
+    callsub get_event
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_get_statistics_route@19:
+    // smart_contracts/insurance/contract.py:447
+    // @abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_statistics
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_get_globals_route@18:
+    // smart_contracts/insurance/contract.py:438
     // @abimethod(readonly=True)
     txn OnCompletion
     !
@@ -55,18 +149,18 @@ main_get_globals_route@16:
     intc_0 // 1
     return
 
-main_delete_policy_route@15:
-    // smart_contracts/insurance/contract.py:266
+main_delete_policy_route@17:
+    // smart_contracts/insurance/contract.py:405
     // @abimethod
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/insurance/contract.py:23
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     txna ApplicationArgs 1
-    // smart_contracts/insurance/contract.py:266
+    // smart_contracts/insurance/contract.py:405
     // @abimethod
     callsub delete_policy
     bytec_0 // 0x151f7c75
@@ -76,21 +170,21 @@ main_delete_policy_route@15:
     intc_0 // 1
     return
 
-main_calculate_fee_route@14:
-    // smart_contracts/insurance/contract.py:232
+main_calculate_fee_route@16:
+    // smart_contracts/insurance/contract.py:371
     // @abimethod(readonly=True)
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/insurance/contract.py:23
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     txna ApplicationArgs 1
     txna ApplicationArgs 2
     txna ApplicationArgs 3
     txna ApplicationArgs 4
-    // smart_contracts/insurance/contract.py:232
+    // smart_contracts/insurance/contract.py:371
     // @abimethod(readonly=True)
     callsub calculate_fee
     bytec_0 // 0x151f7c75
@@ -100,8 +194,8 @@ main_calculate_fee_route@14:
     intc_0 // 1
     return
 
-main_get_policy_count_route@13:
-    // smart_contracts/insurance/contract.py:227
+main_get_policy_count_route@15:
+    // smart_contracts/insurance/contract.py:366
     // @abimethod(readonly=True)
     txn OnCompletion
     !
@@ -116,18 +210,18 @@ main_get_policy_count_route@13:
     intc_0 // 1
     return
 
-main_get_policies_by_owner_route@12:
-    // smart_contracts/insurance/contract.py:205
+main_get_policies_by_owner_route@14:
+    // smart_contracts/insurance/contract.py:344
     // @abimethod(readonly=True)
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/insurance/contract.py:23
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     txna ApplicationArgs 1
-    // smart_contracts/insurance/contract.py:205
+    // smart_contracts/insurance/contract.py:344
     // @abimethod(readonly=True)
     callsub get_policies_by_owner
     bytec_0 // 0x151f7c75
@@ -137,18 +231,18 @@ main_get_policies_by_owner_route@12:
     intc_0 // 1
     return
 
-main_get_policy_route@11:
-    // smart_contracts/insurance/contract.py:200
+main_get_policy_route@13:
+    // smart_contracts/insurance/contract.py:339
     // @abimethod(readonly=True)
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/insurance/contract.py:23
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     txna ApplicationArgs 1
-    // smart_contracts/insurance/contract.py:200
+    // smart_contracts/insurance/contract.py:339
     // @abimethod(readonly=True)
     callsub get_policy
     bytec_0 // 0x151f7c75
@@ -158,19 +252,19 @@ main_get_policy_route@11:
     intc_0 // 1
     return
 
-main_dispute_settlement_route@10:
-    // smart_contracts/insurance/contract.py:172
+main_dispute_settlement_route@12:
+    // smart_contracts/insurance/contract.py:297
     // @abimethod
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/insurance/contract.py:23
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     txna ApplicationArgs 1
     txna ApplicationArgs 2
-    // smart_contracts/insurance/contract.py:172
+    // smart_contracts/insurance/contract.py:297
     // @abimethod
     callsub dispute_settlement
     bytec_0 // 0x151f7c75
@@ -180,19 +274,19 @@ main_dispute_settlement_route@10:
     intc_0 // 1
     return
 
-main_oracle_settle_route@9:
-    // smart_contracts/insurance/contract.py:140
+main_oracle_settle_route@11:
+    // smart_contracts/insurance/contract.py:245
     // @abimethod
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/insurance/contract.py:23
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     txna ApplicationArgs 1
     txna ApplicationArgs 2
-    // smart_contracts/insurance/contract.py:140
+    // smart_contracts/insurance/contract.py:245
     // @abimethod
     callsub oracle_settle
     bytec_0 // 0x151f7c75
@@ -202,15 +296,15 @@ main_oracle_settle_route@9:
     intc_0 // 1
     return
 
-main_buy_policy_route@8:
-    // smart_contracts/insurance/contract.py:102
+main_buy_policy_route@10:
+    // smart_contracts/insurance/contract.py:207
     // @abimethod
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/insurance/contract.py:23
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     txna ApplicationArgs 1
     txna ApplicationArgs 2
@@ -220,7 +314,7 @@ main_buy_policy_route@8:
     txna ApplicationArgs 6
     txna ApplicationArgs 7
     txna ApplicationArgs 8
-    // smart_contracts/insurance/contract.py:102
+    // smart_contracts/insurance/contract.py:207
     // @abimethod
     callsub buy_policy
     bytec_0 // 0x151f7c75
@@ -230,15 +324,15 @@ main_buy_policy_route@8:
     intc_0 // 1
     return
 
-main_buy_policy_with_payment_route@7:
-    // smart_contracts/insurance/contract.py:54
+main_buy_policy_with_payment_route@9:
+    // smart_contracts/insurance/contract.py:144
     // @abimethod
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/insurance/contract.py:23
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     txna ApplicationArgs 1
     txna ApplicationArgs 2
@@ -248,7 +342,7 @@ main_buy_policy_with_payment_route@7:
     txna ApplicationArgs 6
     txna ApplicationArgs 7
     txna ApplicationArgs 8
-    // smart_contracts/insurance/contract.py:54
+    // smart_contracts/insurance/contract.py:144
     // @abimethod
     callsub buy_policy_with_payment
     bytec_0 // 0x151f7c75
@@ -258,25 +352,62 @@ main_buy_policy_with_payment_route@7:
     intc_0 // 1
     return
 
-main_set_oracle_route@6:
-    // smart_contracts/insurance/contract.py:48
+main_get_oracle_route@8:
+    // smart_contracts/insurance/contract.py:139
+    // @abimethod(readonly=True)
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    callsub get_oracle
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
+main_set_oracle_route@7:
+    // smart_contracts/insurance/contract.py:133
     // @abimethod
     txn OnCompletion
     !
     assert // OnCompletion is not NoOp
     txn ApplicationID
     assert // can only call when not creating
-    // smart_contracts/insurance/contract.py:23
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     txna ApplicationArgs 1
-    // smart_contracts/insurance/contract.py:48
+    // smart_contracts/insurance/contract.py:133
     // @abimethod
     callsub set_oracle
     intc_0 // 1
     return
 
+main_set_dispute_contract_route@6:
+    // smart_contracts/insurance/contract.py:97
+    // @abimethod
+    txn OnCompletion
+    !
+    assert // OnCompletion is not NoOp
+    txn ApplicationID
+    assert // can only call when not creating
+    // smart_contracts/insurance/contract.py:46
+    // class AgriGuardInsurance(ARC4Contract):
+    txna ApplicationArgs 1
+    // smart_contracts/insurance/contract.py:97
+    // @abimethod
+    callsub set_dispute_contract
+    bytec_0 // 0x151f7c75
+    swap
+    concat
+    log
+    intc_0 // 1
+    return
+
 main_create_application_route@5:
-    // smart_contracts/insurance/contract.py:43
+    // smart_contracts/insurance/contract.py:78
     // @abimethod(create="require")
     txn OnCompletion
     !
@@ -284,10 +415,10 @@ main_create_application_route@5:
     txn ApplicationID
     !
     assert // can only call when creating
-    // smart_contracts/insurance/contract.py:23
+    // smart_contracts/insurance/contract.py:46
     // class AgriGuardInsurance(ARC4Contract):
     txna ApplicationArgs 1
-    // smart_contracts/insurance/contract.py:43
+    // smart_contracts/insurance/contract.py:78
     // @abimethod(create="require")
     callsub create_application
     intc_0 // 1
@@ -296,25 +427,239 @@ main_create_application_route@5:
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.create_application(admin: bytes) -> void:
 create_application:
-    // smart_contracts/insurance/contract.py:43-44
+    // smart_contracts/insurance/contract.py:78-79
     // @abimethod(create="require")
     // def create_application(self, admin: Address) -> None:
     proto 1 0
-    // smart_contracts/insurance/contract.py:46
+    // smart_contracts/insurance/contract.py:81
     // self.admin = admin.native
     bytec 4 // "admin"
     frame_dig -1
     app_global_put
+    // smart_contracts/insurance/contract.py:82
+    // self.contract_creation_round = Global.round
+    bytec 10 // "contract_creation_round"
+    global Round
+    app_global_put
+    // smart_contracts/insurance/contract.py:92
+    // self.stats_box.value = initial_stats.copy()
+    bytec 8 // "stats_box"
+    // smart_contracts/insurance/contract.py:84-91
+    // # Initialize statistics
+    // initial_stats = InsuranceStats(
+    //     total_policies=ARC4UInt64(0),
+    //     total_coverage=ARC4UInt64(0),
+    //     total_payouts=ARC4UInt64(0),
+    //     active_policies=ARC4UInt64(0),
+    //     total_fees_collected=ARC4UInt64(0)
+    // )
+    pushbytes 0x00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    // smart_contracts/insurance/contract.py:92
+    // self.stats_box.value = initial_stats.copy()
+    box_put
+    // smart_contracts/insurance/contract.py:94-95
+    // # Log contract creation event
+    // self._log_event(ARC4UInt64(0), admin, ARC4String("contract_created"), ARC4UInt64(0))
+    bytec_1 // 0x0000000000000000
+    frame_dig -1
+    pushbytes 0x0010636f6e74726163745f63726561746564
+    bytec_1 // 0x0000000000000000
+    callsub _log_event
     retsub
+
+
+// smart_contracts.insurance.contract.AgriGuardInsurance.set_dispute_contract(dispute_contract: bytes) -> bytes:
+set_dispute_contract:
+    // smart_contracts/insurance/contract.py:97-98
+    // @abimethod
+    // def set_dispute_contract(self, dispute_contract: Address) -> ARC4UInt64:
+    proto 1 1
+    // smart_contracts/insurance/contract.py:100
+    // assert Txn.sender == self.admin, "Only admin can set dispute contract"
+    txn Sender
+    intc_1 // 0
+    bytec 4 // "admin"
+    app_global_get_ex
+    assert // check self.admin exists
+    ==
+    assert // Only admin can set dispute contract
+    // smart_contracts/insurance/contract.py:101
+    // self.dispute_contract = dispute_contract
+    bytec 9 // "dispute_contract"
+    frame_dig -1
+    app_global_put
+    // smart_contracts/insurance/contract.py:102
+    // return ARC4UInt64(1)
+    bytec 6 // 0x0000000000000001
+    retsub
+
+
+// smart_contracts.insurance.contract.AgriGuardInsurance._log_event(policy_id: bytes, owner: bytes, action: bytes, amount: bytes) -> void:
+_log_event:
+    // smart_contracts/insurance/contract.py:104-105
+    // @subroutine
+    // def _log_event(self, policy_id: ARC4UInt64, owner: Address, action: ARC4String, amount: ARC4UInt64) -> None:
+    proto 4 0
+    // smart_contracts/insurance/contract.py:111
+    // timestamp=ARC4UInt64(Global.round),
+    global Round
+    itob
+    // smart_contracts/insurance/contract.py:107-113
+    // event = PolicyEvent(
+    //     policy_id=policy_id,
+    //     owner=owner,
+    //     action=action,
+    //     timestamp=ARC4UInt64(Global.round),
+    //     amount=amount
+    // )
+    frame_dig -4
+    frame_dig -3
+    concat
+    pushbytes 0x003a
+    concat
+    swap
+    concat
+    frame_dig -1
+    concat
+    frame_dig -2
+    concat
+    // smart_contracts/insurance/contract.py:114
+    // self.event_log[self.next_event_id] = event.copy()
+    intc_1 // 0
+    bytec 7 // "next_event_id"
+    app_global_get_ex
+    assert // check self.next_event_id exists
+    dup
+    itob
+    bytec 11 // "event_log"
+    swap
+    concat
+    dup
+    box_del
+    pop
+    uncover 2
+    box_put
+    // smart_contracts/insurance/contract.py:115
+    // self.next_event_id += UInt64(1)
+    intc_0 // 1
+    +
+    bytec 7 // "next_event_id"
+    swap
+    app_global_put
+    retsub
+
+
+// smart_contracts.insurance.contract.AgriGuardInsurance._update_stats(action: bytes, coverage_amount: bytes, fee_amount: bytes) -> void:
+_update_stats:
+    // smart_contracts/insurance/contract.py:117-118
+    // @subroutine
+    // def _update_stats(self, action: String, coverage_amount: ARC4UInt64, fee_amount: ARC4UInt64) -> None:
+    proto 3 0
+    intc_1 // 0
+    // smart_contracts/insurance/contract.py:120
+    // current_stats = self.stats_box.value.copy()
+    bytec 8 // "stats_box"
+    box_get
+    assert // check self.stats_box exists
+    // smart_contracts/insurance/contract.py:122
+    // if action == String("policy_created"):
+    frame_dig -3
+    bytec 12 // "policy_created"
+    ==
+    bz _update_stats_else_body@2
+    // smart_contracts/insurance/contract.py:123
+    // current_stats.total_policies = ARC4UInt64(current_stats.total_policies.native + 1)
+    frame_dig 1
+    dup
+    intc_1 // 0
+    extract_uint64
+    intc_0 // 1
+    +
+    itob
+    replace2 0
+    // smart_contracts/insurance/contract.py:124
+    // current_stats.total_coverage = ARC4UInt64(current_stats.total_coverage.native + coverage_amount.native)
+    dup
+    pushint 8 // 8
+    extract_uint64
+    frame_dig -2
+    btoi
+    +
+    itob
+    replace2 8
+    // smart_contracts/insurance/contract.py:125
+    // current_stats.active_policies = ARC4UInt64(current_stats.active_policies.native + 1)
+    dup
+    pushint 24 // 24
+    extract_uint64
+    intc_0 // 1
+    +
+    itob
+    replace2 24
+    // smart_contracts/insurance/contract.py:126
+    // current_stats.total_fees_collected = ARC4UInt64(current_stats.total_fees_collected.native + fee_amount.native)
+    dup
+    pushint 32 // 32
+    extract_uint64
+    frame_dig -1
+    btoi
+    +
+    itob
+    replace2 32
+    frame_bury 1
+
+_update_stats_after_if_else@5:
+    // smart_contracts/insurance/contract.py:131
+    // self.stats_box.value = current_stats.copy()
+    bytec 8 // "stats_box"
+    frame_dig 1
+    box_put
+    retsub
+
+_update_stats_else_body@2:
+    // smart_contracts/insurance/contract.py:127
+    // elif action == String("policy_settled"):
+    frame_dig -3
+    bytec 13 // "policy_settled"
+    ==
+    frame_dig 1
+    frame_bury 0
+    bz _update_stats_after_if_else@4
+    // smart_contracts/insurance/contract.py:128
+    // current_stats.total_payouts = ARC4UInt64(current_stats.total_payouts.native + coverage_amount.native)
+    frame_dig 1
+    dup
+    pushint 16 // 16
+    extract_uint64
+    frame_dig -2
+    btoi
+    +
+    itob
+    replace2 16
+    // smart_contracts/insurance/contract.py:129
+    // current_stats.active_policies = ARC4UInt64(current_stats.active_policies.native - 1)
+    dup
+    pushint 24 // 24
+    extract_uint64
+    intc_0 // 1
+    -
+    itob
+    replace2 24
+    frame_bury 0
+
+_update_stats_after_if_else@4:
+    frame_dig 0
+    frame_bury 1
+    b _update_stats_after_if_else@5
 
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.set_oracle(oracle: bytes) -> void:
 set_oracle:
-    // smart_contracts/insurance/contract.py:48-49
+    // smart_contracts/insurance/contract.py:133-134
     // @abimethod
     // def set_oracle(self, oracle: Address) -> None:
     proto 1 0
-    // smart_contracts/insurance/contract.py:51
+    // smart_contracts/insurance/contract.py:136
     // assert Txn.sender == self.admin, "Only admin can set oracle"
     txn Sender
     intc_1 // 0
@@ -323,7 +668,7 @@ set_oracle:
     assert // check self.admin exists
     ==
     assert // Only admin can set oracle
-    // smart_contracts/insurance/contract.py:52
+    // smart_contracts/insurance/contract.py:137
     // self.oracle = oracle.native
     bytec 5 // "oracle"
     frame_dig -1
@@ -331,9 +676,20 @@ set_oracle:
     retsub
 
 
+// smart_contracts.insurance.contract.AgriGuardInsurance.get_oracle() -> bytes:
+get_oracle:
+    // smart_contracts/insurance/contract.py:142
+    // return Address(self.oracle)
+    intc_1 // 0
+    bytec 5 // "oracle"
+    app_global_get_ex
+    assert // check self.oracle exists
+    retsub
+
+
 // smart_contracts.insurance.contract.AgriGuardInsurance.buy_policy_with_payment(zip_code: bytes, t0: bytes, t1: bytes, cap: bytes, direction: bytes, threshold: bytes, slope: bytes, fee: bytes) -> bytes:
 buy_policy_with_payment:
-    // smart_contracts/insurance/contract.py:54-65
+    // smart_contracts/insurance/contract.py:144-155
     // @abimethod
     // def buy_policy_with_payment(
     //     self,
@@ -347,34 +703,71 @@ buy_policy_with_payment:
     //     fee: ARC4UInt64
     // ) -> ARC4UInt64:
     proto 8 1
-    // smart_contracts/insurance/contract.py:72-73
-    // # Verify this is part of a group transaction
+    // smart_contracts/insurance/contract.py:163-164
+    // # Enhanced validation
     // assert Global.group_size == UInt64(2), "Must be called in group transaction"
     global GroupSize
-    intc_3 // 2
+    pushint 2 // 2
     ==
     assert // Must be called in group transaction
-    // smart_contracts/insurance/contract.py:80-81
+    // smart_contracts/insurance/contract.py:165
+    // assert t0.native < t1.native, "Start time must be before end time"
+    frame_dig -7
+    btoi
+    frame_dig -6
+    btoi
+    dup2
+    <
+    assert // Start time must be before end time
+    // smart_contracts/insurance/contract.py:166
+    // assert cap.native > UInt64(0), "Coverage amount must be positive"
+    frame_dig -5
+    btoi
+    assert // Coverage amount must be positive
+    // smart_contracts/insurance/contract.py:167
+    // assert fee.native > UInt64(0), "Fee must be positive"
+    frame_dig -1
+    btoi
+    assert // Fee must be positive
+    // smart_contracts/insurance/contract.py:171
+    // assert t0.native > current_round, "Policy cannot start in the past"
+    dig 1
+    // smart_contracts/insurance/contract.py:169-170
+    // # Time-based validation
+    // current_round = Global.round
+    global Round
+    // smart_contracts/insurance/contract.py:171
+    // assert t0.native > current_round, "Policy cannot start in the past"
+    >
+    assert // Policy cannot start in the past
+    // smart_contracts/insurance/contract.py:172
+    // assert t1.native > t0.native + UInt64(100), "Policy duration too short (minimum 100 rounds)"
+    swap
+    intc_2 // 100
+    +
+    >
+    assert // Policy duration too short (minimum 100 rounds)
+    // smart_contracts/insurance/contract.py:174-175
     // # Create policy
     // policy_id = self.next_policy_id
     intc_1 // 0
-    bytec_1 // "next_policy_id"
+    bytec_2 // "next_policy_id"
     app_global_get_ex
     assert // check self.next_policy_id exists
-    // smart_contracts/insurance/contract.py:82
+    // smart_contracts/insurance/contract.py:176
     // self.next_policy_id += UInt64(1)
     dup
     intc_0 // 1
     +
-    bytec_1 // "next_policy_id"
+    bytec_2 // "next_policy_id"
     swap
     app_global_put
-    // smart_contracts/insurance/contract.py:85
-    // owner=Address.from_bytes(Txn.sender.bytes),
+    // smart_contracts/insurance/contract.py:178
+    // caller = Address.from_bytes(Txn.sender.bytes)
     txn Sender
-    // smart_contracts/insurance/contract.py:84-95
+    // smart_contracts/insurance/contract.py:180-191
     // policy_data = PolicyData(
-    //     owner=Address.from_bytes(Txn.sender.bytes),
+    //     owner=caller,
     //     zip_code=ARC4String.from_bytes(zip_code.bytes),
     //     t0=t0,
     //     t1=t1,
@@ -385,7 +778,8 @@ buy_policy_with_payment:
     //     fee_paid=fee,
     //     settled=ARC4UInt64(0)
     // )
-    bytec 7 // 0x0062
+    dup
+    bytec 14 // 0x0062
     concat
     frame_dig -7
     concat
@@ -401,12 +795,12 @@ buy_policy_with_payment:
     concat
     frame_dig -1
     concat
-    // smart_contracts/insurance/contract.py:94
+    // smart_contracts/insurance/contract.py:190
     // settled=ARC4UInt64(0)
-    bytec_2 // 0x0000000000000000
-    // smart_contracts/insurance/contract.py:84-95
+    bytec_1 // 0x0000000000000000
+    // smart_contracts/insurance/contract.py:180-191
     // policy_data = PolicyData(
-    //     owner=Address.from_bytes(Txn.sender.bytes),
+    //     owner=caller,
     //     zip_code=ARC4String.from_bytes(zip_code.bytes),
     //     t0=t0,
     //     t1=t1,
@@ -420,10 +814,10 @@ buy_policy_with_payment:
     concat
     frame_dig -8
     concat
-    // smart_contracts/insurance/contract.py:97-98
-    // # Store policy in box
+    // smart_contracts/insurance/contract.py:193-194
+    // # Store policy in box with enhanced error handling
     // self.policies[policy_id] = policy_data.copy()
-    swap
+    uncover 2
     itob
     bytec_3 // "policies"
     dig 1
@@ -433,14 +827,36 @@ buy_policy_with_payment:
     pop
     uncover 2
     box_put
-    // smart_contracts/insurance/contract.py:100
+    // smart_contracts/insurance/contract.py:196-197
+    // # Update statistics
+    // self._update_stats(String("policy_created"), cap, fee)
+    bytec 12 // "policy_created"
+    frame_dig -5
+    frame_dig -1
+    callsub _update_stats
+    // smart_contracts/insurance/contract.py:199-200
+    // # Log policy creation event
+    // self._log_event(ARC4UInt64(policy_id), caller, ARC4String("policy_created"), cap)
+    dup
+    dig 2
+    pushbytes 0x000e706f6c6963795f63726561746564
+    frame_dig -5
+    callsub _log_event
+    // smart_contracts/insurance/contract.py:202-203
+    // # Emit log for external monitoring
+    // log(Bytes(b"POLICY_CREATED") + caller.bytes)
+    pushbytes 0x504f4c4943595f43524541544544
+    uncover 2
+    concat
+    log
+    // smart_contracts/insurance/contract.py:205
     // return ARC4UInt64(policy_id)
     retsub
 
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.buy_policy(zip_code: bytes, t0: bytes, t1: bytes, cap: bytes, direction: bytes, threshold: bytes, slope: bytes, fee: bytes) -> bytes:
 buy_policy:
-    // smart_contracts/insurance/contract.py:102-113
+    // smart_contracts/insurance/contract.py:207-218
     // @abimethod
     // def buy_policy(
     //     self,
@@ -454,25 +870,25 @@ buy_policy:
     //     fee: ARC4UInt64
     // ) -> ARC4UInt64:
     proto 8 1
-    // smart_contracts/insurance/contract.py:118-119
+    // smart_contracts/insurance/contract.py:223-224
     // # Create policy
     // policy_id = self.next_policy_id
     intc_1 // 0
-    bytec_1 // "next_policy_id"
+    bytec_2 // "next_policy_id"
     app_global_get_ex
     assert // check self.next_policy_id exists
-    // smart_contracts/insurance/contract.py:120
+    // smart_contracts/insurance/contract.py:225
     // self.next_policy_id += UInt64(1)
     dup
     intc_0 // 1
     +
-    bytec_1 // "next_policy_id"
+    bytec_2 // "next_policy_id"
     swap
     app_global_put
-    // smart_contracts/insurance/contract.py:123
+    // smart_contracts/insurance/contract.py:228
     // owner=Address.from_bytes(Txn.sender.bytes),
     txn Sender
-    // smart_contracts/insurance/contract.py:122-133
+    // smart_contracts/insurance/contract.py:227-238
     // policy_data = PolicyData(
     //     owner=Address.from_bytes(Txn.sender.bytes),
     //     zip_code=ARC4String.from_bytes(zip_code.bytes),
@@ -485,7 +901,7 @@ buy_policy:
     //     fee_paid=fee,
     //     settled=ARC4UInt64(0)
     // )
-    bytec 7 // 0x0062
+    bytec 14 // 0x0062
     concat
     frame_dig -7
     concat
@@ -501,10 +917,10 @@ buy_policy:
     concat
     frame_dig -1
     concat
-    // smart_contracts/insurance/contract.py:132
+    // smart_contracts/insurance/contract.py:237
     // settled=ARC4UInt64(0)
-    bytec_2 // 0x0000000000000000
-    // smart_contracts/insurance/contract.py:122-133
+    bytec_1 // 0x0000000000000000
+    // smart_contracts/insurance/contract.py:227-238
     // policy_data = PolicyData(
     //     owner=Address.from_bytes(Txn.sender.bytes),
     //     zip_code=ARC4String.from_bytes(zip_code.bytes),
@@ -520,7 +936,7 @@ buy_policy:
     concat
     frame_dig -8
     concat
-    // smart_contracts/insurance/contract.py:135-136
+    // smart_contracts/insurance/contract.py:240-241
     // # Store policy in box
     // self.policies[policy_id] = policy_data.copy()
     swap
@@ -533,187 +949,293 @@ buy_policy:
     pop
     uncover 2
     box_put
-    // smart_contracts/insurance/contract.py:138
+    // smart_contracts/insurance/contract.py:243
     // return ARC4UInt64(policy_id)
     retsub
 
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.oracle_settle(policy_id: bytes, approved: bytes) -> bytes:
 oracle_settle:
-    // smart_contracts/insurance/contract.py:140-141
+    // smart_contracts/insurance/contract.py:245-246
     // @abimethod
     // def oracle_settle(self, policy_id: ARC4UInt64, approved: ARC4UInt64) -> ARC4UInt64:
     proto 2 1
-    // smart_contracts/insurance/contract.py:146-147
-    // # Only oracle may settle
-    // assert Txn.sender == self.oracle, "Only oracle"
+    // smart_contracts/insurance/contract.py:251-252
+    // # Enhanced access control
+    // assert Txn.sender == self.oracle, "Only oracle can settle policies"
     txn Sender
     intc_1 // 0
     bytec 5 // "oracle"
     app_global_get_ex
     assert // check self.oracle exists
     ==
-    assert // Only oracle
-    // smart_contracts/insurance/contract.py:149
+    assert // Only oracle can settle policies
+    // smart_contracts/insurance/contract.py:254
     // pid = policy_id.native
     frame_dig -2
     btoi
-    // smart_contracts/insurance/contract.py:150
+    // smart_contracts/insurance/contract.py:255
     // policy_data = self.policies.maybe(pid)[0].copy()
     itob
+    dup
     bytec_3 // "policies"
     swap
     concat
     dup
     box_get
     pop
-    dup
-    // smart_contracts/insurance/contract.py:152-153
-    // # Check that policy is not already settled
+    dupn 2
+    // smart_contracts/insurance/contract.py:257-258
+    // # Enhanced validation
     // assert policy_data.settled.native == UInt64(0), "Policy already settled"
-    pushint 90 // 90
+    intc_3 // 90
     extract_uint64
     !
     assert // Policy already settled
-    // smart_contracts/insurance/contract.py:155
+    // smart_contracts/insurance/contract.py:260-261
+    // # Time-based validation - ensure policy is within coverage period
+    // current_round = Global.round
+    global Round
+    // smart_contracts/insurance/contract.py:262
+    // assert current_round >= policy_data.t0.native, "Policy has not started yet"
+    dig 1
+    pushint 34 // 34
+    extract_uint64
+    dig 1
+    <=
+    assert // Policy has not started yet
+    // smart_contracts/insurance/contract.py:263
+    // assert current_round <= policy_data.t1.native, "Policy has expired"
+    swap
+    pushint 42 // 42
+    extract_uint64
+    <=
+    assert // Policy has expired
+    // smart_contracts/insurance/contract.py:265
     // payout = UInt64(0)
     intc_1 // 0
-    // smart_contracts/insurance/contract.py:156
+    // smart_contracts/insurance/contract.py:266
+    // settlement_action = ARC4String("settled_rejected")
+    pushbytes 0x0010736574746c65645f72656a6563746564
+    // smart_contracts/insurance/contract.py:268
     // if approved.native == UInt64(1):
     frame_dig -1
     btoi
     intc_0 // 1
     ==
-    bz oracle_settle_after_if_else@2
-    // smart_contracts/insurance/contract.py:157
+    bz oracle_settle_after_if_else@5
+    // smart_contracts/insurance/contract.py:269
     // payout = policy_data.cap.native
-    frame_dig 1
+    frame_dig 2
     pushint 50 // 50
     extract_uint64
-    frame_bury 2
-
-oracle_settle_after_if_else@2:
-    // smart_contracts/insurance/contract.py:159
+    dup
+    frame_bury 3
+    // smart_contracts/insurance/contract.py:270
+    // settlement_action = ARC4String("settled_approved")
+    pushbytes 0x0010736574746c65645f617070726f766564
+    frame_bury 4
+    // smart_contracts/insurance/contract.py:272-273
+    // # Enhanced payment with asset validation
     // if payout > UInt64(0):
-    frame_dig 2
     bz oracle_settle_after_if_else@5
-    // smart_contracts/insurance/contract.py:160-164
+    // smart_contracts/insurance/contract.py:274-280
+    // # Use inner transaction for secure payment
     // itxn.Payment(
     //     receiver=policy_data.owner.native,
     //     amount=payout,
-    //     fee=UInt64(1000)
+    //     fee=UInt64(1000),
+    //     note=Bytes(b"AgriGuard Insurance Payout")
     // ).submit()
     itxn_begin
-    // smart_contracts/insurance/contract.py:161
+    // smart_contracts/insurance/contract.py:276
     // receiver=policy_data.owner.native,
-    frame_dig 1
-    extract 0 32 // on error: Index access is out of bounds
     frame_dig 2
+    extract 0 32 // on error: Index access is out of bounds
+    // smart_contracts/insurance/contract.py:279
+    // note=Bytes(b"AgriGuard Insurance Payout")
+    pushbytes 0x41677269477561726420496e737572616e6365205061796f7574
+    itxn_field Note
+    frame_dig 3
     itxn_field Amount
     itxn_field Receiver
-    // smart_contracts/insurance/contract.py:160
+    // smart_contracts/insurance/contract.py:274-275
+    // # Use inner transaction for secure payment
     // itxn.Payment(
     intc_0 // pay
     itxn_field TypeEnum
-    // smart_contracts/insurance/contract.py:163
-    // fee=UInt64(1000)
+    // smart_contracts/insurance/contract.py:278
+    // fee=UInt64(1000),
     intc 4 // 1000
     itxn_field Fee
-    // smart_contracts/insurance/contract.py:160-164
+    // smart_contracts/insurance/contract.py:274-280
+    // # Use inner transaction for secure payment
     // itxn.Payment(
     //     receiver=policy_data.owner.native,
     //     amount=payout,
-    //     fee=UInt64(1000)
+    //     fee=UInt64(1000),
+    //     note=Bytes(b"AgriGuard Insurance Payout")
     // ).submit()
     itxn_submit
 
 oracle_settle_after_if_else@5:
-    // smart_contracts/insurance/contract.py:166-167
+    // smart_contracts/insurance/contract.py:282-283
     // # Mark as settled
     // policy_data.settled = ARC4UInt64(1)
-    frame_dig 1
+    frame_dig 2
     bytec 6 // 0x0000000000000001
     replace2 90
-    // smart_contracts/insurance/contract.py:168
+    // smart_contracts/insurance/contract.py:284
     // self.policies[pid] = policy_data.copy()
-    frame_dig 0
+    frame_dig 1
     dup
     box_del
     pop
-    swap
+    dig 1
     box_put
-    // smart_contracts/insurance/contract.py:170
-    // return ARC4UInt64(payout)
-    frame_dig 2
+    // smart_contracts/insurance/contract.py:286-287
+    // # Update statistics
+    // self._update_stats(String("policy_settled"), ARC4UInt64(payout), ARC4UInt64(0))
+    frame_dig 3
     itob
+    bytec 13 // "policy_settled"
+    dig 1
+    bytec_1 // 0x0000000000000000
+    callsub _update_stats
+    // smart_contracts/insurance/contract.py:289-290
+    // # Log settlement event
+    // self._log_event(ARC4UInt64(pid), policy_data.owner, settlement_action, ARC4UInt64(payout))
+    swap
+    extract 0 32 // on error: Index access is out of bounds
+    frame_dig 0
+    swap
+    frame_dig 4
+    dig 3
+    callsub _log_event
+    // smart_contracts/insurance/contract.py:292-293
+    // # Emit log for external monitoring
+    // log(Bytes(b"POLICY_SETTLED") + Txn.sender.bytes)
+    pushbytes 0x504f4c4943595f534554544c4544
+    txn Sender
+    concat
+    log
+    // smart_contracts/insurance/contract.py:295
+    // return ARC4UInt64(payout)
     frame_bury 0
     retsub
 
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.dispute_settlement(policy_id: bytes, reason: bytes) -> bytes:
 dispute_settlement:
-    // smart_contracts/insurance/contract.py:172-173
+    // smart_contracts/insurance/contract.py:297-298
     // @abimethod
     // def dispute_settlement(self, policy_id: ARC4UInt64, reason: ARC4String) -> ARC4UInt64:
     proto 2 1
-    // smart_contracts/insurance/contract.py:178
+    pushbytes ""
+    // smart_contracts/insurance/contract.py:303
     // pid = policy_id.native
     frame_dig -2
     btoi
-    // smart_contracts/insurance/contract.py:179
+    // smart_contracts/insurance/contract.py:304
     // caller = Address.from_bytes(Txn.sender.bytes)
     txn Sender
     swap
-    // smart_contracts/insurance/contract.py:181-182
-    // # Check if policy exists and caller is owner
+    // smart_contracts/insurance/contract.py:306-307
+    // # Enhanced validation
     // policy_data = self.policies.maybe(pid)[0].copy()
     itob
+    dup
     bytec_3 // "policies"
     swap
     concat
     box_get
-    // smart_contracts/insurance/contract.py:185
+    // smart_contracts/insurance/contract.py:310
     // if not exists:
     bnz dispute_settlement_after_if_else@2
-    // smart_contracts/insurance/contract.py:186
+    // smart_contracts/insurance/contract.py:311
     // return ARC4UInt64(0)  # Policy doesn't exist
-    bytec_2 // 0x0000000000000000
+    bytec_1 // 0x0000000000000000
     frame_bury 0
     retsub
 
 dispute_settlement_after_if_else@2:
-    // smart_contracts/insurance/contract.py:188
+    // smart_contracts/insurance/contract.py:313
     // if caller != policy_data.owner:
-    frame_dig 1
+    frame_dig 3
     extract 0 32 // on error: Index access is out of bounds
-    frame_dig 0
+    frame_dig 1
     !=
     bz dispute_settlement_after_if_else@4
-    // smart_contracts/insurance/contract.py:189
+    // smart_contracts/insurance/contract.py:314
     // return ARC4UInt64(0)  # Not the owner
-    bytec_2 // 0x0000000000000000
+    bytec_1 // 0x0000000000000000
     frame_bury 0
     retsub
 
 dispute_settlement_after_if_else@4:
-    // smart_contracts/insurance/contract.py:191-192
-    // # Check if policy is already settled
+    // smart_contracts/insurance/contract.py:316
     // if policy_data.settled.native == UInt64(0):
-    frame_dig 1
-    pushint 90 // 90
+    frame_dig 3
+    intc_3 // 90
     extract_uint64
+    dup
+    frame_bury 0
     bnz dispute_settlement_after_if_else@6
-    // smart_contracts/insurance/contract.py:193
+    // smart_contracts/insurance/contract.py:317
     // return ARC4UInt64(0)  # Policy not settled yet
-    bytec_2 // 0x0000000000000000
+    bytec_1 // 0x0000000000000000
     frame_bury 0
     retsub
 
 dispute_settlement_after_if_else@6:
-    // smart_contracts/insurance/contract.py:195-198
-    // # Create dispute in dispute contract (if configured)
-    // # This would call the dispute contract's create_dispute method
-    // # For now, just mark that a dispute was requested
+    // smart_contracts/insurance/contract.py:319-320
+    // # Time-based validation - disputes must be filed within time window
+    // current_round = Global.round
+    global Round
+    // smart_contracts/insurance/contract.py:322-323
+    // # Allow disputes within 1000 rounds (approximately 3-4 days) of settlement
+    // assert current_round <= settlement_round + UInt64(1000), "Dispute filing period expired"
+    frame_dig 0
+    intc 4 // 1000
+    +
+    <=
+    assert // Dispute filing period expired
+    // smart_contracts/insurance/contract.py:325-326
+    // # Cross-contract communication: Call dispute contract
+    // if self.dispute_contract != Address(Global.zero_address):
+    intc_1 // 0
+    bytec 9 // "dispute_contract"
+    app_global_get_ex
+    assert // check self.dispute_contract exists
+    global ZeroAddress
+    !=
+    bz dispute_settlement_after_if_else@8
+    // smart_contracts/insurance/contract.py:327-329
+    // # Note: Cross-contract call parameters need proper app reference
+    // # For now, this triggers an event that can be monitored externally
+    // log(Bytes(b"CROSS_CONTRACT_DISPUTE") + Bytes(b"dispute_created"))
+    pushbytes 0x43524f53535f434f4e54524143545f44495350555445646973707574655f63726561746564
+    log
+
+dispute_settlement_after_if_else@8:
+    // smart_contracts/insurance/contract.py:331-332
+    // # Log dispute event
+    // self._log_event(ARC4UInt64(pid), caller, ARC4String("disputed"), ARC4UInt64(0))
+    frame_dig 2
+    frame_dig 1
+    dup
+    cover 2
+    pushbytes 0x00086469737075746564
+    bytec_1 // 0x0000000000000000
+    callsub _log_event
+    // smart_contracts/insurance/contract.py:334-335
+    // # Emit log for external monitoring
+    // log(Bytes(b"DISPUTE_CREATED") + caller.bytes)
+    pushbytes 0x444953505554455f43524541544544
+    swap
+    concat
+    log
+    // smart_contracts/insurance/contract.py:337
     // return ARC4UInt64(1)
     bytec 6 // 0x0000000000000001
     frame_bury 0
@@ -722,11 +1244,11 @@ dispute_settlement_after_if_else@6:
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.get_policy(policy_id: bytes) -> bytes:
 get_policy:
-    // smart_contracts/insurance/contract.py:200-201
+    // smart_contracts/insurance/contract.py:339-340
     // @abimethod(readonly=True)
     // def get_policy(self, policy_id: ARC4UInt64) -> PolicyData:
     proto 1 1
-    // smart_contracts/insurance/contract.py:203
+    // smart_contracts/insurance/contract.py:342
     // return self.policies.maybe(policy_id.native)[0].copy()
     frame_dig -1
     btoi
@@ -741,36 +1263,36 @@ get_policy:
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.get_policies_by_owner(owner: bytes) -> bytes:
 get_policies_by_owner:
-    // smart_contracts/insurance/contract.py:205-206
+    // smart_contracts/insurance/contract.py:344-345
     // @abimethod(readonly=True)
     // def get_policies_by_owner(self, owner: Address) -> Tuple[ARC4UInt64, ARC4UInt64]:
     proto 1 1
     intc_1 // 0
     pushbytes ""
     dup
-    // smart_contracts/insurance/contract.py:212
+    // smart_contracts/insurance/contract.py:351
     // count = UInt64(0)
     intc_1 // 0
-    // smart_contracts/insurance/contract.py:213
+    // smart_contracts/insurance/contract.py:352
     // first_policy_id = UInt64(0)
     dupn 2
-    // smart_contracts/insurance/contract.py:215-216
+    // smart_contracts/insurance/contract.py:354-355
     // # Check each policy ID from 1 to next_policy_id - 1
     // for i in urange(1, self.next_policy_id):
-    bytec_1 // "next_policy_id"
+    bytec_2 // "next_policy_id"
     app_global_get_ex
     assert // check self.next_policy_id exists
     intc_0 // 1
 
 get_policies_by_owner_for_header@1:
-    // smart_contracts/insurance/contract.py:215-216
+    // smart_contracts/insurance/contract.py:354-355
     // # Check each policy ID from 1 to next_policy_id - 1
     // for i in urange(1, self.next_policy_id):
     frame_dig 6
     frame_dig 5
     <
     bz get_policies_by_owner_after_for@10
-    // smart_contracts/insurance/contract.py:218
+    // smart_contracts/insurance/contract.py:357
     // if self.policies.maybe(policy_id)[1]:  # Policy exists
     frame_dig 6
     itob
@@ -786,12 +1308,12 @@ get_policies_by_owner_for_header@1:
     frame_dig 3
     frame_bury 1
     bz get_policies_by_owner_after_if_else@8
-    // smart_contracts/insurance/contract.py:219
+    // smart_contracts/insurance/contract.py:358
     // policy_data = self.policies.maybe(policy_id)[0].copy()
     frame_dig 0
     box_get
     pop
-    // smart_contracts/insurance/contract.py:220
+    // smart_contracts/insurance/contract.py:359
     // if policy_data.owner.native == owner.native:
     extract 0 32 // on error: Index access is out of bounds
     frame_dig -1
@@ -801,7 +1323,7 @@ get_policies_by_owner_for_header@1:
     frame_dig 3
     frame_bury 1
     bz get_policies_by_owner_after_if_else@7
-    // smart_contracts/insurance/contract.py:221
+    // smart_contracts/insurance/contract.py:360
     // count += UInt64(1)
     frame_dig 3
     intc_0 // 1
@@ -810,7 +1332,7 @@ get_policies_by_owner_for_header@1:
     frame_dig 4
     dup
     frame_bury 2
-    // smart_contracts/insurance/contract.py:222
+    // smart_contracts/insurance/contract.py:361
     // if first_policy_id == UInt64(0):
     bnz get_policies_by_owner_after_if_else@6
     frame_dig 6
@@ -828,7 +1350,7 @@ get_policies_by_owner_after_if_else@8:
     frame_bury 4
     frame_dig 1
     frame_bury 3
-    // smart_contracts/insurance/contract.py:215-216
+    // smart_contracts/insurance/contract.py:354-355
     // # Check each policy ID from 1 to next_policy_id - 1
     // for i in urange(1, self.next_policy_id):
     frame_dig 6
@@ -838,7 +1360,7 @@ get_policies_by_owner_after_if_else@8:
     b get_policies_by_owner_for_header@1
 
 get_policies_by_owner_after_for@10:
-    // smart_contracts/insurance/contract.py:225
+    // smart_contracts/insurance/contract.py:364
     // return Tuple((ARC4UInt64(count), ARC4UInt64(first_policy_id)))
     frame_dig 3
     itob
@@ -851,10 +1373,10 @@ get_policies_by_owner_after_for@10:
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.get_policy_count() -> bytes:
 get_policy_count:
-    // smart_contracts/insurance/contract.py:230
+    // smart_contracts/insurance/contract.py:369
     // return ARC4UInt64(self.next_policy_id - UInt64(1))
     intc_1 // 0
-    bytec_1 // "next_policy_id"
+    bytec_2 // "next_policy_id"
     app_global_get_ex
     assert // check self.next_policy_id exists
     intc_0 // 1
@@ -865,7 +1387,7 @@ get_policy_count:
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.calculate_fee(cap: bytes, risk_score: bytes, uncertainty: bytes, duration_days: bytes) -> bytes:
 calculate_fee:
-    // smart_contracts/insurance/contract.py:232-239
+    // smart_contracts/insurance/contract.py:371-378
     // @abimethod(readonly=True)
     // def calculate_fee(
     //     self,
@@ -875,39 +1397,39 @@ calculate_fee:
     //     duration_days: ARC4UInt64
     // ) -> ARC4UInt64:
     proto 4 1
-    // smart_contracts/insurance/contract.py:244-245
+    // smart_contracts/insurance/contract.py:383-384
     // # Base fee: 1% of coverage amount
     // base_fee = cap.native // UInt64(100)
     frame_dig -4
     btoi
     intc_2 // 100
     /
-    // smart_contracts/insurance/contract.py:247-248
+    // smart_contracts/insurance/contract.py:386-387
     // # Risk multiplier: 1.0 to 2.0 based on risk score (0-100)
     // risk_multiplier = UInt64(100) + (risk_score.native // UInt64(2))  # 100-150 (1.0-1.5x)
     frame_dig -3
     btoi
-    intc_3 // 2
+    pushint 2 // 2
     /
     intc_2 // 100
     +
-    // smart_contracts/insurance/contract.py:250-251
+    // smart_contracts/insurance/contract.py:389-390
     // # Uncertainty multiplier: 1.0 to 1.5 based on uncertainty (0-50%)
     // uncertainty_multiplier = UInt64(100) + uncertainty.native  # 100-150 (1.0-1.5x)
     frame_dig -2
     btoi
     intc_2 // 100
     +
-    // smart_contracts/insurance/contract.py:253-254
+    // smart_contracts/insurance/contract.py:392-393
     // # Duration multiplier: 1.0 to 2.0 based on duration (1-365 days)
     // duration_multiplier = UInt64(100) + (duration_days.native // UInt64(2))  # 100-282 (1.0-2.82x)
     frame_dig -1
     btoi
-    intc_3 // 2
+    pushint 2 // 2
     /
     intc_2 // 100
     +
-    // smart_contracts/insurance/contract.py:256-257
+    // smart_contracts/insurance/contract.py:395-396
     // # Calculate final fee
     // fee = (base_fee * risk_multiplier * uncertainty_multiplier * duration_multiplier) // (UInt64(100) * UInt64(100) * UInt64(100))
     uncover 3
@@ -919,24 +1441,24 @@ calculate_fee:
     pushint 1000000 // 1000000
     /
     dup
-    // smart_contracts/insurance/contract.py:259-260
+    // smart_contracts/insurance/contract.py:398-399
     // # Minimum fee of 1000 microALGO
     // min_fee = UInt64(1000)
     intc 4 // 1000
-    // smart_contracts/insurance/contract.py:261
+    // smart_contracts/insurance/contract.py:400
     // if fee < min_fee:
     <
     bz calculate_fee_after_if_else@2
-    // smart_contracts/insurance/contract.py:259-260
+    // smart_contracts/insurance/contract.py:398-399
     // # Minimum fee of 1000 microALGO
     // min_fee = UInt64(1000)
     intc 4 // 1000
-    // smart_contracts/insurance/contract.py:262
+    // smart_contracts/insurance/contract.py:401
     // fee = min_fee
     frame_bury 0
 
 calculate_fee_after_if_else@2:
-    // smart_contracts/insurance/contract.py:264
+    // smart_contracts/insurance/contract.py:403
     // return ARC4UInt64(fee)
     frame_dig 0
     itob
@@ -946,15 +1468,15 @@ calculate_fee_after_if_else@2:
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.delete_policy(policy_id: bytes) -> bytes:
 delete_policy:
-    // smart_contracts/insurance/contract.py:266-267
+    // smart_contracts/insurance/contract.py:405-406
     // @abimethod
     // def delete_policy(self, policy_id: ARC4UInt64) -> ARC4UInt64:
     proto 1 1
-    // smart_contracts/insurance/contract.py:272
+    // smart_contracts/insurance/contract.py:411
     // pid = policy_id.native
     frame_dig -1
     btoi
-    // smart_contracts/insurance/contract.py:274-275
+    // smart_contracts/insurance/contract.py:413-414
     // # Check if policy exists
     // policy_data = self.policies.maybe(pid)[0].copy()
     itob
@@ -963,60 +1485,60 @@ delete_policy:
     concat
     dup
     box_get
-    // smart_contracts/insurance/contract.py:278
+    // smart_contracts/insurance/contract.py:417
     // if not exists:
     bnz delete_policy_after_if_else@2
-    // smart_contracts/insurance/contract.py:279-280
+    // smart_contracts/insurance/contract.py:418-419
     // # Policy doesn't exist
     // return ARC4UInt64(0)
-    bytec_2 // 0x0000000000000000
+    bytec_1 // 0x0000000000000000
     frame_bury 0
     retsub
 
 delete_policy_after_if_else@2:
-    // smart_contracts/insurance/contract.py:282-283
+    // smart_contracts/insurance/contract.py:421-422
     // # Check if caller is the owner
     // caller = Address.from_bytes(Txn.sender.bytes)
     txn Sender
-    // smart_contracts/insurance/contract.py:284
+    // smart_contracts/insurance/contract.py:423
     // if caller != policy_data.owner:
     frame_dig 1
     extract 0 32 // on error: Index access is out of bounds
     !=
     bz delete_policy_after_if_else@4
-    // smart_contracts/insurance/contract.py:285-286
+    // smart_contracts/insurance/contract.py:424-425
     // # Caller is not the owner
     // return ARC4UInt64(0)
-    bytec_2 // 0x0000000000000000
+    bytec_1 // 0x0000000000000000
     frame_bury 0
     retsub
 
 delete_policy_after_if_else@4:
-    // smart_contracts/insurance/contract.py:288-289
+    // smart_contracts/insurance/contract.py:427-428
     // # Check if policy is already settled
     // if policy_data.settled.native == UInt64(1):
     frame_dig 1
-    pushint 90 // 90
+    intc_3 // 90
     extract_uint64
     intc_0 // 1
     ==
     bz delete_policy_after_if_else@6
-    // smart_contracts/insurance/contract.py:290-291
+    // smart_contracts/insurance/contract.py:429-430
     // # Policy is already settled, cannot delete
     // return ARC4UInt64(0)
-    bytec_2 // 0x0000000000000000
+    bytec_1 // 0x0000000000000000
     frame_bury 0
     retsub
 
 delete_policy_after_if_else@6:
-    // smart_contracts/insurance/contract.py:293-295
+    // smart_contracts/insurance/contract.py:432-434
     // # Delete the policy from storage
     // # In PyTeal BoxMap, we delete by using del keyword
     // del self.policies[pid]
     frame_dig 0
     box_del
     pop
-    // smart_contracts/insurance/contract.py:297
+    // smart_contracts/insurance/contract.py:436
     // return ARC4UInt64(1)
     bytec 6 // 0x0000000000000001
     frame_bury 0
@@ -1025,26 +1547,26 @@ delete_policy_after_if_else@6:
 
 // smart_contracts.insurance.contract.AgriGuardInsurance.get_globals() -> bytes:
 get_globals:
-    // smart_contracts/insurance/contract.py:303
+    // smart_contracts/insurance/contract.py:442
     // Address.from_bytes(self.admin.bytes),
     intc_1 // 0
     bytec 4 // "admin"
     app_global_get_ex
     assert // check self.admin exists
-    // smart_contracts/insurance/contract.py:304
+    // smart_contracts/insurance/contract.py:443
     // Address.from_bytes(self.oracle.bytes),
     intc_1 // 0
     bytec 5 // "oracle"
     app_global_get_ex
     assert // check self.oracle exists
-    // smart_contracts/insurance/contract.py:305
+    // smart_contracts/insurance/contract.py:444
     // ARC4UInt64(self.next_policy_id)
     intc_1 // 0
-    bytec_1 // "next_policy_id"
+    bytec_2 // "next_policy_id"
     app_global_get_ex
     assert // check self.next_policy_id exists
     itob
-    // smart_contracts/insurance/contract.py:302-306
+    // smart_contracts/insurance/contract.py:441-445
     // return Tuple((
     //     Address.from_bytes(self.admin.bytes),
     //     Address.from_bytes(self.oracle.bytes),
@@ -1054,4 +1576,189 @@ get_globals:
     concat
     swap
     concat
+    retsub
+
+
+// smart_contracts.insurance.contract.AgriGuardInsurance.get_statistics() -> bytes:
+get_statistics:
+    // smart_contracts/insurance/contract.py:450
+    // return self.stats_box.value
+    bytec 8 // "stats_box"
+    box_get
+    assert // check self.stats_box exists
+    retsub
+
+
+// smart_contracts.insurance.contract.AgriGuardInsurance.get_event(event_id: bytes) -> bytes:
+get_event:
+    // smart_contracts/insurance/contract.py:452-453
+    // @abimethod(readonly=True)
+    // def get_event(self, event_id: ARC4UInt64) -> PolicyEvent:
+    proto 1 1
+    // smart_contracts/insurance/contract.py:455
+    // event = self.event_log.maybe(event_id.native)[0].copy()
+    frame_dig -1
+    btoi
+    itob
+    bytec 11 // "event_log"
+    swap
+    concat
+    box_get
+    pop
+    dup
+    // smart_contracts/insurance/contract.py:456-462
+    // if event == PolicyEvent(
+    //     policy_id=ARC4UInt64(0),
+    //     owner=Address(Global.zero_address),
+    //     action=ARC4String(""),
+    //     timestamp=ARC4UInt64(0),
+    //     amount=ARC4UInt64(0)
+    // ):
+    pushbytes base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5AAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+    ==
+    bz get_event_after_if_else@2
+    // smart_contracts/insurance/contract.py:463-469
+    // return PolicyEvent(
+    //     policy_id=ARC4UInt64(0),
+    //     owner=Address(Global.zero_address),
+    //     action=ARC4String("event_not_found"),
+    //     timestamp=ARC4UInt64(0),
+    //     amount=ARC4UInt64(0)
+    // )
+    pushbytes base32(AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA5AAAAAAAAAAAAAAAAAAAAAAAAAAAAPMV3GK3TUL5XG65C7MZXXK3TE)
+    swap
+    retsub
+
+get_event_after_if_else@2:
+    // smart_contracts/insurance/contract.py:470
+    // return event
+    frame_dig 0
+    swap
+    retsub
+
+
+// smart_contracts.insurance.contract.AgriGuardInsurance.get_recent_events(limit: bytes) -> bytes:
+get_recent_events:
+    // smart_contracts/insurance/contract.py:472-473
+    // @abimethod(readonly=True)
+    // def get_recent_events(self, limit: ARC4UInt64) -> Tuple[ARC4UInt64, ARC4UInt64]:
+    proto 1 1
+    // smart_contracts/insurance/contract.py:475
+    // total_events = self.next_event_id - UInt64(1)
+    intc_1 // 0
+    bytec 7 // "next_event_id"
+    app_global_get_ex
+    assert // check self.next_event_id exists
+    intc_0 // 1
+    -
+    dup
+    // smart_contracts/insurance/contract.py:476
+    // start_id = total_events - limit.native + UInt64(1)
+    frame_dig -1
+    btoi
+    -
+    intc_0 // 1
+    +
+    dup
+    // smart_contracts/insurance/contract.py:477
+    // if start_id < UInt64(1):
+    intc_0 // 1
+    <
+    bz get_recent_events_after_if_else@2
+    // smart_contracts/insurance/contract.py:478
+    // start_id = UInt64(1)
+    intc_0 // 1
+    frame_bury 1
+
+get_recent_events_after_if_else@2:
+    // smart_contracts/insurance/contract.py:480
+    // return Tuple((ARC4UInt64(total_events), ARC4UInt64(start_id)))
+    frame_dig 0
+    itob
+    frame_dig 1
+    itob
+    concat
+    frame_bury 0
+    retsub
+
+
+// smart_contracts.insurance.contract.AgriGuardInsurance.validate_policy_timing(policy_id: bytes) -> bytes:
+validate_policy_timing:
+    // smart_contracts/insurance/contract.py:482-483
+    // @abimethod(readonly=True)
+    // def validate_policy_timing(self, policy_id: ARC4UInt64) -> ARC4UInt64:
+    proto 1 1
+    pushbytes ""
+    // smart_contracts/insurance/contract.py:485
+    // policy_data = self.policies.maybe(policy_id.native)[0].copy()
+    frame_dig -1
+    btoi
+    itob
+    bytec_3 // "policies"
+    swap
+    concat
+    box_get
+    // smart_contracts/insurance/contract.py:488
+    // if not exists:
+    bnz validate_policy_timing_after_if_else@2
+    // smart_contracts/insurance/contract.py:489
+    // return ARC4UInt64(0)  # Policy doesn't exist
+    bytec_1 // 0x0000000000000000
+    frame_bury 0
+    retsub
+
+validate_policy_timing_after_if_else@2:
+    // smart_contracts/insurance/contract.py:491
+    // if policy_data.settled.native == UInt64(1):
+    frame_dig 1
+    intc_3 // 90
+    extract_uint64
+    intc_0 // 1
+    ==
+    bz validate_policy_timing_after_if_else@4
+    // smart_contracts/insurance/contract.py:492
+    // return ARC4UInt64(2)  # Policy already settled
+    pushbytes 0x0000000000000002
+    frame_bury 0
+    retsub
+
+validate_policy_timing_after_if_else@4:
+    // smart_contracts/insurance/contract.py:494
+    // current_round = Global.round
+    global Round
+    dup
+    frame_bury 0
+    // smart_contracts/insurance/contract.py:495
+    // if current_round < policy_data.t0.native:
+    frame_dig 1
+    pushint 34 // 34
+    extract_uint64
+    <
+    bz validate_policy_timing_after_if_else@6
+    // smart_contracts/insurance/contract.py:496
+    // return ARC4UInt64(3)  # Policy hasn't started yet
+    pushbytes 0x0000000000000003
+    frame_bury 0
+    retsub
+
+validate_policy_timing_after_if_else@6:
+    // smart_contracts/insurance/contract.py:498
+    // if current_round > policy_data.t1.native:
+    frame_dig 1
+    pushint 42 // 42
+    extract_uint64
+    frame_dig 0
+    <
+    bz validate_policy_timing_after_if_else@8
+    // smart_contracts/insurance/contract.py:499
+    // return ARC4UInt64(4)  # Policy has expired
+    pushbytes 0x0000000000000004
+    frame_bury 0
+    retsub
+
+validate_policy_timing_after_if_else@8:
+    // smart_contracts/insurance/contract.py:501
+    // return ARC4UInt64(1)  # Policy is active
+    bytec 6 // 0x0000000000000001
+    frame_bury 0
     retsub

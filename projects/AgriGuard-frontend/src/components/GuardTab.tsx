@@ -25,6 +25,9 @@ import { AgriGuardInsuranceFactory } from '../contracts/AgriGuardInsurance'
 import { getAlgodConfigFromViteEnvironment, getIndexerConfigFromViteEnvironment } from '../utils/network/getAlgoClientConfigs'
 import { AlgorandClient } from '@algorandfoundation/algokit-utils'
 import { AlgoAmount } from '@algorandfoundation/algokit-utils/types/amount'
+import { DEMO_MODE } from '../config/demo'
+import { mockInsuranceClient } from '../mocks/MockInsuranceClient'
+import { MOCK_WALLET_ADDRESS, formatAlgo } from '../mocks/mockData'
 
 // Minimalistic styled components
 const MinimalCard = styled(Card)({
